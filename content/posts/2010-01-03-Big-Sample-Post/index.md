@@ -3,6 +3,7 @@ title: "Big Test"
 category: "moar"
 slug: remove-this-shit
 date: 2018-01-03
+language: en
 tags:
   - test
   - huge

@@ -1,6 +1,6 @@
 ---
 title: "Typical JavaScript interview exercises (explained)"
-language: en_US
+language: en
 cover: ./banner.jpg
 slug: js-exercises-explained
 date: "2017-10-16"

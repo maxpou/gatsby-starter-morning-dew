@@ -6,7 +6,7 @@ import './PostList.css'
 class PostsList extends React.Component {
   render() {
     const { posts } = this.props
-
+    
     return (
       <Fragment>
         {posts.map(post => {
@@ -15,6 +15,8 @@ class PostsList extends React.Component {
             excerpt: post.node.excerpt,
             slug: post.node.fields.slug,
             date: post.node.frontmatter.date,
+            language: post.node.frontmatter.language || 'fr',
+            tags: post.node.frontmatter.tags || []
           }
           return <PostsListItem key={props.slug} {...props} />
         })}

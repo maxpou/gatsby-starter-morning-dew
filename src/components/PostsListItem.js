@@ -1,15 +1,17 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Flag from './Flag/Flag'
 
 class PostsListItem extends React.Component {
   render() {
-    const { title, excerpt, slug, date } = this.props
+    const { title, excerpt, slug, date, language } = this.props
 
     return (
       <article className="post">
         <header className="post-header">
           <h2 className="post-title">
             <Link to={slug}>
+              <Flag language={language} />
               {title}
             </Link>
           </h2>
