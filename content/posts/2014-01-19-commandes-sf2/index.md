@@ -1,6 +1,5 @@
 ---
 title: Mémo - Commandes Symfony2
-cover: "https://unsplash.it/1280/500/?random?BoldMage"
 slug: "commandes-sf2"
 description: "Liste des commandes console utilisées lors du développement d’un projet sous Symfony2"
 date: 2015-06-12

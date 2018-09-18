@@ -1,6 +1,6 @@
 ---
 title: "Immutability in JavaScript (without library)"
-cover: "https://unsplash.it/1280/500/?random?BoldMage"
+cover: ./banner.jpg
 slug: immutability-js-without-library
 language: en
 date: "2017-10-16"

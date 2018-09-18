@@ -1,15 +1,15 @@
 import React, { Fragment } from 'react'
-import Header from './Header'
+import Header from './Header/Header'
 import "./index.css";
 import "prismjs/themes/prism-tomorrow.css";
 
 class Template extends React.Component {
   render() {
-    const { children } = this.props
+    const { children, heroImg } = this.props
 
     return (
       <Fragment>
-        <Header />
+        <Header heroImg={heroImg} />
         {children}
       </Fragment>
     )
