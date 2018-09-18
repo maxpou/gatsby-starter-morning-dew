@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter Blog',
+    title: 'Maxpou.fr',
     author: 'Maxence Poutord',
-    description: 'A starter blog demonstrating what Gatsby can do.',
-    siteUrl: 'https://gatsbyjs.github.io/gatsby-starter-blog/',
+    description: '👋 Hey I\'m Max',
+    siteUrl: 'https://www.maxpou.fr/',
   },
   pathPrefix: '/',
   plugins: [

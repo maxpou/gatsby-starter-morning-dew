@@ -1,0 +1,34 @@
+.article {
+  position: relative;
+  width: 80%;
+  max-width: 710px;
+  margin: 4rem auto;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #ebf2f6;
+  word-wrap: break-word;
+}
+
+.gatsby-highlight {
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 1.7;
+  background: #2d2d2d;
+  color: #ffffff;
+  border-radius: 10px;
+  overflow: auto;
+  tab-size: 1.5em;
+  margin: 1.5em -1em 1.5em 0;
+  padding: 1em;
+}
+
+.gatsby-highlight > pre {
+  border: 0;
+  margin: 0;
+}
+
+.article-footer {
+  position: relative;
+  margin: 6rem 0 0;
+  padding: 3rem 0 0;
+  border-top: 1px solid #ebf2f6;
+}
