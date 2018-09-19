@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import Header from './Header/Header'
-import "./index.css";
-import "prismjs/themes/prism-tomorrow.css";
+import './index.css'
+import 'prismjs/themes/prism-tomorrow.css'
 import siteConfig from '../../data/siteConfig'
 
 class Template extends React.Component {

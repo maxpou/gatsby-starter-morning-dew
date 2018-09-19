@@ -23,7 +23,7 @@ export default Page
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(filter: {frontmatter: {type: {eq: "page"}}}) {
+    allMarkdownRemark(filter: { frontmatter: { type: { eq: "page" } } }) {
       edges {
         node {
           frontmatter {

@@ -12,7 +12,7 @@ class Bio extends React.Component {
             alt={siteConfig.authorName}
             style={{ backgroundImage: `url("${siteConfig.authorAvatar}")` }}
             className="img"
-            />
+          />
         </figure>
         <section>
           <h4>{siteConfig.authorName}</h4>

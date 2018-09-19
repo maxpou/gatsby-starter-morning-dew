@@ -4,8 +4,8 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Layout from '../components/layout'
-import Article from '../components/Article/Article';
-import PrevNextPost from '../components/PrevNextPost/PrevNextPost';
+import Article from '../components/Article/Article'
+import PrevNextPost from '../components/PrevNextPost/PrevNextPost'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -15,10 +15,11 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
 
     return (
-      <Layout 
-        location={this.props.location} 
-        title={post.frontmatter.title} 
-        heroImg={post.frontmatter.cover && post.frontmatter.cover.publicURL}>
+      <Layout
+        location={this.props.location}
+        title={post.frontmatter.title}
+        heroImg={post.frontmatter.cover && post.frontmatter.cover.publicURL}
+      >
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
