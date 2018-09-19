@@ -10,3 +10,21 @@
   background-position: center;
   background-size: cover;
 }
+
+.header-menu {
+  position: absolute;
+}
+
+.header-title {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+}
+
+.header-title > h1 {
+  font-weight: 700;
+  margin: 10px 60px;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(34,34,34,0.6);
+}

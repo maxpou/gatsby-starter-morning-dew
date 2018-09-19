@@ -43,13 +43,14 @@ export const pageQuery = graphql`
         author
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       id
       excerpt
       html
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        slug
         cover {
           publicURL
         }

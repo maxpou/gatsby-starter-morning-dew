@@ -6,10 +6,14 @@ import './Header.css'
 class Header extends React.Component {
   render () {
     const heroImg = this.props.heroImg || siteConfig.siteCover
+    const { title } = this.props
  
     return (
       <header style={{ backgroundImage: `url("${heroImg}")` }} className="main-header">
-        <Link to={'/'}>Home</Link>
+        <Link to={'/'} className="header-menu">Home</Link>
+        <div className="header-title">
+          <h1>{title}</h1>
+        </div>
       </header>
     )
   }

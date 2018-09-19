@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 
-import PostsListItem from './PostsListItem'
+import PostsListItem from '../PostsListItem/PostsListItem'
 import './PostList.css'
 
 class PostsList extends React.Component {
@@ -13,7 +13,7 @@ class PostsList extends React.Component {
           const props = {
             title: post.node.frontmatter.title,
             excerpt: post.node.excerpt,
-            slug: post.node.fields.slug,
+            slug: post.node.frontmatter.slug,
             date: post.node.frontmatter.date,
             language: post.node.frontmatter.language || 'fr',
             tags: post.node.frontmatter.tags || []

@@ -4,7 +4,7 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
-import PostsList from '../components/PostsList'
+import PostsList from '../components/PostsList/PostsList'
 
 class BlogList extends React.Component {
   render() {
@@ -50,6 +50,7 @@ export const pageQuery = graphql`
             title
             tags
             language
+            slug
           }
         }
       }

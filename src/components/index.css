@@ -7,7 +7,22 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
-body { margin: 0; }
+body { 
+    margin: 0; 
+    background-color: #e8e8e8;
+}
+
+.content {
+    position: relative;
+    width: 80%;
+    max-width: 770px;
+    border-bottom: 1px solid #ebf2f6;
+    word-wrap: break-word;
+    background-color: #fff;
+    margin: 50px auto 30px auto;
+    padding: 50px;
+    box-shadow: 0 0 0 0,0 6px 12px rgba(0,0,0,0.1);
+}
 
 article,
 aside,

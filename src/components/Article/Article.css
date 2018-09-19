@@ -1,11 +1,5 @@
 .article {
-  position: relative;
-  width: 80%;
-  max-width: 710px;
-  margin: 4rem auto;
-  padding-bottom: 4rem;
-  border-bottom: 1px solid #ebf2f6;
-  word-wrap: break-word;
+  padding: 0 30px;
 }
 
 .gatsby-highlight {

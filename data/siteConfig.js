@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: "Maxpou.fr",
+  siteTitle: "maxpou.fr",
   authorName: "Maxence Poutord",
   authorAvatar: "/images/avatar.jpeg",
   authorDescription: "👋 Hey I'm Max! I hope you liked this. 🐐",

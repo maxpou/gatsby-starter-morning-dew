@@ -1,4 +1,5 @@
 module.exports = {
+  // todo: use data from data/siteConfig.js
   siteMetadata: {
     title: 'Maxpou.fr',
     author: 'Maxence Poutord',
@@ -11,6 +12,13 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/posts`,
+        name: 'pages',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/pages`,
         name: 'pages',
       },
     },
