@@ -1,7 +1,7 @@
 ---
 title: Talks
 slug: talks
-cover: talks.png
+cover: ./talks.png
 type: page
 ---
 

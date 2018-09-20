@@ -3,7 +3,7 @@ title: "Immutability in JavaScript (without library)"
 cover: ./banner.jpg
 slug: immutability-js-without-library
 language: en
-date: "2017-10-16"
+date: 2017-10-16
 tags:
     - JS
 ---

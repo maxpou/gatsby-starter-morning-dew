@@ -1,56 +1,69 @@
 const _ = require('lodash')
 const Promise = require('bluebird')
-const path = require('path')
+const {resolve} = require('path');
 const { createFilePath } = require('gatsby-source-filesystem')
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('./src/templates/blog-post.js')
-    resolve(
-      graphql(
-        `
-          {
-            allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000, filter: {frontmatter: {type: {ne: "page"}}}) {
-              edges {
-                node {
-                  frontmatter {
-                    title
-                    slug
-                  }
-                }
+  const blogPostTemplate = resolve('./src/templates/blog-post.js')
+  const pageTemplate = resolve('./src/templates/page.js')
+
+  const allMarkdown = await graphql(
+    `
+      {
+        allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
+          edges {
+            node {
+              frontmatter {
+                title
+                slug
+                type
               }
             }
           }
-        `
-      ).then(result => {
-        if (result.errors) {
-          console.log(result.errors)
-          reject(result.errors)
         }
+      }
+    `
+  )
 
-        // Create blog posts pages.
-        const posts = result.data.allMarkdownRemark.edges;
+  if (allMarkdown.errors) {
+    console.error(allMarkdown.errors)
+    throw Error(allMarkdown.errors)
+  }
 
-        _.each(posts, (post, index) => {
-          const previous = index === posts.length - 1 ? null : posts[index + 1].node;
-          const next = index === 0 ? null : posts[index - 1].node;
-          console.log(post.node.frontmatter);
+  const markdownFiles = allMarkdown.data.allMarkdownRemark.edges;
 
-          createPage({
-            path: post.node.frontmatter.slug,
-            component: blogPost,
-            context: {
-              slug: post.node.frontmatter.slug,
-              previous,
-              next,
-            },
-          })
-        })
+  // generate blog posts
+  markdownFiles
+    .filter(item => item.node.frontmatter.type !== 'page')
+    .forEach((post, index, posts) => {
+      const previous = index === posts.length - 1 ? null : posts[index + 1].node;
+      const next = index === 0 ? null : posts[index - 1].node;
+
+      createPage({
+        path: post.node.frontmatter.slug,
+        component: blogPostTemplate,
+        context: {
+          slug: post.node.frontmatter.slug,
+          previous,
+          next,
+        },
       })
-    )
-  })
+    })
+
+  // generate pages
+  markdownFiles
+    .filter(item => item.node.frontmatter.type === 'page')
+    .forEach(page => {
+      createPage({
+        path: page.node.frontmatter.slug,
+        component: pageTemplate,
+        context: {
+          slug: page.node.frontmatter.slug,
+        },
+      })
+    })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {

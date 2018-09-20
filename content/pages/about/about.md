@@ -1,7 +1,7 @@
 ---
 title: Hello world!
 slug: about
-cover: helloworld.jpg
+cover: ./helloworld.jpg
 type: page
 ---
 

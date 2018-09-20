@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Flag from '../Flag/Flag'
+import TagList from '../TagList/TagList'
 
 class PostsListItem extends React.Component {
   render() {
-    const { title, excerpt, slug, date, language } = this.props
+    const { title, excerpt, slug, date, language, tags } = this.props
+    console.log(tags);
 
     return (
       <article className="post">
@@ -23,7 +25,8 @@ class PostsListItem extends React.Component {
           </Link>
         </section>
         <footer className="post-meta">
-          <time>{date}</time>
+          🗓 <time>{date}</time>
+          <TagList tags={tags}/>
         </footer>
       </article>
     )

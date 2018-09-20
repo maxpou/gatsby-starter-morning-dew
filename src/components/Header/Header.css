@@ -11,10 +11,6 @@
   background-size: cover;
 }
 
-.header-menu {
-  position: absolute;
-}
-
 .header-title {
   display: table-cell;
   vertical-align: middle;
@@ -27,4 +23,31 @@
   margin: 10px 60px;
   color: #fff;
   text-shadow: 1px 1px 4px rgba(34,34,34,0.6);
+}
+
+nav.header-nav {
+  position: fixed;
+  height: 60px;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  z-index: 1000;
+  justify-content: flex-start;
+  background-color: rgba(32,35,42,0.85);
+}
+
+a.header-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  border: 0;
+  margin: 0;
+  margin-right: .5rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-width: 42px;
+  width: 42px;
+  z-index: 10;
 }

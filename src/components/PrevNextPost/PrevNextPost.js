@@ -10,7 +10,7 @@ class PrevNextPost extends React.Component {
         <ul>
           {previous && (
             <li>
-              <Link to={previous.fields.slug} rel="prev">
+              <Link to={previous.frontmatter.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             </li>
@@ -18,7 +18,7 @@ class PrevNextPost extends React.Component {
 
           {next && (
             <li>
-              <Link to={next.fields.slug} rel="next">
+              <Link to={next.frontmatter.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>
             </li>
