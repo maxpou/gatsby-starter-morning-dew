@@ -1,0 +1,25 @@
+.post {
+  border-bottom: 1px solid rgba(214,209,230,.5);
+  padding-bottom: 1.25rem;
+}
+
+.post-read {
+  display: block;
+  font-size: .75rem;
+  margin-top: 1rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  line-height: 2;
+}
+
+.post-excerpt {
+  line-height: 1.45;
+}
+
+.post-read:hover {
+  background-color: rgba(32,35,42,0.85);
+  border-radius: .25rem;
+  color: #fff;
+}

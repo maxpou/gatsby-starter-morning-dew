@@ -1,12 +1,13 @@
+const config = require("./data/SiteConfig");
+
 module.exports = {
-  // todo: use data from data/siteConfig.js
   siteMetadata: {
-    title: 'Maxpou.fr',
-    author: 'Maxence Poutord',
-    description: '👋 Hey I\'m Max',
-    siteUrl: 'https://www.maxpou.fr/',
+    title: config.siteTitle,
+    author: config.authorName,
+    description: config.siteDescription,
+    siteUrl: config.siteUrl,
   },
-  pathPrefix: '/',
+  pathPrefix: config.pathPrefix,
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -41,6 +42,7 @@ module.exports = {
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
+          'gatsby-remark-autolink-headers',
         ],
       },
     },
@@ -49,7 +51,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: config.googleAnalyticsId,
       },
     },
     `gatsby-plugin-feed`,

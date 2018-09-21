@@ -2,11 +2,11 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Flag from '../Flag/Flag'
 import TagList from '../TagList/TagList'
+import './PostsListItem.css'
 
 class PostsListItem extends React.Component {
   render() {
     const { title, excerpt, slug, date, language, tags } = this.props
-    console.log(tags);
 
     return (
       <article className="post">
@@ -20,13 +20,13 @@ class PostsListItem extends React.Component {
         </header>
         <section className="post-excerpt">
           <p dangerouslySetInnerHTML={{ __html: excerpt }} />
-          <Link className="read-more" to={slug}>
-            &raquo;
-          </Link>
         </section>
         <footer className="post-meta">
+          <TagList tags={tags} />
           🗓 <time>{date}</time>
-          <TagList tags={tags}/>
+          <Link className="post-read" to={slug}>
+            Read post ›
+          </Link>
         </footer>
       </article>
     )

@@ -9,9 +9,11 @@ class Article extends React.Component {
     return (
       <article className="article">
         <section>
-          <h1>{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          <div
+            className="article-content"
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
         </section>
         <footer className="article-footer">
           <Bio />

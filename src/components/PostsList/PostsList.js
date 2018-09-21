@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 
 import PostsListItem from '../PostsListItem/PostsListItem'
-import './PostList.css'
 
 class PostsList extends React.Component {
   render() {
