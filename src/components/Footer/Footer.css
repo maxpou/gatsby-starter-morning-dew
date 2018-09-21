@@ -1,0 +1,33 @@
+.footer {
+  display: flex;
+  text-align: left;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  background-color: rgba(32,35,42,0.85);
+  color: #ffffff;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1260px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-part {
+  flex: 1 auto;
+  margin-bottom: 1em;
+  padding-right: 1em;
+}
+
+.footer-item {
+  order: 2;
+  margin: 0 .25rem;
+  margin-right: 0.25rem;
+  padding: .25rem;
+}
+
+.footer-header {
+  order: 1;
+  margin: 0 .25rem;
+  margin-right: 0.25rem;
+  padding: .25rem;
+}

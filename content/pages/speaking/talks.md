@@ -1,6 +1,6 @@
 ---
-title: Talks
-slug: talks
+title: speaking
+slug: speaking
 cover: ./talks.png
 type: page
 ---

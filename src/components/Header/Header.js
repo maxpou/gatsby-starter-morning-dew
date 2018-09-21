@@ -13,8 +13,8 @@ class Header extends React.Component {
           <Link to={'/'} className="header-menu">
             Blog
           </Link>
-          <Link to={'/talks'} className="header-menu">
-            Talks
+          <Link to={'/speaking'} className="header-menu">
+            Speaking
           </Link>
           <Link to={'/about'} className="header-menu">
             About

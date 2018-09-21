@@ -3,6 +3,13 @@
   padding-bottom: 1.25rem;
 }
 
+.post-title > a:hover {
+  background-color: rgba(32,35,42,0.85);
+  padding: 0.05rem;
+  border-radius: .25rem;
+  color: #fff;
+}
+
 .post-read {
   display: block;
   font-size: .75rem;
