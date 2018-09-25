@@ -18,7 +18,7 @@ class Template extends React.Component {
         <main id="content" className="content" role="main">
           {children}
         </main>
-        <Footer />
+        <Footer siteConfig={siteConfig} />
       </Fragment>
     )
   }
