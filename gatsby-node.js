@@ -1,5 +1,3 @@
-const _ = require('lodash')
-const Promise = require('bluebird')
 const {resolve} = require('path');
 const { createFilePath } = require('gatsby-source-filesystem')
 
