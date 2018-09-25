@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/maxpou/gatsby-starter-morning-dew.svg?branch=master)](https://travis-ci.org/maxpou/gatsby-starter-morning-dew)
+
 # gatsby-starter-morning-dew
 
 Gatsby starter for creating a new blog!

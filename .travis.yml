@@ -1,5 +1,10 @@
 language: node_js
 
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
 os:
   - linux
   - osx
@@ -11,5 +16,5 @@ node_js:
   - "8"
 
 script:
-  - npm install
-  - npm run lint
+  - yarn install
+  - yarn lint
