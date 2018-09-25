@@ -4,33 +4,48 @@
 
 Gatsby starter for creating a new blog!
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
+## Installation
 
-`gatsby new gatsby-blog https://github.com/maxpou/gatsby-starter-morning-dew`
 
-## Features 🛠
+* with Gatsby-cli: `gatsby new gatsby-blog https://github.com/maxpou/gatsby-starter-morning-dew`
+
+* without Gatsby-cli
+
+  ```sh
+  git clone my-site git@github.com:fabe/gatsby-universal.git
+  cd my-site
+  yarn install
+  ```
+
+## Features
 
 - [Gatsby v2](https://www.gatsbyjs.org/)
 - SEO
 - Responsive design
-- [fully configurable](./data/siteConfig.js)
+- Offline support
+- Manifest support 
+- [fully configurable (see data/siteConfig.js)](./data/siteConfig.js)
+- Travis CI support
 - Developer tools:
   - eslint
   - prettier
 
 
-## Running in development
+![Lighthouse scores (locally :bowtie:)](https://lighthouse.now.sh/?perf=88&pwa=81&a11y=92&bp=100&seo=100)]
+
+
+## Commands
 
 ```sh
 # working locally
-npm run dev
+yarn dev
 
 # generate build
-npm run format
+yarn format
 
 # format code
-npm run format
+yarn format
 
 # lint code
-npm run lint
+yarn lint
 ```
