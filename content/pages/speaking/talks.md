@@ -5,7 +5,7 @@ cover: ./talks.png
 type: page
 ---
 
-<div class="talk-container__info">
+<div class="content-alert">
   📌 Slides's sources are available on GitHub (<a href="https://github.com/maxpou-slides">github.com/maxpou-slides</a>)
 </div>
 

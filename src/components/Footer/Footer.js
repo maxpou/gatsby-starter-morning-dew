@@ -45,7 +45,7 @@ class Footer extends React.Component {
             <h5 className="footer-title">{authorName} © 2018</h5>
             <p className="footer-item-text">
               Built with{' '}
-              <a className="footer-link" href="https://gatsby.com/">
+              <a className="footer-link" href="https://www.gatsbyjs.org">
                 Gatsby
               </a>
               .

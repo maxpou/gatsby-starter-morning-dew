@@ -15,8 +15,8 @@ class Bio extends React.Component {
           />
         </figure>
         <section>
-          <h4>{siteConfig.authorName}</h4>
-          <p>{siteConfig.authorDescription}</p>
+          <h4>About the author</h4>
+          <p className="bio-text">{siteConfig.authorDescription}</p>
         </section>
       </Fragment>
     )

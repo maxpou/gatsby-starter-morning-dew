@@ -45,6 +45,11 @@
   border-top: #ebf2f6 1px solid;
 }
 
+.bio-text {
+  padding-top: 1em;
+  line-height: 1.4em;
+}
+
 @media only screen and (max-width: 500px) {
   .post-footer .author-image {
       top: -60px;

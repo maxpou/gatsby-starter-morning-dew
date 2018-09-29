@@ -7,7 +7,7 @@ type: page
 
 ## Hello World!
 
-I am **Maxence Poutord**, a French 28 years old Software Engineer. I started coding at the age of 11 with the QBasic language. I finished my studies with a Master Degree in Computer Science.  
+I am **Maxence Poutord**, a French 29 years old Software Engineer. I started coding at the age of 11 with the QBasic language. I finished my studies with a Master Degree in Computer Science.  
 After some times in France, I've decided to move in Ireland for a new challenge.
 
 Today I consider myself as a **Software craftsman**, a **lifelong learner** and a **web technologies enthusiast**. I am also interested in all aspects of web applications. Whether through their architecture, their interactions with each other and humans who produce and consume them.

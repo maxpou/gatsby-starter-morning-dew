@@ -1,5 +1,6 @@
 import React from 'react'
 import './Content.css'
+import './GatsbyHighlight.css'
 
 class Content extends React.Component {
   render() {

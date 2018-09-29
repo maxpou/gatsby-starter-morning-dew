@@ -3,7 +3,12 @@ module.exports = {
   siteDescription: "👋 Hey I'm Max",
   authorName: 'Maxence Poutord',
   authorAvatar: '/images/avatar.jpeg',
-  authorDescription: "👋 Hey I'm Max! I hope you liked this. 🐐",
+  authorDescription: `
+  Hey I'm Maxence Poutord, a french passionate software engineer, who's constantly looking for new challenges to achieve.
+  Also, sharing my knowledge is crucial for me. That's why, I'm a frequent public speaker, I mentor people and I try to keep this blog alive.
+  After 2 years of being an expatriate in Dublin, I recently switched to digital nomad (Europe).
+  When I'm not at a computer, I'm usually exploring the city or cooking a fancy pizza.
+  `,
   siteUrl: 'https://www.maxpou.fr/',
   pathPrefix: '/',
   siteCover: '/images/cover.jpg',

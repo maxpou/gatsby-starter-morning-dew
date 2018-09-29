@@ -22,8 +22,9 @@ Gatsby starter for creating a new blog!
 - [Gatsby v2](https://www.gatsbyjs.org/)
 - SEO
 - Responsive design
-- Offline support
-- Manifest support 
+- PWA ready
+  - Offline support
+  - Manifest support 
 - [fully configurable (see data/siteConfig.js)](./data/siteConfig.js)
 - Travis CI support
 - Developer tools:
