@@ -8,12 +8,28 @@ module.exports = {
   pathPrefix: '/',
   siteCover: '/images/cover.jpg',
   googleAnalyticsId: 'UA-67868977-1',
-
   background_color: '#ffffff',
   theme_color: '#222222',
   display: 'minimal-ui',
   icon: 'src/assets/gatsby-icon.png',
-
+  headerLinks: [
+    {
+      label: '🏡',
+      url: '/',
+    },
+    {
+      label: 'Blog',
+      url: '/',
+    },
+    {
+      label: 'About',
+      url: '/about',
+    },
+    {
+      label: 'Speaking',
+      url: '/speaking',
+    },
+  ],
   footerLinks: [
     [
       'Explore',

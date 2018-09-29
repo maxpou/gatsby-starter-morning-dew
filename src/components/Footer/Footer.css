@@ -43,6 +43,10 @@
   color: #ffffff;
 }
 
+.footer-heart {
+  color: red
+}
+
 .footer-item-text {
   padding: .10rem 0;
   color: #ffffff;

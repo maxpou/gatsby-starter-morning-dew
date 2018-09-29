@@ -43,19 +43,25 @@ class Footer extends React.Component {
         <nav className="footer-nav">
           <div className="footer-col">
             <h5 className="footer-title">{authorName} © 2018</h5>
-            <p className="footer-item-text">Built with Gatsby.</p>
             <p className="footer-item-text">
-              Theme inpired by{' '}
-              <a
-                className="footer-link"
-                href="https://mmistakes.github.io/hpstr-jekyll-theme/"
-              >
-                hpstr-jekyll-theme
+              Built with{' '}
+              <a className="footer-link" href="https://gatsby.com/">
+                Gatsby
               </a>
               .
             </p>
             <p className="footer-item-text">
-              Hosted with ❤ by{' '}
+              Theme using{' '}
+              <a
+                className="footer-link"
+                href="https://github.com/maxpou/gatsby-starter-morning-dew"
+              >
+                gatsby-starter-morning-dew
+              </a>
+              .
+            </p>
+            <p className="footer-item-text">
+              Hosted with <span className="footer-heart">❤</span> by{' '}
               <a className="footer-link" href="https://github.com/">
                 Github
               </a>

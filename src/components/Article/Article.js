@@ -1,5 +1,6 @@
 import React from 'react'
 import Bio from '../Bio/Bio'
+import Content from '../Content/Content'
 import './Article.css'
 
 class Article extends React.Component {
@@ -8,13 +9,7 @@ class Article extends React.Component {
 
     return (
       <article className="article">
-        <section>
-          <p>{post.frontmatter.date}</p>
-          <div
-            className="article-content"
-            dangerouslySetInnerHTML={{ __html: post.html }}
-          />
-        </section>
+        <Content content={post.html} date={post.frontmatter.date} />
         <footer className="article-footer">
           <Bio />
         </footer>

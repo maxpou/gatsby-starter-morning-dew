@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
+import Content from '../components/Content/Content'
 
 class Page extends React.Component {
   render() {
@@ -19,10 +20,7 @@ class Page extends React.Component {
           meta={[{ name: 'description', content: page.title }]}
         />
         <article className="page">
-          <section>
-            <p>{page.frontmatter.date}</p>
-            <div dangerouslySetInnerHTML={{ __html: page.html }} />
-          </section>
+          <Content content={page.html} date={page.frontmatter.date} />
         </article>
       </Layout>
     )

@@ -13,9 +13,9 @@ class Template extends React.Component {
 
     return (
       <Fragment>
-        <Header />
+        <Header headerLinks={siteConfig.headerLinks} />
         <Hero heroImg={heroImg} title={title} />
-        <main id="content" className="content" role="main">
+        <main id="main" className="main" role="main">
           {children}
         </main>
         <Footer siteConfig={siteConfig} />

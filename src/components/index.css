@@ -10,7 +10,7 @@ body {
   background-color: #e8e8e8;
 }
 
-.content {
+.main {
   position: relative;
   width: 80%;
   max-width: 770px;
@@ -24,7 +24,7 @@ body {
 
 
 @media (max-width: 780px) {
-  .content {
+  .main {
     width: 90%;
     padding: 25px;
   }

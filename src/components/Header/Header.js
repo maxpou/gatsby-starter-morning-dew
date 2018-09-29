@@ -4,21 +4,20 @@ import './Header.css'
 
 class Header extends React.Component {
   render() {
+    const { headerLinks } = this.props
+
     return (
       <header className="header">
         <nav className="header-nav">
-          <Link to={'/'} className="header-item">
-            🏡
-          </Link>
-          <Link to={'/'} className="header-item">
-            Blog
-          </Link>
-          <Link to={'/speaking'} className="header-item">
-            Speaking
-          </Link>
-          <Link to={'/about'} className="header-item">
-            About
-          </Link>
+          {headerLinks.map((headerLink, i) => (
+            <Link
+              to={headerLink.url}
+              className="header-item"
+              key={`header-item-${i}`}
+            >
+              {headerLink.label}
+            </Link>
+          ))}
         </nav>
       </header>
     )
