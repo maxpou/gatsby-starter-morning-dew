@@ -4,10 +4,11 @@
 }
 
 .post-title > a:hover {
-  background-color: rgba(32,35,42,0.85);
-  padding: 0.05rem;
-  border-radius: .25rem;
-  color: #fff;
+  border-bottom: 1px dotted #7f7e7e;
+}
+
+.post-header {
+  padding: 1em 0;
 }
 
 .post-read {
@@ -21,8 +22,13 @@
   line-height: 2;
 }
 
+.post-date {
+  color: #7f7e7e;
+}
+
 .post-excerpt {
   line-height: 1.45;
+  padding-bottom: 0.5em;
 }
 
 .post-read:hover {

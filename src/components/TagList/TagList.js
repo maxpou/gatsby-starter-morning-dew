@@ -9,7 +9,7 @@ class TagList extends React.Component {
       <div className="tag-list">
         🏷{' '}
         {tags.map((tag, i) => (
-          <span className="tag-list-item">{tag}</span>
+          <span className="tag-list-item" key={`tag-list-${i}`}>{tag}</span>
           // todo: solve this shit!
           // {i < tags.length - 1 ? ', ' : ''}
         ))}

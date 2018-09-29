@@ -23,7 +23,7 @@ class PostsListItem extends React.Component {
         </section>
         <footer className="post-meta">
           <TagList tags={tags} />
-          🗓 <time>{date}</time>
+          🗓 <time className="post-date">{date}</time>
           <Link className="post-read" to={slug}>
             Read post ›
           </Link>

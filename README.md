@@ -31,7 +31,7 @@ Gatsby starter for creating a new blog!
   - prettier
 
 
-![Lighthouse scores (locally :bowtie:)](https://lighthouse.now.sh/?perf=88&pwa=81&a11y=92&bp=100&seo=100)]
+![Lighthouse scores (locally :bowtie:)](https://lighthouse.now.sh/?perf=88&pwa=81&a11y=92&bp=100&seo=100)
 
 
 ## Commands

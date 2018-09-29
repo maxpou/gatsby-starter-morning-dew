@@ -13,6 +13,11 @@
   line-height: 1.3;
 }
 
+.article-content > p {
+  margin: 1em 0 0 0;
+  line-height: 1.5;
+}
+
 .gatsby-highlight {
   border-radius: 8px;
   font-size: 15px;

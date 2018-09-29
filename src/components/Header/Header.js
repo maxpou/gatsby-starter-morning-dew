@@ -7,16 +7,16 @@ class Header extends React.Component {
     return (
       <header className="header">
         <nav className="header-nav">
-          <Link to={'/'} className="header-menu">
+          <Link to={'/'} className="header-item">
             🏡
           </Link>
-          <Link to={'/'} className="header-menu">
+          <Link to={'/'} className="header-item">
             Blog
           </Link>
-          <Link to={'/speaking'} className="header-menu">
+          <Link to={'/speaking'} className="header-item">
             Speaking
           </Link>
-          <Link to={'/about'} className="header-menu">
+          <Link to={'/about'} className="header-item">
             About
           </Link>
         </nav>

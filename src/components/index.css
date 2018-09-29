@@ -1,5 +1,10 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: "Lato", sans-serif;
   color: #222222cc;
   background-color: #e8e8e8;
@@ -15,6 +20,14 @@ body {
   margin: 100px auto 30px auto;
   padding: 50px;
   box-shadow: 0 0 0 0,0 6px 12px rgba(0,0,0,0.1);
+}
+
+
+@media (max-width: 780px) {
+  .content {
+    width: 90%;
+    padding: 25px;
+  }
 }
 
 img {

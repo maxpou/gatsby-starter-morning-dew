@@ -54,3 +54,9 @@
   margin-right: 0.25rem;
   padding: .25rem;
 }
+
+@media only screen and (max-width: 500px) {
+  .footer-col:first-child {
+    width: 100%
+  }
+}
