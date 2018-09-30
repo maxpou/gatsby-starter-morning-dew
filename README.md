@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/maxpou/gatsby-starter-morning-dew.svg?branch=master)](https://travis-ci.org/maxpou/gatsby-starter-morning-dew)
+[![Build Status](https://travis-ci.org/maxpou/gatsby-starter-morning-dew.svg?branch=master)](https://travis-ci.org/maxpou/gatsby-starter-morning-dew) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
 
 # gatsby-starter-morning-dew
 
@@ -19,15 +20,17 @@ Gatsby starter for creating a new blog!
 
 ## Features
 
-- [Gatsby v2](https://www.gatsbyjs.org/)
-- SEO
-- Responsive design
-- PWA ready
-  - Offline support
-  - Manifest support 
-- [fully configurable (see data/siteConfig.js)](./data/siteConfig.js)
-- Travis CI support
-- Developer tools:
+- [:purple_heart: Gatsby v2](https://www.gatsbyjs.org/)
+- :mag: SEO
+- :iphone: Responsive design
+- :sparkles: PWA ready
+  - :airplane: Offline support
+  - :page_with_curl: Manifest support 
+- [:wrench: fully configurable (see data/siteConfig.js)](./data/siteConfig.js)
+- :construction_worker: Travis CI support
+- :speech_balloon: Disqus support
+- :books: Multilang support
+- :gem: Developer tools:
   - eslint
   - prettier
 

@@ -7,6 +7,7 @@
     "url": "https://github.com/maxpou/gatsby-starter-morning-dew/issues"
   },
   "dependencies": {
+    "disqus-react": "^1.0.5",
     "gatsby": "next",
     "gatsby-plugin-feed": "next",
     "gatsby-plugin-google-analytics": "next",
