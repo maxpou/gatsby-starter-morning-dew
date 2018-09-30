@@ -1,6 +1,37 @@
+---
+title: How to install
+slug: how-to-install
+cover: ./cover.png
+type: page
+---
+
+👋 Welcome on **gatsby-starter-morning-dew** starter template!
+
+## Installation
+
+* with Gatsby-cli: 
+  
+  ```sh
+  npm install --global gatsby-cli`
+  gatsby new gatsby-blog https://github.com/maxpou/gatsby-starter-morning-dew
+  ```
+
+* without Gatsby-cli
+
+  ```sh
+  git clone my-site git@github.com:maxpou/gatsby-starter-morning-dew.git
+  cd my-site
+  yarn install
+  ```
+
+## Customisation
+
+In `data/siteConfig.js`, you will find the following
+
+```js
 module.exports = {
-  siteTitle: 'gatsby-starter-morning-dew',
-  siteDescription: "👋 Hey I'm a Gatsby starter!",
+  siteTitle: 'maxpou.fr',
+  siteDescription: "👋 Hey I'm Max",
   authorName: 'Maxence Poutord',
   authorAvatar: '/images/avatar.jpeg',
   authorDescription: `
@@ -72,3 +103,4 @@ module.exports = {
     ],
   ],
 }
+```

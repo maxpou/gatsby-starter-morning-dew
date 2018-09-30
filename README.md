@@ -20,7 +20,7 @@ Gatsby starter for creating a new blog!
 
 ## Features
 
-- [:purple_heart: Gatsby v2](https://www.gatsbyjs.org/)
+- [:purple_heart: Gatsby v2](https://www.gatsbyjs.org/) / React 16
 - :mag: SEO optimized
 - :love_letter: Write posts/pages in Markdown
 - :iphone: Responsive design
