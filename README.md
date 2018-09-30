@@ -46,7 +46,7 @@ Gatsby starter for creating a new blog!
 yarn dev
 
 # generate build
-yarn format
+yarn build
 
 # format code
 yarn format
