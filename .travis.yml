@@ -7,14 +7,23 @@ cache:
 
 os:
   - linux
-  - osx
 
 node_js:
   - "node"
   - "lts/*"
-  - "7"
   - "8"
 
 script:
   - yarn install
   - yarn lint
+
+before_deploy:
+  - yarn build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: public
+  on:
+    branch: master

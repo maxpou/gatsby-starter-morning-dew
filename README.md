@@ -13,7 +13,7 @@ Gatsby starter for creating a new blog!
 * without Gatsby-cli
 
   ```sh
-  git clone my-site git@github.com:fabe/gatsby-universal.git
+  git clone my-site git@github.com:maxpou/gatsby-starter-morning-dew.git
   cd my-site
   yarn install
   ```
@@ -21,12 +21,13 @@ Gatsby starter for creating a new blog!
 ## Features
 
 - [:purple_heart: Gatsby v2](https://www.gatsbyjs.org/)
-- :mag: SEO
+- :mag: SEO optimized
+- :love_letter: Write posts/pages in Markdown
 - :iphone: Responsive design
 - :sparkles: PWA ready
   - :airplane: Offline support
   - :page_with_curl: Manifest support 
-- [:wrench: fully configurable (see data/siteConfig.js)](./data/siteConfig.js)
+- [:wrench: Fully configurable (see data/siteConfig.js)](./data/siteConfig.js)
 - :construction_worker: Travis CI support
 - :speech_balloon: Disqus support
 - :books: Multilang support
