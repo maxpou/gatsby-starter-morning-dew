@@ -10,7 +10,7 @@ module.exports = {
   When I'm not at a computer, I'm usually exploring the city or cooking a fancy pizza.
   `,
   siteUrl: 'https://www.maxpou.fr/',
-  pathPrefix: '/',
+  pathPrefix: '/gatsby-starter-morning-dew',
   siteCover: '/images/cover.jpg',
   googleAnalyticsId: 'UA-67868977-1',
   background_color: '#ffffff',

@@ -18,7 +18,7 @@ script:
   - yarn lint
 
 before_deploy:
-  - yarn build
+  - yarn build --prefix-paths
 
 deploy:
   provider: pages

@@ -1,10 +1,11 @@
 import React from 'react'
+import { withPrefix } from 'gatsby'
 import siteConfig from '../../../data/siteConfig'
 import './Hero.css'
 
 class Hero extends React.Component {
   render() {
-    const heroImg = this.props.heroImg || siteConfig.siteCover
+    const heroImg = this.props.heroImg || withPrefix(siteConfig.siteCover)
     const { title } = this.props
 
     return (
