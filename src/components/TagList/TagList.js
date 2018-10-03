@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import { Link } from 'gatsby'
 import './TagList.css'
 
 class TagList extends React.Component {
@@ -8,13 +9,16 @@ class TagList extends React.Component {
     return (
       <div className="tag-list">
         🏷{' '}
-        {tags.map((tag, i) => (
-          <span className="tag-list-item" key={`tag-list-${i}`}>
-            {tag}
-          </span>
-          // todo: solve this shit!
-          // {i < tags.length - 1 ? ', ' : ''}
-        ))}
+        {tags.map((tag, i) => {
+          return (
+            <Fragment key={`tag-list-${i}`}>
+              <Link className="tag-list-item" to={`tags/${tag}`}>
+                {tag}
+              </Link>
+              {i < tags.length - 1 ? ', ' : ''}
+            </Fragment>
+          )
+        })}
       </div>
     )
   }

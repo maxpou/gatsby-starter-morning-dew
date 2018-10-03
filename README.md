@@ -21,22 +21,25 @@ Gatsby starter for creating a new blog!
 ## Features
 
 - [:purple_heart: Gatsby v2](https://www.gatsbyjs.org/) / React 16
-- :mag: SEO optimized
+- :mag: SEO optimized (robot.txt)
 - :love_letter: Write posts/pages in Markdown
+  - :art: Code syntax
 - :iphone: Responsive design
 - :sparkles: PWA ready
   - :airplane: Offline support
   - :page_with_curl: Manifest support 
 - [:wrench: Fully configurable (see data/siteConfig.js)](./data/siteConfig.js)
-- :construction_worker: Travis CI support
 - :speech_balloon: Disqus support
+- :bookmark: Groups post with tags
+- :bar_chart: Google Analytics support
 - :books: Multilang support
 - :gem: Developer tools:
   - eslint
   - prettier
+- :construction_worker: Travis CI support
 
 
-![Lighthouse scores (locally :bowtie:)](https://lighthouse.now.sh/?perf=88&pwa=81&a11y=92&bp=100&seo=100)
+![Lighthouse scores (locally :bowtie:)](https://lighthouse.now.sh/?perf=98&pwa=81&a11y=92&bp=100&seo=100)
 
 
 ## Commands
@@ -54,3 +57,5 @@ yarn format
 # lint code
 yarn lint
 ```
+
+**:warning: Add `--prefix-paths` if you are using path prefix!**

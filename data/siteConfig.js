@@ -10,7 +10,8 @@ module.exports = {
   When I'm not at a computer, I'm usually exploring the city or cooking a fancy pizza.
   `,
   siteUrl: 'https://www.maxpou.fr/',
-  pathPrefix: '/gatsby-starter-morning-dew',
+  // https://www.gatsbyjs.org/docs/gatsby-config/#pathprefix
+  pathPrefix: '/gatsby-starter-morning-dew', // Note: it must *not* have a trailing slash.
   siteCover: '/images/cover.jpg',
   googleAnalyticsId: 'UA-67868977-1',
   background_color: '#ffffff',
