@@ -4,9 +4,11 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import Content from '../components/Content/Content'
+import get from 'lodash/get'
 
 class Page extends React.Component {
   render() {
+    const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     const page = this.props.data.markdownRemark
 
     return (
@@ -18,6 +20,7 @@ class Page extends React.Component {
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: page.title }]}
+          title={`${page.frontmatter.title} | ${siteTitle}`}
         />
         <article className="page">
           <Content content={page.html} date={page.frontmatter.date} />

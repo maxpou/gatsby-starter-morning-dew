@@ -6,6 +6,7 @@ date: 2018-09-30
 language: en
 tags:
   - gatsby
+  - gatsby-starter
 ---
 
 
@@ -25,11 +26,11 @@ tags:
 - 💎 Developer tools: eslint and prettier
 
 
-![Lighthouse scores (locally :bowtie:)](https://lighthouse.now.sh/?perf=88&pwa=81&a11y=92&bp=100&seo=100)
+![Lighthouse scores (locally :bowtie:)](https://lighthouse.now.sh/?perf=98&pwa=81&a11y=92&bp=100&seo=100)
 
 ## Commands
 
-```sh
+```bash
 # working locally
 yarn dev
 
@@ -42,3 +43,5 @@ yarn format
 # lint code
 yarn lint
 ```
+
+**⚠️ Add `--prefix-paths` if you are using path prefix!**

@@ -6,6 +6,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const blogPostTemplate = resolve('./src/templates/blog-post.js')
   const pageTemplate = resolve('./src/templates/page.js')
+  const postsBytagTemplate = resolve('./src/templates/tags.js')
 
   const allMarkdown = await graphql(
     `
@@ -17,6 +18,7 @@ exports.createPages = async ({ graphql, actions }) => {
                 title
                 slug
                 type
+                tags
               }
             }
           }
@@ -59,6 +61,20 @@ exports.createPages = async ({ graphql, actions }) => {
         component: pageTemplate,
         context: {
           slug: page.node.frontmatter.slug,
+        },
+      })
+    })
+
+  // generate tags
+  markdownFiles
+    .filter(item => item.node.frontmatter.tags !== null)
+    .reduce((acc, cur) => [...new Set([...acc, ...cur.node.frontmatter.tags])], [])
+    .forEach(tag => {
+      createPage({
+        path: `tags/${tag}`,
+        component: postsBytagTemplate,
+        context: {
+          tag: tag
         },
       })
     })
