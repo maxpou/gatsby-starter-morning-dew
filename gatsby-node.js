@@ -69,12 +69,12 @@ exports.createPages = async ({ graphql, actions }) => {
   markdownFiles
     .filter(item => item.node.frontmatter.tags !== null)
     .reduce((acc, cur) => [...new Set([...acc, ...cur.node.frontmatter.tags])], [])
-    .forEach(tag => {
+    .forEach(uniqTag => {
       createPage({
-        path: `tags/${tag}`,
+        path: `tags/${uniqTag}`,
         component: postsBytagTemplate,
         context: {
-          tag: tag
+          tag: uniqTag
         },
       })
     })
