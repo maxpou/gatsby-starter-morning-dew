@@ -9,7 +9,6 @@ tags:
     - stuff
     - other
 ---
-# Quanto et ius coniunctis urbes
 
 ## Sedisti civiliter
 

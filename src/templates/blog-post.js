@@ -82,6 +82,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         language
+        tags
         cover {
           publicURL
         }

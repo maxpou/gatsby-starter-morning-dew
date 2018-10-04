@@ -11,18 +11,18 @@ type: page
 
 * with Gatsby-cli: 
   
-  ```sh
-  npm install --global gatsby-cli`
-  gatsby new gatsby-blog https://github.com/maxpou/gatsby-starter-morning-dew
-  ```
+```bash
+npm install --global gatsby-cli`
+gatsby new gatsby-blog https://github.com/maxpou/gatsby-starter-morning-dew
+```
 
 * without Gatsby-cli
 
-  ```sh
-  git clone my-site git@github.com:maxpou/gatsby-starter-morning-dew.git
-  cd my-site
-  yarn install
-  ```
+```bash
+git clone my-site git@github.com:maxpou/gatsby-starter-morning-dew.git
+cd my-site
+yarn install
+```
 
 ## Customisation
 

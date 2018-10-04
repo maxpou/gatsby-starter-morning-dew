@@ -2,6 +2,12 @@
   padding: 0 30px 30px;
 }
 
+@media only screen and (max-width: 500px) {
+  .article {
+    padding: 0;
+  }
+}
+
 .article-footer {
   position: relative;
   margin: 6rem 0 0;

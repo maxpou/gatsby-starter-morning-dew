@@ -8,7 +8,6 @@ tags:
     - cheese
     - other
 ---
-# Ab dicemur cura
 
 ## Mane oscula anxia
 
