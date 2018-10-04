@@ -9,7 +9,6 @@ tags:
     - something
     - tagging
 ---
-# Autolyci eminus retenta
 
 ## Hoc domum solitos veteremque nostrum
 

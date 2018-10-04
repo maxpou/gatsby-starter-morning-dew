@@ -15,5 +15,9 @@ module.exports = {
     "ecmaFeatures": {
       "jsx": true,
     },
+  },
+  "rules": {
+    "react/jsx-uses-vars": 2,
+    "no-unused-vars": "warn"
   }
 }

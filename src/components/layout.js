@@ -2,9 +2,10 @@ import React, { Fragment } from 'react'
 import Header from './Header/Header'
 import Hero from './Hero/Hero'
 import Footer from './Footer/Footer'
+import siteConfig from '../../data/siteConfig'
+
 import './index.css'
 import 'prismjs/themes/prism-tomorrow.css'
-import siteConfig from '../../data/siteConfig'
 
 class Template extends React.Component {
   render() {

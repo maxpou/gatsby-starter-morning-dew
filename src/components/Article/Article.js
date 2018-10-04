@@ -9,7 +9,11 @@ class Article extends React.Component {
 
     return (
       <article className="article">
-        <Content content={post.html} date={post.frontmatter.date} />
+        <Content
+          content={post.html}
+          date={post.frontmatter.date}
+          tags={post.frontmatter.tags}
+        />
         <footer className="article-footer">
           <Bio />
         </footer>

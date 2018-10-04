@@ -9,7 +9,7 @@ tags:
   - no-cover
 ---
 
-# NOTE: This "post" is based on [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and is meant to test styling of Markdown generated documents.
+NOTE: This "post" is based on [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and is meant to test styling of Markdown generated documents.
 
 This is intended as a quick reference and showcase. For more complete info, see [John Gruber's original spec](http://daringfireball.net/projects/markdown/) and the [Github-flavored Markdown info page](http://github.github.com/github-flavored-markdown/).
 
@@ -20,21 +20,26 @@ You can play around with Markdown on our [live demo page](http://www.markdown-he
 (If you're not a Markdown Here user, check out the [Markdown Cheatsheet](./Markdown-Cheatsheet) that is not specific to MDH. But, really, you should also use Markdown Here, because it's awesome. http://markdown-here.com)
 
 ##### Table of Contents
+- [H1](#h1)
+  - [H2](#h2)
+    - [H3](#h3)
+      - [H4](#h4)
+        - [H5](#h5)
+          - [H6](#h6)
+- [Alt-H1](#alt-h1)
+  - [Alt-H2](#alt-h2)
+  - [Emphasis](#emphasis)
+  - [Lists](#lists)
+  - [Links](#links)
+  - [Images](#images)
+  - [Code and Syntax Highlighting](#code-and-syntax-highlighting)
+  - [Tables](#tables)
+  - [Blockquotes](#blockquotes)
+  - [Inline HTML](#inline-html)
+  - [Horizontal Rule](#horizontal-rule)
+  - [Line Breaks](#line-breaks)
+  - [YouTube Videos](#youtube-videos)
 
-[Headers](#headers)
-[Emphasis](#emphasis)
-[Lists](#lists)
-[Links](#links)
-[Images](#images)
-[Code and Syntax Highlighting](#code)
-[Tables](#tables)
-[Blockquotes](#blockquotes)
-[Inline HTML](#html)
-[Horizontal Rule](#hr)
-[Line Breaks](#lines)
-[YouTube Videos](#videos)
-
-<a name="headers"/>
 
 ## Headers
 
