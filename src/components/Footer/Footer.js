@@ -4,7 +4,7 @@ import './Footer.css'
 
 class Footer extends React.Component {
   render() {
-    const { authorName, footerLinks } = this.props.siteConfig
+    const { authorName, footerLinks, websiteHost } = this.props.siteConfig
 
     const FooterItem = ({ item }) => {
       if (typeof item === 'string') {
@@ -62,8 +62,8 @@ class Footer extends React.Component {
             </p>
             <p className="footer-item-text">
               Hosted with <span className="footer-heart">❤</span> by{' '}
-              <a className="footer-link" href="https://github.com/">
-                Github
+              <a className="footer-link" href={websiteHost.url}>
+                {websiteHost.name}
               </a>
               .
             </p>

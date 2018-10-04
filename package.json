@@ -43,7 +43,9 @@
   },
   "homepage": "https://github.com/maxpou/gatsby-starter-morning-dew#readme",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "blog",
+    "starter"
   ],
   "license": "MIT",
   "main": "n/a",

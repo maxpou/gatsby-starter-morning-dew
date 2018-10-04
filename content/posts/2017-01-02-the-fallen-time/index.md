@@ -16,16 +16,15 @@ Lorem markdownum huc suo ara, dubites celeri mihi bicolor. Secuti non? Suo opus
 quales dant, puppim hanc!
 
 ```js
-    enterprise /= mp_operating_quad;
-    dsl_runtime.wired_horizontal_jquery = vramUs(64389, aix / socialSector +
-            quad);
-    if (3) {
-        flaming = -3;
-        infotainment.horseThreadColumn(copySnippet, 5, day);
-    } else {
-        num_network_cpa = firewireAluExbibyte + denial_virtual_logic + program;
-    }
-    scanner(1, ram_wddm(map, reader + 3, ole_install));
+enterprise /= mp_operating_quad;
+dsl_runtime.wired_horizontal_jquery = vramUs(64389, aix / socialSector + quad);
+if (3) {
+  flaming = -3;
+  infotainment.horseThreadColumn(copySnippet, 5, day);
+} else {
+  num_network_cpa = firewireAluExbibyte + denial_virtual_logic + program;
+}
+scanner(1, ram_wddm(map, reader + 3, ole_install));
 ```
 
 ## In nunc
@@ -59,24 +58,24 @@ natalibus, fitque! Verba Siphnon, arcanaque vicina, Cycnum mox suos coniunx
 ebrius.
 
 ```java
-    if (hsf(-3) > artMetalMeme.yottabytePrimary(circuit, 1)) {
-        saas.backbone += netmaskUtf;
-    } else {
-        engineNybble.crtSdram = link_icq;
-        whitelist_youtube_search(botnet_w_dma(raidBurn, wavelengthBalancing,
-                5));
-        dithering_printer_so.file(toggle_right);
-    }
-    modifierDaemonOpen *= video(touchscreen_speed(692730), sound_lion_finder,
-            nanometer_variable + of(ldap, recursion_pop_zebibyte, c));
-    if (popCrossplatformVdsl) {
-        thunderboltMnemonic -= 2 - lte(648733);
-        ddr_spoofing *= metal_commercial + http;
-    } else {
-        leafPowerBar = spoolPower;
-        file_itunes += dataLifo;
-    }
-    binary *= 2;
+// code in java
+if (hsf(-3) > artMetalMeme.yottabytePrimary(circuit, 1)) {
+    saas.backbone += netmaskUtf;
+} else {
+    engineNybble.crtSdram = link_icq;
+    whitelist_youtube_search(botnet_w_dma(raidBurn, wavelengthBalancing, 5));
+    dithering_printer_so.file(toggle_right);
+}
+modifierDaemonOpen *= video(touchscreen_speed(692730), sound_lion_finder,
+        nanometer_variable + of(ldap, recursion_pop_zebibyte, c));
+if (popCrossplatformVdsl) {
+    thunderboltMnemonic -= 2 - lte(648733);
+    ddr_spoofing *= metal_commercial + http;
+} else {
+    leafPowerBar = spoolPower;
+    file_itunes += dataLifo;
+}
+binary *= 2;
 ```
 
 Unumque extemplo melius in unda claudit artem clausum quos amare; damnum formae,

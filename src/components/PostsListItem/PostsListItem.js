@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Flag from '../Flag/Flag'
 import TagList from '../TagList/TagList'
+import siteConfig from '../../../data/siteConfig'
 import './PostsListItem.css'
 
 class PostsListItem extends React.Component {
@@ -13,7 +14,7 @@ class PostsListItem extends React.Component {
         <header className="post-header">
           <h2 className="post-title">
             <Link to={slug}>
-              <Flag language={language} />
+              {siteConfig.multilangPosts && <Flag language={language} />}
               {title}
             </Link>
           </h2>
