@@ -1,7 +1,7 @@
 sudo: required
 language: node_js
 
-ddist: trusty
+dist: trusty
 
 script:
   - yarn install
