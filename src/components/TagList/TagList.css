@@ -1,6 +1,7 @@
 .tag-list {
   display: inline;
   margin: 0 .5rem 0 0;
+  color: #7f7e7e;
 }
 
 .tag-list-item {
