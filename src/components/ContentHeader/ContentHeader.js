@@ -12,7 +12,7 @@ class ContentIntro extends React.Component {
         {Array.isArray(tags) &&
           tags.length > 0 && (
             <Fragment>
-              {' in'}
+              <span className="ContentHeader-in"> in</span>
               <TagList tags={tags} />
             </Fragment>
           )}
