@@ -1,3 +1,7 @@
+.content {
+  line-height: 1.6;
+}
+
 .content > h2 {
   padding-top: 3rem;
   margin-top: 3rem;
@@ -10,7 +14,6 @@
 
 .content > p {
   margin: 1em 0 0 0;
-  line-height: 1.5;
 }
 
 .content-alert {
@@ -21,8 +24,18 @@
   background-color: #d9edf7;
 }
 
-.content > p > a, .content > li > a {
+.content p > a,
+.content li > a {
   border-bottom: 1px dotted rgba(162,162,162,0.8);
+}
+
+.content p > a:hover,
+.content li > a:hover {
+  border-bottom-style: solid;
+}
+
+.gatsby-resp-image-link {
+  border-bottom: none !important;
 }
 
 .content > blockquote {
