@@ -18,7 +18,7 @@ class Bio extends React.Component {
         </figure>
         <section>
           <h4>About the author</h4>
-          <p className="bio-text">{siteConfig.authorDescription}</p>
+          <p className="bio-text" dangerouslySetInnerHTML={{ __html: siteConfig.authorDescription }} />
         </section>
       </Fragment>
     )
