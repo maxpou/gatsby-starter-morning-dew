@@ -9,6 +9,7 @@ import get from 'lodash/get'
 class Page extends React.Component {
   render() {
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+    const siteDescription = get(this.props, 'data.site.siteMetadata.siteDescription')
     const page = this.props.data.markdownRemark
 
     return (
@@ -19,7 +20,7 @@ class Page extends React.Component {
       >
         <Helmet
           htmlAttributes={{ lang: 'en' }}
-          meta={[{ name: 'description', content: page.title }]}
+          meta={[{ name: 'description', content: siteDescription }]}
           title={`${page.frontmatter.title} | ${siteTitle}`}
         />
         <article className="page">
