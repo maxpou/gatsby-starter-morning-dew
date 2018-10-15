@@ -34,6 +34,11 @@
   font-weight: bold;
 }
 
+.footer-link:hover {
+  color: #e8e8e8;
+  border-bottom: 1px dotted #e8e8e8;
+}
+
 .footer-title {
   margin: 0 0 1rem;;
 }

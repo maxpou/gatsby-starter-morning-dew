@@ -16,15 +16,19 @@ class Footer extends React.Component {
       }
       if (item.url.startsWith('/')) {
         return (
-          <Link className="footer-item" to={item.url}>
-            {item.label}
-          </Link>
+          <span className="footer-item">
+            <Link className="footer-link"  to={item.url}>
+              {item.label}
+            </Link>
+          </span>
         )
       }
       return (
-        <a className="footer-item" href={item.url}>
-          {item.label}
-        </a>
+        <span className="footer-item">
+          <a className="footer-link" href={item.url}>
+            {item.label}
+          </a>
+        </span>
       )
     }
 
