@@ -40,7 +40,7 @@ module.exports = {
   After 2 years of being an expatriate in Dublin, I recently switched to digital nomad (Europe).
   When I'm not at a computer, I'm usually exploring the city or cooking a fancy pizza.
   `,
-  siteUrl: 'https://www.maxpou.fr/',
+  siteUrl: 'https://maxpou.github.io/',
   pathPrefix: '/gatsby-starter-morning-dew',
   siteCover: '/images/cover.jpg',
   googleAnalyticsId: 'UA-67868977-1',

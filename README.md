@@ -80,7 +80,8 @@ module.exports = {
   After 2 years of being an expatriate in Dublin, I recently switched to digital nomad (Europe).
   When I'm not at a computer, I'm usually exploring the city or cooking a fancy pizza.
   `,
-  siteUrl: 'https://www.maxpou.fr/',
+  siteUrl: 'https://maxpou.github.io/',
+  disqusSiteUrl: 'https://www.maxpou.fr/',
   // Prefixes all links. For cases when deployed to maxpou.fr/gatsby-starter-morning-dew/
   pathPrefix: '/gatsby-starter-morning-dew', // Note: it must *not* have a trailing slash.
   siteCover: '/images/cover.jpg',
