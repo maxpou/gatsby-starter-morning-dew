@@ -5,7 +5,7 @@
 
 Gatsby starter for creating a new blog!
 
-[Demo website.](https://www.maxpou.fr/gatsby-starter-morning-dew/)
+[Demo website.](https://maxpou.github.io/gatsby-starter-morning-dew/)
 
 ![screenshot](https://i.imgur.com/aRTBbKs.jpg)
 
