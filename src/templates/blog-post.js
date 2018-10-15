@@ -17,10 +17,10 @@ class BlogPostTemplate extends React.Component {
     if (!disqusShortname) {
       return null
     }
-    const siteUrl = get(this.props, 'data.site.siteMetadata.siteUrl')
+    const disqusSiteUrl = get(this.props, 'data.site.siteMetadata.disqusSiteUrl')
     const post = this.props.data.markdownRemark
     const disqusConfig = {
-      url: `${siteUrl}${post.frontmatter.slug}`,
+      url: `${disqusSiteUrl}${post.frontmatter.slug}`,
       title: post.frontmatter.title,
     }
 
@@ -69,7 +69,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
-        siteUrl
+        disqusSiteUrl
         disqusShortname
       }
     }
