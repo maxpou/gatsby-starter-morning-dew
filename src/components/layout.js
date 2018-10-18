@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import Header from './Header/Header'
-import Hero from './Hero/Hero'
 import Footer from './Footer/Footer'
 import siteConfig from '../../data/siteConfig'
 
@@ -9,16 +8,12 @@ import 'prismjs/themes/prism-tomorrow.css'
 
 class Template extends React.Component {
   render() {
-    const { children, heroImg } = this.props
-    const title = this.props.title || siteConfig.siteTitle
+    const { children } = this.props
 
     return (
       <Fragment>
         <Header headerLinks={siteConfig.headerLinks} />
-        <Hero heroImg={heroImg} title={title} />
-        <main id="main" className="main" role="main">
-          {children}
-        </main>
+        <div style={{ margin: '60px 0' }}>{children}</div>
         <Footer siteConfig={siteConfig} />
       </Fragment>
     )

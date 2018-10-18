@@ -1,28 +1,26 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
-import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
+import Wrapper from '../components/Wrapper/Wrapper'
+import Hero from '../components/Hero/Hero'
 import PostsList from '../components/PostsList/PostsList'
+import SEO from '../components/SEO/SEO';
 
 class BlogList extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const siteDescription = get(
-      this,
-      'props.data.site.siteMetadata.description'
-    )
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
 
     return (
       <Layout location={this.props.location}>
-        <Helmet
-          htmlAttributes={{ lang: 'en' }}
-          meta={[{ name: 'description', content: siteDescription }]}
-          title={siteTitle}
-        />
-        <PostsList posts={posts} />
+        <SEO />
+        <Hero title={siteTitle} />
+
+        <Wrapper>
+          <PostsList posts={posts} />
+        </Wrapper>
       </Layout>
     )
   }

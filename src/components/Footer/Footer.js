@@ -17,7 +17,7 @@ class Footer extends React.Component {
       if (item.url.startsWith('/')) {
         return (
           <span className="footer-item">
-            <Link className="footer-link"  to={item.url}>
+            <Link className="footer-link" to={item.url}>
               {item.label}
             </Link>
           </span>

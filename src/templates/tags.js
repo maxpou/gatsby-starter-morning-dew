@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
 import PostsList from '../components/PostsList/PostsList'
+import Wrapper from '../components/Wrapper/Wrapper'
 
 class Tags extends React.Component {
   render() {
@@ -24,8 +25,10 @@ class Tags extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`${pageTitle} | ${siteTitle}`}
         />
-        <h1>Posts tagged as "{this.props.pageContext.tag}"</h1>
-        <PostsList posts={posts} />
+        <Wrapper>
+          <h1>Posts tagged as "{this.props.pageContext.tag}"</h1>
+          <PostsList posts={posts} />
+        </Wrapper>
       </Layout>
     )
   }
