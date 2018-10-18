@@ -1,21 +1,17 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+
 import Layout from '../components/layout'
-import PostsList from '../components/PostsList/PostsList'
 import Wrapper from '../components/Wrapper/Wrapper'
+import SEO from '../components/SEO/SEO'
+import RelatedPosts from '../components/RelatedPosts/RelatedPosts'
 
 class NotFoundPage extends React.Component {
   render() {
-    const siteTitle = this.props.data.site.siteMetadata.title
     const posts = this.props.data.allMarkdownRemark.edges
 
     return (
       <Layout location={this.props.location} noCover={true}>
-        <Helmet
-          htmlAttributes={{ lang: 'en' }}
-          meta={[{ name: 'description', content: 'Page Not Found' }]}
-          title={siteTitle}
-        />
+        <SEO title="Page Not Found" />
         <Wrapper>
           <h2>Page Not Found</h2>
           <p>
@@ -24,7 +20,7 @@ class NotFoundPage extends React.Component {
           </p>
           <h2>Since you are here...</h2>
           <p>Here's my latest posts:</p>
-          <PostsList posts={posts} />
+          <RelatedPosts posts={posts} />
         </Wrapper>
       </Layout>
     )
@@ -35,12 +31,6 @@ export default NotFoundPage
 
 export const pageQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { type: { ne: "page" } } }

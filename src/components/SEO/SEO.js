@@ -1,16 +1,19 @@
-import React from "react"
-import Helmet from "react-helmet"
+import React from 'react'
+import Helmet from 'react-helmet'
 import { withPrefix } from 'gatsby'
 import siteConfig from '../../../data/siteConfig'
 
 class SEO extends React.Component {
   render() {
     const { isBlogPost, path = '', lang = 'en' } = this.props
-    const title = this.props.title 
+    const title = this.props.title
       ? `${this.props.title} | ${siteConfig.siteTitle}`
       : siteConfig.siteTitle
-    const imagePath = this.props.cover || withPrefix(siteConfig.siteCover) 
-    const formatedSiteUrl = siteConfig.siteUrl.substring(0, siteConfig.siteUrl.length - 1)
+    const imagePath = this.props.cover || withPrefix(siteConfig.siteCover)
+    const formatedSiteUrl = siteConfig.siteUrl.substring(
+      0,
+      siteConfig.siteUrl.length - 1
+    )
     const image = `${formatedSiteUrl}${imagePath}`
     const description = this.props.description || siteConfig.siteDescription
 

@@ -5,14 +5,14 @@ import Layout from '../components/layout'
 import Content from '../components/Content/Content'
 import Wrapper from '../components/Wrapper/Wrapper'
 import Hero from '../components/Hero/Hero'
-import SEO from '../components/SEO/SEO';
+import SEO from '../components/SEO/SEO'
 
 class Page extends React.Component {
   render() {
     const page = this.props.data.markdownRemark
 
     return (
-      <Layout location={this.props.location} >
+      <Layout location={this.props.location}>
         <SEO
           title={page.frontmatter.title}
           description={page.excerpt}

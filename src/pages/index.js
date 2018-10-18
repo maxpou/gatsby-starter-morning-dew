@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import Wrapper from '../components/Wrapper/Wrapper'
 import Hero from '../components/Hero/Hero'
 import PostsList from '../components/PostsList/PostsList'
-import SEO from '../components/SEO/SEO';
+import SEO from '../components/SEO/SEO'
 
 class BlogList extends React.Component {
   render() {
