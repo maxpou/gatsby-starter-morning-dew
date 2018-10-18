@@ -1,31 +1,35 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import Content from '../components/Content/Content'
-import get from 'lodash/get'
+import Wrapper from '../components/Wrapper/Wrapper'
+import Hero from '../components/Hero/Hero'
+import SEO from '../components/SEO/SEO';
 
 class Page extends React.Component {
   render() {
-    const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-    const siteDescription = get(this.props, 'data.site.siteMetadata.siteDescription')
     const page = this.props.data.markdownRemark
 
     return (
-      <Layout
-        location={this.props.location}
-        title={page.frontmatter.title}
-        heroImg={page.frontmatter.cover && page.frontmatter.cover.publicURL}
-      >
-        <Helmet
-          htmlAttributes={{ lang: 'en' }}
-          meta={[{ name: 'description', content: siteDescription }]}
-          title={`${page.frontmatter.title} | ${siteTitle}`}
+      <Layout location={this.props.location} >
+        <SEO
+          title={page.frontmatter.title}
+          description={page.excerpt}
+          path={page.frontmatter.slug}
+          cover={page.frontmatter.cover.publicURL}
         />
-        <article className="page">
-          <Content content={page.html} date={page.frontmatter.date} />
-        </article>
+
+        <Hero
+          heroImg={page.frontmatter.cover && page.frontmatter.cover.publicURL}
+          title={page.frontmatter.title}
+        />
+
+        <Wrapper>
+          <article className="page">
+            <Content content={page.html} date={page.frontmatter.date} />
+          </article>
+        </Wrapper>
       </Layout>
     )
   }
@@ -35,12 +39,6 @@ export default Page
 
 export const pageQuery = graphql`
   query PageBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        author
-      }
-    }
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       id
       excerpt

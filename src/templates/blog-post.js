@@ -1,23 +1,22 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
-import get from 'lodash/get'
 import Disqus from 'disqus-react'
 
 import Layout from '../components/layout'
+import Wrapper from '../components/Wrapper/Wrapper'
+import Hero from '../components/Hero/Hero'
 import Article from '../components/Article/Article'
 import PrevNextPost from '../components/PrevNextPost/PrevNextPost'
+import SEO from '../components/SEO/SEO';
 
 class BlogPostTemplate extends React.Component {
   renderDisqus() {
-    const disqusShortname = get(
-      this.props,
-      'data.site.siteMetadata.disqusShortname'
-    )
+    const disqusShortname = this.props.data.site.siteMetadata.disqusShortname
     if (!disqusShortname) {
       return null
     }
-    const disqusSiteUrl = get(this.props, 'data.site.siteMetadata.disqusSiteUrl')
+    const disqusSiteUrl = this.props.data.site.siteMetadata.disqusSiteUrl
     const post = this.props.data.markdownRemark
     const disqusConfig = {
       url: `${disqusSiteUrl}${post.frontmatter.slug}`,
@@ -34,28 +33,33 @@ class BlogPostTemplate extends React.Component {
 
   render() {
     const post = this.props.data.markdownRemark
-    const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-    const siteDescription = post.excerpt
     const { previous, next } = this.props.pageContext
-    const lang = post.frontmatter.language ? post.frontmatter.language : 'en'
+    console.log(post);
 
     return (
-      <Layout
-        location={this.props.location}
-        title={post.frontmatter.title}
-        heroImg={post.frontmatter.cover && post.frontmatter.cover.publicURL}
-      >
-        <Helmet
-          htmlAttributes={{ lang: lang }}
-          meta={[{ name: 'description', content: siteDescription }]}
-          title={`${post.frontmatter.title} | ${siteTitle}`}
+      <Layout location={this.props.location}>
+        <SEO 
+          title={post.frontmatter.title}
+          description={post.excerpt}
+          cover={post.frontmatter.cover.publicURL}
+          lang={post.frontmatter.language}
+          path={post.frontmatter.slug}
+          isBlogPost
         />
 
-        <Article post={post} />
+        <Hero
+          heroImg={post.frontmatter.cover && post.frontmatter.cover.publicURL}
+          title={post.frontmatter.title}
+        />
 
-        {this.renderDisqus()}
+        <Wrapper>
+          <Article post={post} />
+        </Wrapper>
 
-        <PrevNextPost previous={previous} next={next} />
+        <Wrapper>
+          {this.renderDisqus()}
+          <PrevNextPost previous={previous} next={next} />
+        </Wrapper>
       </Layout>
     )
   }

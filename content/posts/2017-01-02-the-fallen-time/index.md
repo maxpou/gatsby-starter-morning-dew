@@ -16,15 +16,29 @@ Lorem markdownum huc suo ara, dubites celeri mihi bicolor. Secuti non? Suo opus
 quales dant, puppim hanc!
 
 ```js
-enterprise /= mp_operating_quad;
-dsl_runtime.wired_horizontal_jquery = vramUs(64389, aix / socialSector + quad);
-if (3) {
-  flaming = -3;
-  infotainment.horseThreadColumn(copySnippet, 5, day);
-} else {
-  num_network_cpa = firewireAluExbibyte + denial_virtual_logic + program;
+const ThemeContext = React.createContext('light');
+
+class ThemeProvider extends React.Component {
+  state = {theme: 'light'};
+
+  render() {
+    return (
+      <ThemeContext.Provider value={this.state.theme}>
+        {this.props.children}
+      </ThemeContext.Provider>
+    );
+  }
 }
-scanner(1, ram_wddm(map, reader + 3, ole_install));
+
+class ThemedButton extends React.Component {
+  render() {
+    return (
+      <ThemeContext.Consumer>
+        {theme => <Button theme={theme} />}
+      </ThemeContext.Consumer>
+    );
+  }
+}
 ```
 
 ## In nunc
