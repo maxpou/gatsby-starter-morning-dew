@@ -5,8 +5,8 @@ import get from 'lodash/get'
 import Layout from '../components/layout'
 import PostsList from '../components/PostsList/PostsList'
 import Wrapper from '../components/Wrapper/Wrapper'
-import SEO from '../components/SEO/SEO';
-import Hero from '../components/Hero/Hero';
+import SEO from '../components/SEO/SEO'
+import Hero from '../components/Hero/Hero'
 
 class Tags extends React.Component {
   render() {

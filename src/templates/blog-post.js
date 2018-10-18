@@ -1,5 +1,4 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Disqus from 'disqus-react'
 
@@ -8,7 +7,7 @@ import Wrapper from '../components/Wrapper/Wrapper'
 import Hero from '../components/Hero/Hero'
 import Article from '../components/Article/Article'
 import PrevNextPost from '../components/PrevNextPost/PrevNextPost'
-import SEO from '../components/SEO/SEO';
+import SEO from '../components/SEO/SEO'
 
 class BlogPostTemplate extends React.Component {
   renderDisqus() {
@@ -34,11 +33,10 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const { previous, next } = this.props.pageContext
-    console.log(post);
 
     return (
       <Layout location={this.props.location}>
-        <SEO 
+        <SEO
           title={post.frontmatter.title}
           description={post.excerpt}
           cover={post.frontmatter.cover.publicURL}
