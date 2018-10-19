@@ -17,7 +17,6 @@ const Ghost = styled.p`
   line-height: 1.5;
   text-align: center;
   font-size: 7rem;
-  content: '👻';
 `
 
 const SubTitle = styled.h2`
