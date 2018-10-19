@@ -1,5 +1,5 @@
 ---
-title: "Le Corbeau et le Renard (fake post)"
+title: "Le Corbeau et le Renard (fake French post)"
 slug: post-en-francais
 cover: ./cover.jpg
 date: 2018-01-02
