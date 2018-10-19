@@ -6,9 +6,6 @@ module.exports = {
   "plugins": [
     "react",
   ],
-  "globals": {
-    "graphql": false,
-  },
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": 2018,

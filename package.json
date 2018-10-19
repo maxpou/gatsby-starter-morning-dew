@@ -7,6 +7,7 @@
     "url": "https://github.com/maxpou/gatsby-starter-morning-dew/issues"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^1.8.0",
     "disqus-react": "^1.0.5",
     "gatsby": "^2.0.0-rc.28",
     "gatsby-plugin-feed": "next",
@@ -15,7 +16,7 @@
     "gatsby-plugin-offline": "^2.0.5",
     "gatsby-plugin-react-helmet": "next",
     "gatsby-plugin-sharp": "next",
-    "gatsby-plugin-typography": "next",
+    "gatsby-plugin-styled-components": "^3.0.0",
     "gatsby-remark-autolink-headers": "^2.0.6",
     "gatsby-remark-copy-linked-files": "next",
     "gatsby-remark-images": "next",
@@ -30,11 +31,7 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-helmet": "^5.2.0",
-    "react-typography": "^0.16.13",
-    "typeface-merriweather": "0.0.54",
-    "typeface-montserrat": "0.0.54",
-    "typography": "^0.16.17",
-    "typography-theme-wordpress-2016": "^0.15.10"
+    "styled-components": "^4.0.2"
   },
   "devDependencies": {
     "eslint": "^5.7.0",
