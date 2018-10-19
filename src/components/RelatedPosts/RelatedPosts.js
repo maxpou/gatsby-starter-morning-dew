@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
+import { StyledLink } from '../Commons'
 import Flag from '../Flag/Flag'
 import siteConfig from '../../../data/siteConfig'
 
@@ -14,11 +15,11 @@ class RelatedPosts extends React.Component {
           const slug = post.node.frontmatter.slug
           const language = post.node.frontmatter.language || 'en'
           return (
-            <li>
-              <Link to={slug}>
+            <li key={slug}>
+              <StyledLink to={slug}>
                 {siteConfig.multilangPosts && <Flag language={language} />}
                 {title}
-              </Link>
+              </StyledLink>
             </li>
           )
         })}

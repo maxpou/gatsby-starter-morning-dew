@@ -39,7 +39,7 @@ class BlogPostTemplate extends React.Component {
         <SEO
           title={post.frontmatter.title}
           description={post.excerpt}
-          cover={post.frontmatter.cover.publicURL}
+          cover={post.frontmatter.cover && post.frontmatter.cover.publicURL}
           lang={post.frontmatter.language}
           path={post.frontmatter.slug}
           isBlogPost

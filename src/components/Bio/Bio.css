@@ -59,10 +59,10 @@
 
 @media only screen and (max-width: 500px) {
   .post-footer .author-image {
-      top: -60px;
+    top: -60px;
   }
 
   .author-profile .author-image {
-      margin-top: -70px;
+    margin-top: -70px;
   }
 }

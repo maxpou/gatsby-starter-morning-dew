@@ -17,7 +17,7 @@ class Page extends React.Component {
           title={page.frontmatter.title}
           description={page.excerpt}
           path={page.frontmatter.slug}
-          cover={page.frontmatter.cover.publicURL}
+          cover={page.frontmatter.cover && page.frontmatter.cover.publicURL}
         />
 
         <Hero
