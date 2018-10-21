@@ -1,5 +1,4 @@
 import React from 'react'
-// import { Link } from 'gatsby'
 import { StyledLink } from '../Commons'
 import Flag from '../Flag/Flag'
 import siteConfig from '../../../data/siteConfig'
