@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 
-import PostsListItem from '../PostsListItem/PostsListItem'
+import PostsListItem from './PostsListItem'
 
 class PostsList extends React.Component {
   render() {

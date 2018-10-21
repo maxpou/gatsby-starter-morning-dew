@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 
 export const StyledLink = styled(Link)`
   border-bottom: 1px dotted rgba(162, 162, 162, 0.8);
