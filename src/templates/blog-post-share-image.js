@@ -20,7 +20,7 @@ const Preview = styled.div.attrs({
 `
 
 const Title = styled.h1.attrs({
-  fontsize: props => props.type === 'twitter' ? '2.5rem' : '4.8rem',
+  fontsize: props => (props.type === 'twitter' ? '2.5rem' : '4.8rem'),
 })`
   font-weight: 700;
   font-size: ${props => props.fontsize};
@@ -31,7 +31,7 @@ const Title = styled.h1.attrs({
 `
 
 const ReadTime = styled.h2.attrs({
-  fontsize: props => props.type === 'twitter' ? '1.5rem' : '2rem',
+  fontsize: props => (props.type === 'twitter' ? '1.5rem' : '2rem'),
 })`
   vertical-align: middle;
   font-size: ${props => props.fontsize};
@@ -46,7 +46,7 @@ const ReadTime = styled.h2.attrs({
 class BlogPostShareImage extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
-    const { width, height, type} = this.props.pageContext
+    const { width, height, type } = this.props.pageContext
     const heroImg = post.frontmatter.cover && post.frontmatter.cover.publicURL
 
     return (
