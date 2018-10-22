@@ -61,6 +61,9 @@ yarn format
 
 # lint code
 yarn lint
+
+# Generate generate post preview images (yarn dev need to run before)
+yarn generatePostPreviewImages
 ```
 
 **:warning: Add `--prefix-paths` if you are using path prefix!**

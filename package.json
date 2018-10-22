@@ -36,7 +36,9 @@
   "devDependencies": {
     "eslint": "^5.7.0",
     "eslint-plugin-react": "^7.7.0",
-    "prettier": "^1.12.0"
+    "prettier": "^1.12.0",
+    "puppeteer": "^1.9.0",
+    "yaml": "^1.0.0"
   },
   "homepage": "https://github.com/maxpou/gatsby-starter-morning-dew#readme",
   "keywords": [
@@ -58,6 +60,7 @@
     "develop": "gatsby develop",
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
+    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",
+    "generatePostPreviewImages": "node ./scripts/generatePostPreviewImages.js"
   }
 }
