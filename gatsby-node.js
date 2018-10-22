@@ -4,9 +4,10 @@ const { createFilePath } = require('gatsby-source-filesystem')
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const blogPostTemplate = resolve('./src/templates/blog-post.js')
-  const pageTemplate = resolve('./src/templates/page.js')
-  const postsBytagTemplate = resolve('./src/templates/tags.js')
+  const BlogPostTemplate = resolve('./src/templates/blog-post.js')
+  const BlogPostShareImage = resolve('./src/templates/blog-post-share-image.js')
+  const PageTemplate = resolve('./src/templates/page.js')
+  const PostsBytagTemplate = resolve('./src/templates/tags.js')
 
   const allMarkdown = await graphql(
     `
@@ -43,13 +44,38 @@ exports.createPages = async ({ graphql, actions }) => {
 
       createPage({
         path: post.node.frontmatter.slug,
-        component: blogPostTemplate,
+        component: BlogPostTemplate,
         context: {
           slug: post.node.frontmatter.slug,
           previous,
           next,
         },
       })
+
+      // generate post share images (dev only)
+      if (process.env.gatsby_executing_command.includes('develop')) {
+        createPage({
+          path: `${post.node.frontmatter.slug}/image_tw`,
+          component: BlogPostShareImage,
+          context: {
+            slug: post.node.frontmatter.slug,
+            width: 440,
+            height: 220,
+            type: 'twitter',
+          }
+        })
+        createPage({
+          path: `${post.node.frontmatter.slug}/image_fb`,
+          component: BlogPostShareImage,
+          context: {
+            slug: post.node.frontmatter.slug,
+            width: 1200,
+            height: 630,
+            type: 'facebook',
+          }
+        })
+      }
+
     })
 
   // generate pages
@@ -58,7 +84,7 @@ exports.createPages = async ({ graphql, actions }) => {
     .forEach(page => {
       createPage({
         path: page.node.frontmatter.slug,
-        component: pageTemplate,
+        component: PageTemplate,
         context: {
           slug: page.node.frontmatter.slug,
         },
@@ -72,7 +98,7 @@ exports.createPages = async ({ graphql, actions }) => {
     .forEach(uniqTag => {
       createPage({
         path: `tags/${uniqTag}`,
-        component: postsBytagTemplate,
+        component: PostsBytagTemplate,
         context: {
           tag: uniqTag
         },
