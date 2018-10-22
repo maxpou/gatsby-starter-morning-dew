@@ -3,8 +3,8 @@ import Header from './Header/Header'
 import Footer from './Footer/Footer'
 import siteConfig from '../../data/siteConfig'
 
-import './index.css'
 import 'prismjs/themes/prism-tomorrow.css'
+import { GlobalStyle } from './Commons'
 
 class Template extends React.Component {
   render() {
@@ -12,6 +12,7 @@ class Template extends React.Component {
 
     return (
       <Fragment>
+        <GlobalStyle />
         <Header headerLinks={siteConfig.headerLinks} />
         <div style={{ margin: '60px 0' }}>{children}</div>
         <Footer siteConfig={siteConfig} />

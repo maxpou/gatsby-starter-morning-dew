@@ -1,22 +1,27 @@
 import React, { Fragment } from 'react'
+import styled from 'styled-components'
 import TagList from '../TagList/TagList'
-import './ContentHeader.css'
+
+const Header = styled.header`
+  margin-bottom: 2rem;
+  color: #7f7e7e;
+`
 
 class ContentIntro extends React.Component {
   render() {
     const { date, tags } = this.props
 
     return (
-      <header className="ContentHeader">
-        {date && <time className="ContentHeader-time">{date}</time>}
+      <Header>
+        {date && <time>{date}</time>}
         {Array.isArray(tags) &&
           tags.length > 0 && (
             <Fragment>
-              <span className="ContentHeader-in"> in</span>
+              <span> in</span>
               <TagList tags={tags} />
             </Fragment>
           )}
-      </header>
+      </Header>
     )
   }
 }
