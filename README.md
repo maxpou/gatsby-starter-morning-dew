@@ -36,15 +36,17 @@ Gatsby starter for creating a new blog!
   - :page_with_curl: Manifest support 
 - [:wrench: Fully configurable (see data/siteConfig.js)](./data/siteConfig.js)
 - :speech_balloon: Disqus support
+- :nail_care: css-in-js (with [styled-components](https://www.styled-components.com))
 - :bookmark: Groups post with tags
 - :bar_chart: Google Analytics support
+- :bird: post preview image generation (Twitter, Facebook)
 - :gem: Developer tools:
   - eslint
   - prettier
 - :construction_worker: Travis CI support
 
 
-![Lighthouse scores (locally :bowtie:)](https://lighthouse.now.sh/?perf=98&pwa=81&a11y=92&bp=100&seo=100)
+![Lighthouse scores (locally :bowtie:)](https://lighthouse.now.sh/?perf=97&pwa=96&a11y=92&bp=100&seo=100)
 
 
 ## Commands
