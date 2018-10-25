@@ -61,6 +61,15 @@ const ContentBody = styled.div`
     margin: 0;
     padding: 0;
   }
+
+  & p > code.language-text,
+  & li > code.language-text {
+    background: rgba(255, 229, 100, 0.2);
+    color: #222222cc;
+    padding: 0 3px;
+    font-size: 0.94em;
+    border-radius: 0.3rem;
+  }
 `
 
 class Content extends React.Component {

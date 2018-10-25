@@ -1,0 +1,86 @@
+---
+title: "What's new in gatsby-starter-morning-dew v1.1?"
+slug: gatsby-starter-morning-dew-v1-1
+date: 2018-10-30
+language: en
+cover: ./cover-balloons.jpg
+tags:
+  - gatsby
+---
+
+**TLDR;** Metatags generation, CSS-in-JS and pagination are now in `gatsby-starter-morning-dew` 🎉
+
+## 🏷 Meta tags generator
+
+It's now posible to generate some preview images for social networks (Twitter and Facebook).
+
+![](./gatsby-starter-morning-dew-v1-1-tw.png)
+
+This great idea come from a [conversation](https://twitter.com/_maxpou/status/1054106299213012992) I had with Luciano Mammino (aka [@Loige](https://twitter.com/loige)). I basically took 85% of his code. Thanks Luciano 😊
+
+
+**How to do it?**
+
+1. In a terminal, run `npm run dev`.
+2. In a second terminal, run: `npm run generatePostPreviewImages`
+
+Gatsby will first create extra url suffixed by `/image_tw` and `/image_fb`. Then, Pupetter will take a snapshot and add it to your post folder.
+
+**Note:** the url suffixed by `image_tw` and `image_fb` are only available on dev mode. I volontary remove them in production.
+
+Once, you're ready, you can test your Twitter Cards with: https://cards-dev.twitter.com/validator
+
+**Quick tip:** If you want to recreate this pictures
+
+```bash
+# delete Facebook images
+find ./content -name "*-fb.png" -type f -delete
+# delete Twitter images
+find ./content -name "*-tw.png" -type f -delete
+```
+
+## 💅 CSS-in-JS
+
+I added a library called [styled-components](https://www.styled-components.com/) which allow me to create components like this:
+
+```jsx
+const Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
+
+render(
+  <Title>
+    Hello World!
+  </Title>
+);
+```
+
+Main motivations were:
+
+* **Avoid name collision**. During the development I face a problem where component's CSS had collision with other components. Now this problem is fixed. Styled component assing uniq class identifer (example `class="Article__ArticleWrapper-dSJTpe loVbTg"`).
+* **Automatic critical CSS**.
+* **Cleaner file architecture**. I previously had a redundant file organisation. For 1 component, I end up with 1 folder and 2 files with the same name (but a different extension).
+  ```bash
+  # Before
+  ├── components/
+  │   ├── Article
+  │   │   ├── Article.css
+  │   │   └── Article.js
+  │   ├── Content
+  │   │   ├── Content.css
+  │   │   └── Content.js
+  │   └── ...
+  
+  # Now
+  ├── components/
+  │   ├── Article.js
+  │   ├── Content.js
+  ```
+
+Biggest cons: files are now larger!
+
+## Pagination
+
+### // TODO
