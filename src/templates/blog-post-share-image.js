@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, withPrefix } from 'gatsby'
 import styled from 'styled-components'
 import siteConfig from '../../data/siteConfig'
+import { GlobalStyle } from '../components/Commons'
 
 const Preview = styled.div.attrs({
   width: props => props.width || 440,
@@ -20,7 +21,7 @@ const Preview = styled.div.attrs({
 `
 
 const Title = styled.h1.attrs({
-  fontsize: props => (props.type === 'twitter' ? '2.5rem' : '4.8rem'),
+  fontsize: props => (props.type === 'twitter' ? '1.8rem' : '4.8rem'),
 })`
   font-weight: 700;
   font-size: ${props => props.fontsize};
@@ -48,11 +49,15 @@ class BlogPostShareImage extends React.Component {
     const post = this.props.data.markdownRemark
     const { width, height, type } = this.props.pageContext
     const heroImg = post.frontmatter.cover && post.frontmatter.cover.publicURL
+    const minute = post.timeToRead === 1 ? 'min' : 'mins'
 
     return (
       <Preview width={width} height={height} hero={heroImg}>
+        <GlobalStyle />
         <Title type={type}>{post.frontmatter.title}</Title>
-        <ReadTime type={type}>{post.timeToRead} mins</ReadTime>
+        <ReadTime type={type}>
+          {post.timeToRead} {minute}
+        </ReadTime>
       </Preview>
     )
   }

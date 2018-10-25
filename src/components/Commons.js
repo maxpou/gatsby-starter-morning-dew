@@ -27,7 +27,8 @@ a {
   color: rgba(34,34,34,0.8);
 }
 
-ul {
+ul,
+ol {
   padding-left: 2em;
   margin: 1em 0 0 0;
 }
