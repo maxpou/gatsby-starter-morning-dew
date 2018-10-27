@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
-import RelatedPosts from '../RelatedPosts/RelatedPosts'
-import { Text } from '../Commons'
+import RelatedPosts from './RelatedPosts'
+import { Text } from './Commons'
 
 class PrevNextPost extends React.Component {
   render() {

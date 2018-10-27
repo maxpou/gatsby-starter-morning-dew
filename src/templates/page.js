@@ -2,10 +2,10 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
-import Content from '../components/Content/Content'
-import Wrapper from '../components/Wrapper/Wrapper'
-import Hero from '../components/Hero/Hero'
-import SEO from '../components/SEO/SEO'
+import Content from '../components/Content'
+import Wrapper from '../components/Wrapper'
+import Hero from '../components/Hero'
+import SEO from '../components/SEO'
 import Disqus from '../components/Disqus'
 
 class Page extends React.Component {

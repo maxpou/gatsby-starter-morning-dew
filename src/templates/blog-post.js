@@ -2,11 +2,11 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
-import Wrapper from '../components/Wrapper/Wrapper'
-import Hero from '../components/Hero/Hero'
-import Article from '../components/Article/Article'
-import PrevNextPost from '../components/PrevNextPost/PrevNextPost'
-import SEO from '../components/SEO/SEO'
+import Wrapper from '../components/Wrapper'
+import Hero from '../components/Hero'
+import Article from '../components/Article'
+import PrevNextPost from '../components/PrevNextPost'
+import SEO from '../components/SEO'
 import Disqus from '../components/Disqus'
 
 class BlogPostTemplate extends React.Component {

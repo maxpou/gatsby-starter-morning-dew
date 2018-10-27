@@ -9,20 +9,6 @@ Gatsby starter for creating a new blog!
 
 ![screenshot](https://i.imgur.com/aRTBbKs.jpg)
 
-
-## Installation
-
-
-* with Gatsby-cli: `gatsby new gatsby-blog https://github.com/maxpou/gatsby-starter-morning-dew`
-
-* without Gatsby-cli
-
-  ```sh
-  git clone my-site git@github.com:maxpou/gatsby-starter-morning-dew.git
-  cd my-site
-  yarn install
-  ```
-
 ## Features
 
 - [:purple_heart: Gatsby v2](https://www.gatsbyjs.org/) / React 16
@@ -36,7 +22,7 @@ Gatsby starter for creating a new blog!
   - :page_with_curl: Manifest support 
 - [:wrench: Fully configurable (see data/siteConfig.js)](./data/siteConfig.js)
 - :speech_balloon: Disqus support
-- :nail_care: css-in-js (with [styled-components](https://www.styled-components.com))
+- :nail_care: css-in-js (with [styled-components v4](https://www.styled-components.com))
 - :bookmark: Groups post with tags
 - :bar_chart: Google Analytics support
 - :bird: post preview image generation (Twitter, Facebook)
@@ -48,6 +34,19 @@ Gatsby starter for creating a new blog!
 
 ![Lighthouse scores (locally :bowtie:)](https://lighthouse.now.sh/?perf=97&pwa=96&a11y=92&bp=100&seo=100)
 
+
+## Installation
+
+
+* with Gatsby-cli: `gatsby new gatsby-blog https://github.com/maxpou/gatsby-starter-morning-dew`
+
+* without Gatsby-cli
+
+  ```sh
+  git clone my-site git@github.com:maxpou/gatsby-starter-morning-dew.git
+  cd my-site
+  yarn install
+  ```
 
 ## Commands
 

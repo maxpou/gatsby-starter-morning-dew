@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
-import Wrapper from '../components/Wrapper/Wrapper'
-import SEO from '../components/SEO/SEO'
-import RelatedPosts from '../components/RelatedPosts/RelatedPosts'
+import Wrapper from '../components/Wrapper'
+import SEO from '../components/SEO'
+import RelatedPosts from '../components/RelatedPosts'
 import { Text } from '../components/Commons'
 
 const MainTitle = styled.h1`

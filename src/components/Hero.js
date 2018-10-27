@@ -1,6 +1,6 @@
 import React from 'react'
 import { withPrefix } from 'gatsby'
-import siteConfig from '../../../data/siteConfig'
+import siteConfig from '../../data/siteConfig'
 import styled from 'styled-components'
 
 const HeroContainer = styled.div`

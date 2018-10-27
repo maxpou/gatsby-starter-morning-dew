@@ -3,10 +3,10 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Layout from '../components/layout'
-import Wrapper from '../components/Wrapper/Wrapper'
-import Hero from '../components/Hero/Hero'
-import PostsList from '../components/PostsList/PostsList'
-import SEO from '../components/SEO/SEO'
+import Wrapper from '../components/Wrapper'
+import Hero from '../components/Hero'
+import PostsList from '../components/PostsList'
+import SEO from '../components/SEO'
 
 class BlogList extends React.Component {
   render() {

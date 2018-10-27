@@ -1,7 +1,7 @@
 import React from 'react'
-import { StyledLink } from '../Commons'
-import Flag from '../Flag/Flag'
-import siteConfig from '../../../data/siteConfig'
+import { StyledLink } from './Commons'
+import Flag from './Flag/Flag'
+import siteConfig from '../../data/siteConfig'
 
 class RelatedPosts extends React.Component {
   render() {

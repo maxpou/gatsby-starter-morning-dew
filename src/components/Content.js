@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import ContentHeader from '../ContentHeader/ContentHeader'
+import ContentHeader from './ContentHeader'
 
 const ContentBody = styled.div`
   line-height: 1.6;
