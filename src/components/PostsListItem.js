@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Flag from '../Flag/Flag'
-import TagList from '../TagList/TagList'
-import siteConfig from '../../../data/siteConfig'
+import Flag from './Flag/Flag'
+import TagList from './TagList'
+import siteConfig from '../../data/siteConfig'
 import styled from 'styled-components'
 
 const Post = styled.article`

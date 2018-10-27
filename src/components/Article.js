@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import Bio from '../Bio/Bio'
-import Content from '../Content/Content'
+import Bio from './Bio'
+import Content from './Content'
 
 const ArticleWrapper = styled.article`
   padding: 0 30px 30px;

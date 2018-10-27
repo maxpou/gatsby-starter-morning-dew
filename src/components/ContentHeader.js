@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
-import TagList from '../TagList/TagList'
+import TagList from './TagList'
 
 const Header = styled.header`
   margin-bottom: 2rem;

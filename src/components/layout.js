@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
-import Header from './Header/Header'
-import Footer from './Footer/Footer'
+import Header from './Header'
+import Footer from './Footer'
 import siteConfig from '../../data/siteConfig'
 
 import 'prismjs/themes/prism-tomorrow.css'

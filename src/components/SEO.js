@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { withPrefix } from 'gatsby'
-import siteConfig from '../../../data/siteConfig'
+import siteConfig from '../../data/siteConfig'
 
 class SEO extends React.Component {
   render() {
