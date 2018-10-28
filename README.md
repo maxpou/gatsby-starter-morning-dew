@@ -37,7 +37,6 @@ Gatsby starter for creating a new blog!
 
 ## Installation
 
-
 * with Gatsby-cli: `gatsby new gatsby-blog https://github.com/maxpou/gatsby-starter-morning-dew`
 
 * without Gatsby-cli
