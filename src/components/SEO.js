@@ -9,12 +9,14 @@ class SEO extends React.Component {
     const title = this.props.title
       ? `${this.props.title} | ${siteConfig.siteTitle}`
       : siteConfig.siteTitle
-    const imagePath = this.props.cover || withPrefix(siteConfig.siteCover)
     const formatedSiteUrl = siteConfig.siteUrl.substring(
       0,
       siteConfig.siteUrl.length - 1
     )
+    const imagePath = this.props.imageFb || this.props.cover || withPrefix(siteConfig.siteCover)
+    const imagePathTwitter = this.props.imageTw || this.props.cover || withPrefix(siteConfig.siteCover)
     const image = `${formatedSiteUrl}${imagePath}`
+    const imageTwitter = `${formatedSiteUrl}${imagePathTwitter}`
     const description = this.props.description || siteConfig.siteDescription
 
     return (
@@ -35,7 +37,7 @@ class SEO extends React.Component {
         <meta name="twitter:creator" content={siteConfig.twitterUsername} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={image} />
+        <meta name="twitter:image" content={imageTwitter} />
       </Helmet>
     )
   }

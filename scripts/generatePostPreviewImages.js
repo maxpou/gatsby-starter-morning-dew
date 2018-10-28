@@ -11,7 +11,9 @@ const takeScreenshot = async (url, width, height, destination) => {
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   })
   const page = await browser.newPage()
-  await page.goto(url)
+  await page.goto(url, {
+    waitUntil: 'networkidle2'
+  })
   await page.screenshot({
     path: destination,
     clip: {

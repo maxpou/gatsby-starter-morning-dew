@@ -19,16 +19,17 @@ const ContentBody = styled.div`
     margin: 1em 0 0 0;
   }
 
-  & p > a,
-  & li > a {
+  & a {
     border-bottom: 1px dotted rgba(162, 162, 162, 0.8);
 
     &:hover {
       border-bottom-style: solid;
     }
-  }
-  .gatsby-resp-image-link {
-    border-bottom: none !important;
+
+    &.anchor,
+    &.gatsby-resp-image-link {
+      border: none;
+    }
   }
 
   & > blockquote {

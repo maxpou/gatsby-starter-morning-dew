@@ -12,19 +12,21 @@ const Preview = styled.div.attrs({
   width: ${props => props.width}px;
   height: ${props => props.height}px;
   background-image: url("${props => props.hero}");
-  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  display: table-cell;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   vertical-align: middle;
   text-align: center;
 `
 
 const Title = styled.h1.attrs({
-  fontsize: props => (props.type === 'twitter' ? '1.8rem' : '4.8rem'),
+  fontSize: props => (props.type === 'twitter' ? '1.8rem' : '4.8rem'),
 })`
   font-weight: 700;
-  font-size: ${props => props.fontsize};
+  font-size: ${props => props.fontSize};
   margin: 10px 60px;
   color: #fff;
   text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.6);
@@ -32,10 +34,10 @@ const Title = styled.h1.attrs({
 `
 
 const ReadTime = styled.h2.attrs({
-  fontsize: props => (props.type === 'twitter' ? '1.5rem' : '2rem'),
+  fontSize: props => (props.type === 'twitter' ? '1.5rem' : '2rem'),
 })`
   vertical-align: middle;
-  font-size: ${props => props.fontsize};
+  font-size: ${props => props.fontSize};
   text-align: center;
   color: #fff;
   ::before {

@@ -20,6 +20,8 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.excerpt}
           cover={post.frontmatter.cover && post.frontmatter.cover.publicURL}
+          imageFb={post.frontmatter.imageFb && post.frontmatter.imageFb.publicURL}
+          imageTw={post.frontmatter.imageTw && post.frontmatter.imageTw.publicURL}
           lang={post.frontmatter.language}
           path={post.frontmatter.slug}
           isBlogPost
@@ -58,6 +60,12 @@ export const pageQuery = graphql`
         language
         tags
         cover {
+          publicURL
+        }
+        imageTw {
+          publicURL
+        }
+        imageFb {
           publicURL
         }
       }

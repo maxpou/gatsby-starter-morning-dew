@@ -4,11 +4,13 @@ slug: gatsby-starter-morning-dew-v1-1
 date: 2018-10-30
 language: en
 cover: ./cover-balloons.jpg
+imageTw: ./gatsby-starter-morning-dew-v1-1-tw.png
+imageFb: ./gatsby-starter-morning-dew-v1-1-fb.png
 tags:
   - gatsby
 ---
 
-**TLDR;** Metatags generation, CSS-in-JS and pagination are now in `gatsby-starter-morning-dew` 🎉
+**TLDR;** Metatags generation, CSS-in-JS ([styled-components](https://www.styled-components.com)) and pagination are now in gatsby-starter-morning-dew 🎉
 
 ## 🏷 Meta tags generator
 
@@ -24,9 +26,9 @@ This great idea come from a [conversation](https://twitter.com/_maxpou/status/10
 1. In a terminal, run `npm run dev`.
 2. In a second terminal, run: `npm run generatePostPreviewImages`
 
-Gatsby will first create extra url suffixed by `/image_tw` and `/image_fb`. Then, Pupetter will take a snapshot and add it to your post folder.
+Gatsby will first create extra url suffixed by `/image_tw` and `/image_fb` (i.e. *http://localhost:8000/gatsby-starter-morning-dew-v1-1/image_tw*). Then, Pupetter will take a snapshot and add it to your post folder.
 
-**Note:** the url suffixed by `image_tw` and `image_fb` are only available on dev mode. I volontary remove them in production.
+**Note:** this extra URLs are only available on dev mode. I volontary remove them in production.
 
 Once, you're ready, you can test your Twitter Cards with: https://cards-dev.twitter.com/validator
 
@@ -39,9 +41,9 @@ find ./content -name "*-fb.png" -type f -delete
 find ./content -name "*-tw.png" -type f -delete
 ```
 
-## 💅 CSS-in-JS
+## 💅 CSS-in-JS (styled-components)
 
-I added a library called [styled-components](https://www.styled-components.com/) which allow me to create components like this:
+I added a library called [styled-components](https://www.styled-components.com) which allow me to create components like this:
 
 ```jsx
 const Title = styled.h1`
@@ -83,4 +85,11 @@ Biggest cons: files are now larger!
 
 ## Pagination
 
-### // TODO
+### 🚧 TODO 🚧
+
+## Other
+
+* Few CSS improvements. Example:
+  <code style="background: #2d2d2d; border-radius: .3em; padding: .1em; color: #ccc;">previous code tag</code> ... `new code tag`
+* Generate WebP images (withWebp option in [gatsby-remark-images](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-remark-images#options))
+* Disqus support on pages (previously only supported on blog posts)
