@@ -8,8 +8,6 @@ dist: trusty
 script:
   - yarn install
   - yarn lint
-
-before_deploy:
   - yarn build --prefix-paths
 
 deploy:
