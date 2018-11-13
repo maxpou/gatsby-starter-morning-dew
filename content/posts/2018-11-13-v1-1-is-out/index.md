@@ -1,7 +1,7 @@
 ---
 title: "What's new in gatsby-starter-morning-dew v1.1?"
 slug: gatsby-starter-morning-dew-v1-1
-date: 2018-10-30
+date: 2018-11-13
 language: en
 cover: ./cover-balloons.jpg
 imageTw: ./gatsby-starter-morning-dew-v1-1-tw.png
@@ -25,6 +25,13 @@ This great idea come from a [conversation](https://twitter.com/_maxpou/status/10
 
 1. In a terminal, run `npm run dev`.
 2. In a second terminal, run: `npm run generatePostPreviewImages`
+3. Add the images in the post's header
+  ```yaml
+  title: My blog post
+  # ...
+  imageTw: ./gatsby-starter-morning-dew-v1-1-tw.png
+  imageFb: ./gatsby-starter-morning-dew-v1-1-fb.png
+  ```
 
 Gatsby will first create extra url suffixed by `/image_tw` and `/image_fb` (i.e. *http://localhost:8000/gatsby-starter-morning-dew-v1-1/image_tw*). Then, Pupetter will take a snapshot and add it to your post folder.
 
@@ -46,7 +53,7 @@ If you don't to skip the file generation for some posts, add `generate-card: fal
 ```yaml
 ---
 title: My blog post
-slug: mu-blog-post
+# ...
 generate-card: false
 ---
 ```

@@ -28,7 +28,7 @@ const takeScreenshot = async (url, width, height, destination) => {
 }
 
 const getArticleFiles = () => {
-  return glob.sync(join(__dirname, '..', 'content', 'posts', '**', 'index.md'))
+  return glob.sync(join(__dirname, '..', 'content', 'posts', '**', '*.md'))
 }
 
 const parseFile = async file => {
@@ -56,7 +56,6 @@ const main = async () => {
   for (let i = 0; i < files.length; i++) {
     const file = files[i]
     const destPrefix = join(file.directory, `${file.slug}-`)
-    // console.log(file);
     const fbFile = `${destPrefix}fb.png`
     const twFile = `${destPrefix}tw.png`
 
