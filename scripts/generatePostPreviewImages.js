@@ -56,15 +56,16 @@ const main = async () => {
   for (let i = 0; i < files.length; i++) {
     const file = files[i]
     const destPrefix = join(file.directory, `${file.slug}-`)
+    // console.log(file);
     const fbFile = `${destPrefix}fb.png`
     const twFile = `${destPrefix}tw.png`
 
-    if (!existsSync(fbFile)) {
+    if (file['generate-card'] !== false) {
       await takeScreenshot(`${baseUrl}${file.slug}/image_fb`, 1200, 630, fbFile)
       console.log(`Created ${fbFile}`)
     }
 
-    if (!existsSync(twFile)) {
+    if (file['generate-card'] !== false) {
       await takeScreenshot(`${baseUrl}${file.slug}/image_tw`, 440, 220, twFile)
       console.log(`Created ${twFile}`)
     }

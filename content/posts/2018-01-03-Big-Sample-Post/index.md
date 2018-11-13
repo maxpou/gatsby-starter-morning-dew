@@ -3,10 +3,12 @@ title: "Big Test"
 slug: big-test
 date: 2018-01-03
 language: en
+generate-card: false
 tags:
   - test
   - huge
   - no-cover
+  - fake
 ---
 
 NOTE: This "post" is based on [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and is meant to test styling of Markdown generated documents.
@@ -26,19 +28,11 @@ You can play around with Markdown on our [live demo page](http://www.markdown-he
       - [H4](#h4)
         - [H5](#h5)
           - [H6](#h6)
-- [Alt-H1](#alt-h1)
-  - [Alt-H2](#alt-h2)
   - [Emphasis](#emphasis)
   - [Lists](#lists)
   - [Links](#links)
   - [Images](#images)
   - [Code and Syntax Highlighting](#code-and-syntax-highlighting)
-  - [Tables](#tables)
-  - [Blockquotes](#blockquotes)
-  - [Inline HTML](#inline-html)
-  - [Horizontal Rule](#horizontal-rule)
-  - [Line Breaks](#line-breaks)
-  - [YouTube Videos](#youtube-videos)
 
 
 ## Headers

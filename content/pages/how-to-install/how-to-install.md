@@ -107,3 +107,32 @@ module.exports = {
   ],
 }
 ```
+
+## Markdown headers
+
+```yaml
+---
+title: "My blog post title"
+# Slug (www.site.com/my-blog-post)
+slug: my-blog-post
+
+# Date of publication
+date: 2018-10-30
+
+# Language (FR or EN)
+language: en
+
+# Relative path to cover image
+cover: ./cover-balloons.jpg
+
+# use generated Twitter/etc. cards
+imageTw: ./gatsby-starter-morning-dew-v1-1-tw.png
+imageFb: ./gatsby-starter-morning-dew-v1-1-fb.png
+# ... or if you want to skip the generation
+generate-card: false
+
+# Tags
+tags:
+  - gatsby
+---
+```
