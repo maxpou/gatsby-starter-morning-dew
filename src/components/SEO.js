@@ -13,8 +13,10 @@ class SEO extends React.Component {
       0,
       siteConfig.siteUrl.length - 1
     )
-    const imagePath = this.props.imageFb || this.props.cover || withPrefix(siteConfig.siteCover)
-    const imagePathTwitter = this.props.imageTw || this.props.cover || withPrefix(siteConfig.siteCover)
+    const imagePath =
+      this.props.imageFb || this.props.cover || withPrefix(siteConfig.siteCover)
+    const imagePathTwitter =
+      this.props.imageTw || this.props.cover || withPrefix(siteConfig.siteCover)
     const image = `${formatedSiteUrl}${imagePath}`
     const imageTwitter = `${formatedSiteUrl}${imagePathTwitter}`
     const description = this.props.description || siteConfig.siteDescription

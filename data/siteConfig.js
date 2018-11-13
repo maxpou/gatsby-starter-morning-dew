@@ -21,6 +21,7 @@ module.exports = {
   theme_color: '#222222',
   display: 'minimal-ui',
   icon: 'src/assets/gatsby-icon.png',
+  postsPerPage: 6,
   disqusShortname: 'maxpou',
   headerLinks: [
     {
