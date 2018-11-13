@@ -41,6 +41,16 @@ find ./content -name "*-fb.png" -type f -delete
 find ./content -name "*-tw.png" -type f -delete
 ```
 
+If you don't to skip the file generation for some posts, add `generate-card: false` to the post's header.
+
+```yaml
+---
+title: My blog post
+slug: mu-blog-post
+generate-card: false
+---
+```
+
 ## 💅 CSS-in-JS (styled-components)
 
 I added a library called [styled-components](https://www.styled-components.com) which allow me to create components like this:

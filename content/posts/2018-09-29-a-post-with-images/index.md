@@ -2,6 +2,7 @@
 title: A post with images
 slug: a-post-with-images
 cover: ./cover.jpg
+generate-card: false
 date: 2018-09-29
 language: en
 tags:

@@ -2,12 +2,13 @@
 title: "The Fallen Time (fake post)"
 slug: the-fallen-time
 cover: ./cover.jpg
+generate-card: false
 date: 2017-01-02
 language: en
 tags:
     - test
     - something
-    - tagging
+    - fake
 ---
 
 ## Hoc domum solitos veteremque nostrum

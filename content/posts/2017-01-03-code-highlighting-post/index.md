@@ -2,6 +2,7 @@
 title: "Syntax Highlighting Post"
 slug: code-highlighting-post
 cover: ./cover.png
+generate-card: false
 date: 2017-01-03
 language: en
 tags:

@@ -3,11 +3,12 @@ title: Bold Mage (fake post)
 slug: bold-mage
 date: 2017-01-01
 cover: ./cover.jpg
+generate-card: false
 language: en
 tags:
     - programming
     - stuff
-    - other
+    - fake
 ---
 
 ## Sedisti civiliter
