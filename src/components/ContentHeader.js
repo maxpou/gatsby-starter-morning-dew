@@ -14,13 +14,12 @@ class ContentIntro extends React.Component {
     return (
       <Header>
         {date && <time>{date}</time>}
-        {Array.isArray(tags) &&
-          tags.length > 0 && (
-            <Fragment>
-              <span> in</span>
-              <TagList tags={tags} />
-            </Fragment>
-          )}
+        {Array.isArray(tags) && tags.length > 0 && (
+          <Fragment>
+            <span> in</span>
+            <TagList tags={tags} />
+          </Fragment>
+        )}
       </Header>
     )
   }

@@ -51,6 +51,7 @@ module.exports = {
   display: 'minimal-ui',
   icon: 'src/assets/gatsby-icon.png',
   disqusShortname: 'maxpou',
+  postsPerPage: 6,
   headerLinks: [
     {
       label: '🏡',

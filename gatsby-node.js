@@ -1,5 +1,6 @@
 const {resolve} = require('path');
 const { createFilePath } = require('gatsby-source-filesystem')
+const config = require('./data/siteConfig');
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -8,6 +9,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const BlogPostShareImage = resolve('./src/templates/blog-post-share-image.js')
   const PageTemplate = resolve('./src/templates/page.js')
   const PostsBytagTemplate = resolve('./src/templates/tags.js')
+  const ListPostsTemplate = resolve('./src/templates/blog-list-template.js')
 
   const allMarkdown = await graphql(
     `
@@ -33,11 +35,30 @@ exports.createPages = async ({ graphql, actions }) => {
     throw Error(allMarkdown.errors)
   }
 
-  const markdownFiles = allMarkdown.data.allMarkdownRemark.edges;
+  const markdownFiles = allMarkdown.data.allMarkdownRemark.edges
+
+  const posts = markdownFiles
+    .filter(item => item.node.frontmatter.type !== 'page')
+  
+  // generate paginated post list
+  const postsPerPage = config.postsPerPage;
+  const nbPages = Math.ceil(posts.length / postsPerPage)
+
+  Array.from({ length: nbPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/` : `/pages/${i + 1}`,
+      component: ListPostsTemplate,
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        currentPage: i + 1,
+        nbPages: nbPages,
+      },
+    })
+  })
 
   // generate blog posts
-  markdownFiles
-    .filter(item => item.node.frontmatter.type !== 'page')
+  posts
     .forEach((post, index, posts) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node;
       const next = index === 0 ? null : posts[index - 1].node;

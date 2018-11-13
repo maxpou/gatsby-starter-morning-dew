@@ -85,7 +85,17 @@ Biggest cons: files are now larger!
 
 ## Pagination
 
-### 🚧 TODO 🚧
+![pagination](./pagination.png)
+
+Pagination is now available. By default, there's 6 posts per page. You can change this value in `siteConfig.js`:
+
+```js
+module.exports = {
+  // ...
+  postsPerPage: 6,
+  // ...
+}
+```
 
 ## Other
 
