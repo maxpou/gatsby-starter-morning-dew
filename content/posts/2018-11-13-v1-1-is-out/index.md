@@ -12,11 +12,11 @@ tags:
 
 **TLDR;** Metatags generation, CSS-in-JS ([styled-components](https://www.styled-components.com)) and pagination are now in gatsby-starter-morning-dew 🎉
 
-## 🏷 Meta tags generator
+## 🏷 Social media card generator
 
-It's now posible to generate some preview images for social networks (Twitter and Facebook).
+It's now posible to generate preview images for social networks ([Twitter](https://cards-dev.twitter.com/validator) and Facebook).
 
-![](./gatsby-starter-morning-dew-v1-1-tw.png)
+![twitter cards](./twitter-cards.png)
 
 This great idea come from a [conversation](https://twitter.com/_maxpou/status/1054106299213012992) I had with Luciano Mammino (aka [@Loige](https://twitter.com/loige)). I basically took 85% of his code. Thanks Luciano 😊
 
@@ -25,7 +25,7 @@ This great idea come from a [conversation](https://twitter.com/_maxpou/status/10
 
 1. In a terminal, run `npm run dev`.
 2. In a second terminal, run: `npm run generatePostPreviewImages`
-3. Add the images in the post's header
+3. In the post's header, add the generated images:
   ```yaml
   title: My blog post
   # ...
@@ -34,10 +34,6 @@ This great idea come from a [conversation](https://twitter.com/_maxpou/status/10
   ```
 
 Gatsby will first create extra url suffixed by `/image_tw` and `/image_fb` (i.e. *http://localhost:8000/gatsby-starter-morning-dew-v1-1/image_tw*). Then, Pupetter will take a snapshot and add it to your post folder.
-
-**Note:** this extra URLs are only available on dev mode. I volontary remove them in production.
-
-Once, you're ready, you can test your Twitter Cards with: https://cards-dev.twitter.com/validator
 
 **Quick tip:** If you want to recreate this pictures
 
@@ -69,11 +65,10 @@ const Title = styled.h1`
   color: palevioletred;
 `;
 
-render(
-  <Title>
-    Hello World!
-  </Title>
-);
+
+<Title>
+  Hello World!
+</Title>
 ```
 
 Main motivations were:
