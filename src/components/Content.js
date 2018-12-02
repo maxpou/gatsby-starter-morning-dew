@@ -54,13 +54,23 @@ const ContentBody = styled.div`
     overflow: auto;
     tab-size: 1.5em;
     margin: 1.5em 0em 1.5em 0;
-    padding: 1em;
+    /* padding: 1em; */
   }
 
   & .gatsby-highlight > pre {
     border: 0;
     margin: 0;
-    padding: 0;
+    padding: 1;
+  }
+
+  & .gatsby-highlight-code-line {
+    background-color: #022a4b;
+    display: block;
+    margin-right: -1em;
+    margin-left: -1em;
+    padding-right: 1em;
+    padding-left: .75em;
+    border-left: .25em solid #ffa7c4;
   }
 
   & p > code.language-text,
