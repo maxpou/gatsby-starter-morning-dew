@@ -26,6 +26,7 @@ class SEO extends React.Component {
         {/* General tags */}
         <html lang={lang} />
         <meta name="description" content={description} />
+        <link rel="canonical" href={formatedSiteUrl + withPrefix(path)} />
 
         {/* OpenGraph tags */}
         <meta property="og:url" content={formatedSiteUrl + withPrefix(path)} />
