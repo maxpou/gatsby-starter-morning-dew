@@ -65,11 +65,12 @@ const ContentBody = styled.div`
 
   & .gatsby-highlight-code-line {
     background-color: #022a4b;
+    display: block;
     margin-right: -1em;
     margin-left: -1em;
     padding-right: 1em;
-    padding-left: .75em;
-    border-left: .25em solid #ffa7c4;
+    padding-left: 0.75em;
+    border-left: 0.25em solid #ffa7c4;
   }
 
   & p > code.language-text,

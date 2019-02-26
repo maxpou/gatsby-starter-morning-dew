@@ -15,7 +15,6 @@ module.exports = {
   },
   "rules": {
     "react/jsx-uses-vars": 2,
-    "no-unused-vars": "warn",
     'no-console': [
       'warn',
       {
