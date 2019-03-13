@@ -39,6 +39,7 @@
     "eslint-plugin-react": "^7.7.0",
     "prettier": "^1.12.0",
     "puppeteer": "^1.9.0",
+    "semantic-release": "^15.13.3",
     "yaml": "^1.0.0"
   },
   "homepage": "https://github.com/maxpou/gatsby-starter-morning-dew#readme",
@@ -51,7 +52,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maxpou/gatsby-starter-morning-dew.git"
+    "url": "https://github.com/maxpou/gatsby-starter-morning-dew.git"
   },
   "scripts": {
     "dev": "gatsby develop",
@@ -60,7 +61,7 @@
     "format": "prettier --write 'src/**/*.js' 'data/siteConfig.js'",
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "generatePostPreviewImages": "node ./scripts/generatePostPreviewImages.js"
+    "generatePostPreviewImages": "node ./scripts/generatePostPreviewImages.js",
+    "semantic-release": "semantic-release"
   }
 }
