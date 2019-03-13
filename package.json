@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter-morning-dew",
   "description": "Starter Morning Dew Blog",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "author": "Maxence Poutord <maxence.poutord@gmail.com>",
   "bugs": {
     "url": "https://github.com/maxpou/gatsby-starter-morning-dew/issues"
