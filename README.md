@@ -32,7 +32,7 @@ Gatsby starter for creating a new blog!
 - :construction_worker: Travis CI support
 
 
-![Lighthouse scores (locally :bowtie:)](https://lighthouse.now.sh/?perf=97&pwa=96&a11y=92&bp=100&seo=100)
+![Lighthouse scores (locally :bowtie:)](https://lighthouse.now.sh/?perf=99&pwa=100&a11y=92&bp=93&seo=100)
 
 
 ## Installation
