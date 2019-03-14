@@ -31,4 +31,4 @@ jobs:
         github_token: $GITHUB_TOKEN
         local_dir: public
         on:
-          branch: travis-jobs
+          branch: master
