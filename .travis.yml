@@ -5,13 +5,12 @@ cache:
   directories:
     - node_modules
 
-node_js: node
-
 dist: trusty
 
 jobs:
   include:
     - stage: test
+      node_js: lts/*
       script: 
         - yarn lint
         - yarn build --prefix-paths
