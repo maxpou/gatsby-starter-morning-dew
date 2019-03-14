@@ -85,7 +85,7 @@ const ContentBody = styled.div`
   & table {
     margin-top: 1em;
     border-collapse: collapse;
-    border-radius: 1em;
+    border-radius: 0.5em;
     overflow: hidden;
 
     & th,
