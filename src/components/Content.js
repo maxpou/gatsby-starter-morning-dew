@@ -69,8 +69,8 @@ const ContentBody = styled.div`
     margin-right: -1em;
     margin-left: -1em;
     padding-right: 1em;
-    padding-left: 0.75em;
-    border-left: 0.25em solid #ffa7c4;
+    padding-left: .75em;
+    border-left: .25em solid #ffa7c4;
   }
 
   & p > code.language-text,
@@ -80,6 +80,20 @@ const ContentBody = styled.div`
     padding: 0 3px;
     font-size: 0.94em;
     border-radius: 0.3rem;
+  }
+
+  & table {
+    margin-top: 1em;
+    border-collapse: collapse;
+    border-radius: 1em;
+    overflow: hidden;
+
+    & th,
+    & td {
+      padding: 0.5em;
+      background: #e8e8e8;
+      border-bottom: 2px solid white; 
+    }
   }
 `
 
