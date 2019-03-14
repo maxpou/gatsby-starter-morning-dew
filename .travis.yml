@@ -7,7 +7,6 @@ dist: trusty
 
 jobs:
   include:
-    - script: yarn install
     - script: yarn lint
     - script: yarn build --prefix-paths
     # Define the release stage that runs semantic-release
