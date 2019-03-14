@@ -26,7 +26,7 @@ jobs:
         script:
           - npx semantic-release
     - stage: deploy
-      if: branch = travis-jobs
+      if: branch = master
       node_js: lts/*
       script: yarn build --prefix-paths
       deploy:
@@ -35,4 +35,4 @@ jobs:
         github_token: $GITHUB_TOKEN
         local_dir: public
         on:
-          branch: travis-jobs
+          branch: master
