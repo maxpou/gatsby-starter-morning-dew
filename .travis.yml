@@ -11,8 +11,10 @@ dist: trusty
 
 jobs:
   include:
-    - script: yarn lint
-    - script: yarn build --prefix-paths
+    - stage: release
+      script: 
+        - yarn lint
+        - yarn build --prefix-paths
     # Define the release stage that runs semantic-release
     - stage: release
       node_js: lts/*
@@ -23,6 +25,7 @@ jobs:
         script:
           - npx semantic-release
     - stage: deploy
+      if: branch = master
       node_js: lts/*
       script: yarn build --prefix-paths
       deploy:
