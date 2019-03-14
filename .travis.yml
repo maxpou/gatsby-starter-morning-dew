@@ -1,19 +1,22 @@
 sudo: required
 language: node_js
 
-node_js: node
+cache:
+  directories:
+    - node_modules
 
 dist: trusty
 
-script:
-  - yarn install
-  - yarn lint
-  - yarn build --prefix-paths
-
 jobs:
   include:
+    - stage: test
+      node_js: lts/*
+      script: 
+        - yarn lint
+        - yarn build --prefix-paths
     # Define the release stage that runs semantic-release
     - stage: release
+      if: branch = master
       node_js: lts/*
       script: skip
       deploy:
@@ -21,11 +24,14 @@ jobs:
         skip_cleanup: true
         script:
           - npx semantic-release
-
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  local_dir: public
-  on:
-    branch: master
+    - stage: deploy
+      if: branch = master
+      node_js: lts/*
+      script: yarn build --prefix-paths
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        github_token: $GITHUB_TOKEN
+        local_dir: public
+        on:
+          branch: master
