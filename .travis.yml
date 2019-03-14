@@ -1,6 +1,10 @@
 sudo: required
 language: node_js
 
+cache:
+  directories:
+    - node_modules
+
 node_js: node
 
 dist: trusty
@@ -20,7 +24,7 @@ jobs:
           - npx semantic-release
     - stage: deploy
       node_js: lts/*
-      script: skip
+      script: yarn build --prefix-paths
       deploy:
         provider: pages
         skip_cleanup: true
