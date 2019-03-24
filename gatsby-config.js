@@ -1,4 +1,5 @@
-const config = require("./data/siteConfig");
+const path = require('path');
+const config = require.resolve("./data/siteConfig");
 
 module.exports = {
   siteMetadata: {
@@ -12,14 +13,14 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/posts`,
+        path: 'content/posts',
         name: 'pages',
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/pages`,
+        path: 'content/pages',
         name: 'pages',
       },
     },
@@ -71,6 +72,12 @@ module.exports = {
         display: config.display,
         icon: config.icon,
       }
+    },
+    {
+      resolve: 'gatsby-plugin-compile-es6-packages',
+      options: {
+        modules: ['gatsby-starter-morning-dew'],
+      },
     },
   ],
 }
