@@ -1,15 +1,15 @@
-const {resolve} = require('path');
 const { createFilePath } = require('gatsby-source-filesystem')
+const path = require('path')
 const config = require('./data/siteConfig');
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const BlogPostTemplate = resolve('./src/templates/blog-post.js')
-  const BlogPostShareImage = resolve('./src/templates/blog-post-share-image.js')
-  const PageTemplate = resolve('./src/templates/page.js')
-  const PostsBytagTemplate = resolve('./src/templates/tags.js')
-  const ListPostsTemplate = resolve('./src/templates/blog-list-template.js')
+  const BlogPostTemplate = require.resolve('./src/templates/blog-post.js')
+  const BlogPostShareImage = require.resolve('./src/templates/blog-post-share-image.js')
+  const PageTemplate = require.resolve('./src/templates/page.js')
+  const PostsBytagTemplate = require.resolve('./src/templates/tags.js')
+  const ListPostsTemplate = require.resolve('./src/templates/blog-list-template.js')
 
   const allMarkdown = await graphql(
     `
