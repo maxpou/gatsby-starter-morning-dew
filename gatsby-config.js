@@ -1,5 +1,4 @@
-const path = require('path');
-const config = require.resolve("./data/siteConfig");
+const config = require("./data/siteConfig");
 
 module.exports = {
   siteMetadata: {
