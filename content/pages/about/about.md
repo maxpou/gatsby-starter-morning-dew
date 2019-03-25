@@ -20,33 +20,21 @@ Gatsby starter for creating a new blog!
 ![screenshot](https://i.imgur.com/aRTBbKs.jpg)
 
 
-## Installation
-
-
-* with Gatsby-cli: `gatsby new gatsby-blog https://github.com/maxpou/gatsby-starter-morning-dew`
-
-* without Gatsby-cli
-
-  ```bash
-  git clone my-site git@github.com:maxpou/gatsby-starter-morning-dew.git
-  cd my-site
-  yarn install
-  ```
-
 ## Features
 
 - [💜 Gatsby v2](https://www.gatsbyjs.org/) / React 16
-- 🔍 SEO optimized (robot.txt)
+- 🔍 SEO optimized
 - 💌 Write posts/pages in Markdown
   - 🎨 Code syntax highlight
-  - 📚 Multilang support (blog post only)
-- 📱 Responsive design
+  - 📚 Multilang support (blog post)
+- 📱 Mobile Friendly (Responsive design)
 - ✨ PWA ready
   - ✈️ Offline support
   - 📃 Manifest support 
 - [🔧 Fully configurable (see data/siteConfig.js)](./data/siteConfig.js)
 - 💬 Disqus support
 - 💅 css-in-js (with [styled-components](https://www.styled-components.com))
+- 🧙‍♀️ Use it as a starter or [as a theme](https://www.gatsbyjs.org/blog/2018-11-11-introducing-gatsby-themes/)
 - 🔖 Groups post with tags
 - 📊 Google Analytics support
 - 🐦 post preview image generation (Twitter, Facebook)
@@ -61,19 +49,19 @@ Gatsby starter for creating a new blog!
 
 ```sh
 # working locally
-yarn dev
+npm run dev
 
 # generate build
-yarn build
+npm run build
 
 # format code
-yarn format
+npm run format
 
 # lint code
-yarn lint
+npm run lint
 
-# Generate generate post preview images (yarn dev need to run before)
-yarn generatePostPreviewImages
+# Generate generate post preview images (npm run dev need to run before)
+npm run generatePostPreviewImages
 ```
 
 **:warning: Add `--prefix-paths` if you are using path prefix!**
@@ -102,10 +90,10 @@ module.exports = {
   googleAnalyticsId: 'UA-67868977-1',
   background_color: '#ffffff',
   theme_color: '#222222',
-  display: 'minimal-ui',
+  display: 'standalone',
   icon: 'src/assets/gatsby-icon.png',
-  disqusShortname: 'maxpou',
   postsPerPage: 6,
+  disqusShortname: 'maxpou',
   headerLinks: [
     {
       label: '🏡',
@@ -117,7 +105,7 @@ module.exports = {
     },
     {
       label: 'About',
-      url: '/about',
+      url: '/gatsby-starter-morning-dew',
     },
     {
       label: 'Installation',
@@ -138,7 +126,7 @@ module.exports = {
       },
       {
         label: 'About',
-        url: '/about',
+        url: '/gatsby-starter-morning-dew',
       },
       {
         label: 'Installation',
