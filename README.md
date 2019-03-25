@@ -12,11 +12,11 @@ Gatsby starter for creating a new blog!
 ## Features
 
 - [:purple_heart: Gatsby v2](https://www.gatsbyjs.org/) / React 16
-- :mag: SEO optimized (robot.txt)
+- :mag: SEO optimized
 - :love_letter: Write posts/pages in Markdown
   - :art: Code syntax highlight
-  - :books: Multilang support (blog post only)
-- :iphone: Responsive design
+  - :books: Multilang support (blog post)
+- :iphone: Mobile Friendly (Responsive design)
 - :sparkles: PWA ready
   - :airplane: Offline support
   - :page_with_curl: Manifest support 
@@ -32,7 +32,7 @@ Gatsby starter for creating a new blog!
 - :construction_worker: Travis CI support
 
 
-![Lighthouse scores (locally :bowtie:)](https://lighthouse.now.sh/?perf=99&pwa=100&a11y=100&bp=93&seo=100)
+![Lighthouse scores (locally :bowtie:)](https://lighthouse.now.sh/?perf=100&pwa=100&a11y=100&bp=93&seo=100)
 
 
 ## Installation
@@ -44,26 +44,26 @@ Gatsby starter for creating a new blog!
   ```sh
   git clone my-site git@github.com:maxpou/gatsby-starter-morning-dew.git
   cd my-site
-  yarn install
+  npm install
   ```
 
 ## Commands
 
 ```sh
 # working locally
-yarn dev
+npm run dev
 
 # generate build
-yarn build
+npm run build
 
 # format code
-yarn format
+npm run format
 
 # lint code
-yarn lint
+npm run lint
 
-# Generate generate post preview images (yarn dev need to run before)
-yarn generatePostPreviewImages
+# Generate generate post preview images (npm run dev need to run before)
+npm run generatePostPreviewImages
 ```
 
 **:warning: Add `--prefix-paths` if you are using path prefix!**

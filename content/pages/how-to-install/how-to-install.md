@@ -13,7 +13,7 @@ type: page
 * with Gatsby-cli: 
   
 ```bash
-npm install --global gatsby-cli`
+npm install --global gatsby-cli
 gatsby new gatsby-blog https://github.com/maxpou/gatsby-starter-morning-dew
 ```
 
@@ -24,6 +24,23 @@ git clone my-site git@github.com:maxpou/gatsby-starter-morning-dew.git
 cd my-site
 yarn install
 ```
+
+## Installation (theme)
+
+You can also use `gatsby-starter-morning-dew` as a [Gatsby theme](https://www.gatsbyjs.org/blog/2018-11-11-introducing-gatsby-themes/)!
+
+* Add the theme
+  ```bash
+  npm install gatsby-starter-morning-dew
+  ```
+* In your `gatsby-config.js`, add:
+  ```
+  __experimentalThemes: [
+    "gatsby-starter-morning-dew"
+  ]
+  ```
+
+For more details, you can see what I did with my personnal blog.
 
 ## Customisation
 
