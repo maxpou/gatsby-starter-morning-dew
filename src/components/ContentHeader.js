@@ -4,7 +4,7 @@ import TagList from './TagList'
 
 const Header = styled.header`
   margin-bottom: 2rem;
-  color: #7f7e7e;
+  color: #787676;
 `
 
 class ContentIntro extends React.Component {
