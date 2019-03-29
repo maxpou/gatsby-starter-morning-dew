@@ -28,7 +28,7 @@ const ReadPost = styled(Link)`
 `
 
 const PostDate = styled.time`
-  color: #7f7e7e;
+  color: #787676;
   &:before {
     content: '🗓';
     margin-right: 0.2rem;

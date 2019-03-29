@@ -5,15 +5,15 @@ import styled from 'styled-components'
 const ListContainer = styled.div`
   display: inline;
   margin: 0 0.5rem 0 0;
-  color: #7f7e7e;
+  color: #787676;
 `
 
 const TagListItem = styled(Link)`
   margin-left: 0.3rem;
-  color: #7f7e7e;
+  color: #787676;
 
   &:hover {
-    border-bottom: 1px dotted #7f7e7e;
+    border-bottom: 1px dotted #787676;
   }
   &:before {
     content: '#';
