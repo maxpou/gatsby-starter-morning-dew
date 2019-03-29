@@ -32,7 +32,7 @@ Gatsby starter for creating a new blog!
 - :construction_worker: Travis CI support
 
 
-![Lighthouse scores (locally :bowtie:)](https://lighthouse.now.sh/?perf=100&pwa=100&a11y=100&bp=93&seo=100)
+![Lighthouse scores (locally :bowtie:)](https://lighthouse.now.sh/?perf=100&pwa=100&a11y=100&bp=100&seo=100)
 
 
 ## Installation
@@ -92,10 +92,10 @@ module.exports = {
   googleAnalyticsId: 'UA-67868977-1',
   background_color: '#ffffff',
   theme_color: '#222222',
-  display: 'minimal-ui',
+  display: 'standalone',
   icon: 'src/assets/gatsby-icon.png',
-  disqusShortname: 'maxpou',
   postsPerPage: 6,
+  disqusShortname: 'maxpou',
   headerLinks: [
     {
       label: '🏡',
@@ -107,7 +107,7 @@ module.exports = {
     },
     {
       label: 'About',
-      url: '/about',
+      url: '/gatsby-starter-morning-dew',
     },
     {
       label: 'Installation',
@@ -128,7 +128,7 @@ module.exports = {
       },
       {
         label: 'About',
-        url: '/about',
+        url: '/gatsby-starter-morning-dew',
       },
       {
         label: 'Installation',
