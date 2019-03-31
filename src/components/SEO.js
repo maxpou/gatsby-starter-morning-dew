@@ -1,49 +1,48 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { withPrefix } from 'gatsby'
-import siteConfig from '../../data/siteConfig'
+import useSiteMetadata from '../hooks/use-site-config'
 
-class SEO extends React.Component {
-  render() {
-    const { isBlogPost, path = '', lang = 'en' } = this.props
-    const title = this.props.title
-      ? `${this.props.title} | ${siteConfig.siteTitle}`
-      : siteConfig.siteTitle
-    const formatedSiteUrl = siteConfig.siteUrl.substring(
-      0,
-      siteConfig.siteUrl.length - 1
-    )
-    const imagePath =
-      this.props.imageFb || this.props.cover || withPrefix(siteConfig.siteCover)
-    const imagePathTwitter =
-      this.props.imageTw || this.props.cover || withPrefix(siteConfig.siteCover)
-    const image = `${formatedSiteUrl}${imagePath}`
-    const imageTwitter = `${formatedSiteUrl}${imagePathTwitter}`
-    const description = this.props.description || siteConfig.siteDescription
+const SEO = props => {
+  const { isBlogPost, path = '', lang = 'en' } = props
+  const {
+    siteTitle,
+    siteUrl,
+    siteCover,
+    siteDescription,
+    twitterUsername,
+  } = useSiteMetadata()
 
-    return (
-      <Helmet title={title}>
-        {/* General tags */}
-        <html lang={lang} />
-        <meta name="description" content={description} />
-        <link rel="canonical" href={formatedSiteUrl + withPrefix(path)} />
+  const title = props.title ? `${props.title} | ${siteTitle}` : siteTitle
+  const formatedSiteUrl = siteUrl.substring(0, siteUrl.length - 1)
+  const imagePath = props.imageFb || props.cover || withPrefix(siteCover)
+  const imagePathTwitter = props.imageTw || props.cover || withPrefix(siteCover)
+  const image = `${formatedSiteUrl}${imagePath}`
+  const imageTwitter = `${formatedSiteUrl}${imagePathTwitter}`
+  const description = props.description || siteDescription
 
-        {/* OpenGraph tags */}
-        <meta property="og:url" content={formatedSiteUrl + withPrefix(path)} />
-        <meta property="og:type" content={isBlogPost ? 'article' : 'website'} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={image} />
+  return (
+    <Helmet title={title}>
+      {/* General tags */}
+      <html lang={lang} />
+      <meta name="description" content={description} />
+      <link rel="canonical" href={formatedSiteUrl + withPrefix(path)} />
 
-        {/* Twitter Card tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:creator" content={siteConfig.twitterUsername} />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={imageTwitter} />
-      </Helmet>
-    )
-  }
+      {/* OpenGraph tags */}
+      <meta property="og:url" content={formatedSiteUrl + withPrefix(path)} />
+      <meta property="og:type" content={isBlogPost ? 'article' : 'website'} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+
+      {/* Twitter Card tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content={twitterUsername} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={imageTwitter} />
+    </Helmet>
+  )
 }
 
 export default SEO
