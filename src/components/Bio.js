@@ -1,8 +1,8 @@
 import React from 'react'
 import { withPrefix } from 'gatsby'
-import siteConfig from '../../data/siteConfig'
 import styled from 'styled-components'
 import { Text } from './Commons'
+import useSiteMetadata from '../hooks/use-site-config'
 
 const BioWrapper = styled.div`
   & .author-image {
@@ -54,28 +54,24 @@ const BioText = styled(Text)`
   }
 `
 
-class Bio extends React.Component {
-  render() {
-    const prefixedImg = withPrefix(siteConfig.authorAvatar)
-    return (
-      <BioWrapper>
-        <figure className="author-image">
-          <a
-            src={siteConfig.authorAvatar}
-            alt={siteConfig.authorName}
-            style={{ backgroundImage: `url("${prefixedImg}")` }}
-            className="img"
-          />
-        </figure>
-        <section>
-          <h4>About the author</h4>
-          <BioText
-            dangerouslySetInnerHTML={{ __html: siteConfig.authorDescription }}
-          />
-        </section>
-      </BioWrapper>
-    )
-  }
+const Bio = () => {
+  const { authorAvatar, authorName, authorDescription } = useSiteMetadata()
+  return (
+    <BioWrapper>
+      <figure className="author-image">
+        <a
+          src={authorAvatar}
+          alt={authorName}
+          style={{ backgroundImage: `url("${withPrefix(authorAvatar)}")` }}
+          className="img"
+        />
+      </figure>
+      <section>
+        <h4>About the author</h4>
+        <BioText dangerouslySetInnerHTML={{ __html: authorDescription }} />
+      </section>
+    </BioWrapper>
+  )
 }
 
 export default Bio

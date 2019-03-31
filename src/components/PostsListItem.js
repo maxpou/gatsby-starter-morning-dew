@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Flag from './Flag/Flag'
 import TagList from './TagList'
-import siteConfig from '../../data/siteConfig'
+import useSiteMetadata from '../hooks/use-site-config'
 import styled from 'styled-components'
 
 const Post = styled.article`
@@ -50,30 +50,29 @@ const PostTitleLink = styled(Link)`
   }
 `
 
-class PostsListItem extends React.Component {
-  render() {
-    const { title, excerpt, slug, date, language, tags } = this.props
+const PostsListItem = props => {
+  const { title, excerpt, slug, date, language, tags } = props
+  const { multilangPosts } = useSiteMetadata()
 
-    return (
-      <Post>
-        <PostHeader>
-          <h2>
-            <PostTitleLink to={slug}>
-              {siteConfig.multilangPosts && <Flag language={language} />}
-              {title}
-            </PostTitleLink>
-          </h2>
-        </PostHeader>
-        <section>
-          <Excerpt dangerouslySetInnerHTML={{ __html: excerpt }} />
-        </section>
-        <footer>
-          <TagList tags={tags} icon={true} />
-          <PostDate>{date}</PostDate>
-          <ReadPost to={slug}>Read post ›</ReadPost>
-        </footer>
-      </Post>
-    )
-  }
+  return (
+    <Post>
+      <PostHeader>
+        <h2>
+          <PostTitleLink to={slug}>
+            {multilangPosts && <Flag language={language} />}
+            {title}
+          </PostTitleLink>
+        </h2>
+      </PostHeader>
+      <section>
+        <Excerpt dangerouslySetInnerHTML={{ __html: excerpt }} />
+      </section>
+      <footer>
+        <TagList tags={tags} icon={true} />
+        <PostDate>{date}</PostDate>
+        <ReadPost to={slug}>Read post ›</ReadPost>
+      </footer>
+    </Post>
+  )
 }
 export default PostsListItem

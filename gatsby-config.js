@@ -1,4 +1,4 @@
-const config = require("./data/siteConfig");
+const config = require('./data/siteConfig')
 
 module.exports = {
   siteMetadata: {
@@ -70,7 +70,7 @@ module.exports = {
         theme_color: config.theme_color,
         display: config.display,
         icon: config.icon,
-      }
+      },
     },
     {
       resolve: 'gatsby-plugin-compile-es6-packages',

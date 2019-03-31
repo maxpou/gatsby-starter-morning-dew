@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import useSiteMetadata from '../hooks/use-site-config'
 
 const HeaderWrapper = styled.header`
   position: fixed;
@@ -40,22 +41,20 @@ const HeaderLink = styled(Link)`
   z-index: 10;
 `
 
-class Header extends React.Component {
-  render() {
-    const { headerLinks } = this.props
+const Header = () => {
+  const { headerLinks } = useSiteMetadata()
 
-    return (
-      <HeaderWrapper>
-        <HeaderNav>
-          {headerLinks.map((headerLink, i) => (
-            <HeaderLink to={headerLink.url} key={`header-link-${i}`}>
-              {headerLink.label}
-            </HeaderLink>
-          ))}
-        </HeaderNav>
-      </HeaderWrapper>
-    )
-  }
+  return (
+    <HeaderWrapper>
+      <HeaderNav>
+        {headerLinks.map((headerLink, i) => (
+          <HeaderLink to={headerLink.url} key={`header-link-${i}`}>
+            {headerLink.label}
+          </HeaderLink>
+        ))}
+      </HeaderNav>
+    </HeaderWrapper>
+  )
 }
 
 export default Header
