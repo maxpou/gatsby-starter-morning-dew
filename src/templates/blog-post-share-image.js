@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql, withPrefix } from 'gatsby'
 import styled from 'styled-components'
-import siteConfig from '../../data/siteConfig'
 import { GlobalStyle } from '../components/Commons'
 import useSiteMetadata from '../hooks/use-site-config'
 
