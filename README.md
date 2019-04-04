@@ -120,39 +120,43 @@ module.exports = {
     url: 'https://github.com',
   },
   footerLinks: [
-    [
-      'Explore',
-      {
-        label: 'Blog',
-        url: '/',
-      },
-      {
-        label: 'About',
-        url: '/gatsby-starter-morning-dew',
-      },
-      {
-        label: 'Installation',
-        url: '/how-to-install',
-      },
-    ],
-    [
-      'Follow the author',
-      {
-        label: 'Github',
-        url: 'https://github.com/maxpou/gatsby-starter-morning-dew',
-        iconClassName: 'fa fa-github',
-      },
-      {
-        label: 'Website',
-        url: 'https://www.maxpou.fr',
-        iconClassName: 'fa fa-globe',
-      },
-      {
-        label: 'Twitter',
-        url: 'https://twitter.com/_maxpou',
-        iconClassName: 'fa fa-twitter',
-      },
-    ],
+    {
+      sectionName: 'Explore',
+      links: [
+        {
+          label: 'Blog',
+          url: '/',
+        },
+        {
+          label: 'About',
+          url: '/gatsby-starter-morning-dew',
+        },
+        {
+          label: 'Installation',
+          url: '/how-to-install',
+        },
+      ],
+    },
+    {
+      sectionName: 'Follow the author',
+      links: [
+        {
+          label: 'Github',
+          url: 'https://github.com/maxpou/gatsby-starter-morning-dew',
+          iconClassName: 'fa fa-github',
+        },
+        {
+          label: 'Website',
+          url: 'https://www.maxpou.fr',
+          iconClassName: 'fa fa-globe',
+        },
+        {
+          label: 'Twitter',
+          url: 'https://twitter.com/_maxpou',
+          iconClassName: 'fa fa-twitter',
+        },
+      ],
+    },
   ],
 }
 ```
