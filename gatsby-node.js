@@ -1,5 +1,4 @@
 const { createFilePath } = require('gatsby-source-filesystem')
-const config = require('./data/siteConfig')
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -14,27 +13,35 @@ exports.createPages = async ({ graphql, actions }) => {
     './src/templates/blog-list-template.js'
   )
 
-  const allMarkdown = await graphql(
-    `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              frontmatter {
-                title
-                slug
-                type
-                tags
-              }
+  const allMarkdown = await graphql(`
+    {
+      allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            frontmatter {
+              title
+              slug
+              type
+              tags
             }
           }
         }
       }
-    `
-  )
+    }
+  `)
+
+  const postPerPageQuery = await graphql(`
+    {
+      site {
+        siteMetadata {
+          postsPerPage
+        }
+      }
+    }
+  `)
 
   if (allMarkdown.errors) {
     console.error(allMarkdown.errors)
@@ -48,7 +55,7 @@ exports.createPages = async ({ graphql, actions }) => {
   )
 
   // generate paginated post list
-  const postsPerPage = config.postsPerPage
+  const postsPerPage = postPerPageQuery.data.site.siteMetadata.postsPerPage
   const nbPages = Math.ceil(posts.length / postsPerPage)
 
   Array.from({ length: nbPages }).forEach((_, i) => {
