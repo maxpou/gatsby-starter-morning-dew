@@ -42,10 +42,6 @@ const PageBtn = styled(Link)`
 
 const PreviousBtn = styled(PageBtn)`
   order: 1;
-  /* &:before {
-    content: '‹';
-    margin-right: 0.2rem;
-  } */
   @media (max-width: 564px) {
     order: 2;
   }
