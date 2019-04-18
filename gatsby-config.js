@@ -1,3 +1,4 @@
+const path = require('path')
 const config = require('./data/siteConfig')
 
 module.exports = {
@@ -21,6 +22,19 @@ module.exports = {
       options: {
         path: 'content/pages',
         name: 'pages',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'images',
+        path: 'content/images',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-page-creator`,
+      options: {
+        path: path.join(__dirname, `src`, `pages`),
       },
     },
     {
@@ -72,6 +86,7 @@ module.exports = {
         icon: config.icon,
       },
     },
+    // https://www.gatsbyjs.org/docs/themes/converting-a-starter/#transpiling-your-theme-with-webpack
     {
       resolve: 'gatsby-plugin-compile-es6-packages',
       options: {
