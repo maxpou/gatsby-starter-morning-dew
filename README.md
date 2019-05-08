@@ -143,17 +143,14 @@ module.exports = {
         {
           label: 'Github',
           url: 'https://github.com/maxpou/gatsby-starter-morning-dew',
-          iconClassName: 'fa fa-github',
         },
         {
           label: 'Website',
           url: 'https://www.maxpou.fr',
-          iconClassName: 'fa fa-globe',
         },
         {
           label: 'Twitter',
           url: 'https://twitter.com/_maxpou',
-          iconClassName: 'fa fa-twitter',
         },
       ],
     },

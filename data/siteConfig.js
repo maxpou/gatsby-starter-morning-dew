@@ -20,7 +20,7 @@ module.exports = {
   background_color: '#ffffff',
   theme_color: '#222222',
   display: 'standalone',
-  icon: 'src/assets/gatsby-icon.png',
+  icon: 'content/images/gatsby-icon.png',
   postsPerPage: 6,
   disqusShortname: 'maxpou',
   headerLinks: [
