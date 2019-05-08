@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import useSiteMetadata from '../hooks/use-site-config'
+import { colors } from '../tokens'
 
 const HeaderWrapper = styled.header`
   position: fixed;
@@ -11,7 +12,7 @@ const HeaderWrapper = styled.header`
   display: block;
   width: 100%;
   z-index: 1000;
-  background-color: rgba(32, 35, 42, 0.85);
+  background-color: ${colors.primaryAlpha};
 `
 
 const HeaderNav = styled.nav`
@@ -31,7 +32,7 @@ const HeaderLink = styled(Link)`
   position: relative;
   display: flex;
   align-items: center;
-  color: #fff;
+  color: ${colors.textLightest};
   border: 0;
   margin: 0;
   margin-right: 0.5rem;

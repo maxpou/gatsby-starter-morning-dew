@@ -4,6 +4,7 @@ import Flag from './Flag/Flag'
 import TagList from './TagList'
 import useSiteMetadata from '../hooks/use-site-config'
 import styled from 'styled-components'
+import { colors } from '../tokens'
 
 const Post = styled.article`
   border-bottom: 1px solid rgba(214, 209, 230, 0.5);
@@ -19,16 +20,17 @@ const ReadPost = styled(Link)`
   text-transform: uppercase;
   letter-spacing: 0.05em;
   line-height: 2;
+  color: ${colors.primary};
 
   &:hover {
-    background-color: rgba(32, 35, 42, 0.85);
+    background-color: ${colors.primaryAlpha};
     border-radius: 0.25rem;
-    color: #fff;
+    color: ${colors.textLightest};
   }
 `
 
 const PostDate = styled.time`
-  color: #787676;
+  color: ${colors.textLight};
   &:before {
     content: '🗓';
     margin-right: 0.2rem;
@@ -46,7 +48,7 @@ const Excerpt = styled.p`
 
 const PostTitleLink = styled(Link)`
   &:hover {
-    border-bottom: 1px dotted rgba(34, 34, 34, 0.8);
+    border-bottom: 1px dotted ${colors.primary};
   }
 `
 

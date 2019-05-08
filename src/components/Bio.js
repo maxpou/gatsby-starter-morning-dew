@@ -20,7 +20,7 @@ const BioWrapper = styled.div`
     overflow: hidden;
     padding: 6px;
     z-index: 2;
-    box-shadow: #e7eef2 0 0 0 1px;
+    box-shadow: #ececec 0 0 0 1px;
   }
 
   & .author-image .img {
@@ -47,7 +47,7 @@ const BioWrapper = styled.div`
 
 const BioText = styled(Text)`
   & a {
-    border-bottom: 1px dotted rgba(162, 162, 162, 0.8);
+    border-bottom: 1px dotted #ececec;
   }
   & a:hover {
     border-bottom-style: solid;

@@ -2,13 +2,14 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import useSiteMetadata from '../hooks/use-site-config'
+import { colors } from '../tokens'
 
 const FooterWrapper = styled.footer`
   text-align: left;
   padding-top: 30px;
   padding-bottom: 50px;
-  background-color: rgba(32, 35, 42, 0.85);
-  color: #ffffff;
+  background-color: ${colors.primary};
+  color: ${colors.textLightest};
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
@@ -30,12 +31,12 @@ const FooterWrapper = styled.footer`
   }
 
   & a {
-    color: #ffffff;
+    color: ${colors.textLightest};
     font-weight: bold;
 
     &:hover {
-      color: #e8e8e8;
-      border-bottom: 1px dotted #e8e8e8;
+      color: ${colors.textLightestHover};
+      /* border-bottom: 1px dotted ${colors.textLightestHover}; */
     }
   }
 
@@ -48,16 +49,16 @@ const FooterWrapper = styled.footer`
 
   .footer-item {
     padding: 0.25rem 0;
-    color: #ffffff;
+    color: ${colors.textLightest};
   }
 
   .footer-heart {
-    color: red;
+    color: ${colors.heartFooter};
   }
 
   .footer-item-text {
     padding: 0.1rem 0;
-    color: #ffffff;
+    color: ${colors.textLightest};
   }
 
   .footer-header {
@@ -113,7 +114,9 @@ const Footer = () => {
     <FooterWrapper>
       <nav>
         <div className="footer-col">
-          <h5 className="footer-title">{authorName} © 2018</h5>
+          <h5 className="footer-title">
+            {authorName} © {new Date().getFullYear()}
+          </h5>
           <p className="footer-item-text">
             Built with{' '}
             <a className="footer-link" href="https://www.gatsbyjs.org">
