@@ -1,8 +1,8 @@
 import React from 'react'
-import { withPrefix } from 'gatsby'
 import styled from 'styled-components'
 import { Text } from './Commons'
 import useSiteMetadata from '../hooks/use-site-config'
+import useSiteImages from '../hooks/use-site-images'
 
 const BioWrapper = styled.div`
   & .author-image {
@@ -56,13 +56,14 @@ const BioText = styled(Text)`
 
 const Bio = () => {
   const { authorAvatar, authorName, authorDescription } = useSiteMetadata()
+  const { fixed } = useSiteImages(authorAvatar)
+
   return (
     <BioWrapper>
       <figure className="author-image">
         <a
-          src={authorAvatar}
           alt={authorName}
-          style={{ backgroundImage: `url("${withPrefix(authorAvatar)}")` }}
+          style={{ backgroundImage: `url("${fixed.src}")` }}
           className="img"
         />
       </figure>

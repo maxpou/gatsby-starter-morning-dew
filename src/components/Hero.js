@@ -2,6 +2,7 @@ import React from 'react'
 import { withPrefix } from 'gatsby'
 import styled from 'styled-components'
 import useSiteMetadata from '../hooks/use-site-config'
+import useSiteImages from '../hooks/use-site-images'
 import { colors } from '../tokens'
 
 const HeroContainer = styled.div`
@@ -32,7 +33,8 @@ const HeroTitle = styled.h1`
 
 const Hero = props => {
   const { siteCover } = useSiteMetadata()
-  const heroImg = props.heroImg || withPrefix(siteCover)
+  const { fluid } = useSiteImages(siteCover)
+  const heroImg = props.heroImg || fluid.src
 
   return (
     <HeroContainer style={{ backgroundImage: `url("${heroImg}")` }}>
