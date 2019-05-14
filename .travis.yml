@@ -14,6 +14,10 @@ jobs:
       script: 
         - yarn lint
         - yarn build --prefix-paths
+    - stage: performance_budget
+      if: $TRAVIS_PULL_REQUEST != false
+      script: 
+        - yarn lh -- https://staging.example.com
     # Define the release stage that runs semantic-release
     - stage: release
       if: branch = master

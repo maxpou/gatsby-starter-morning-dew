@@ -45,6 +45,7 @@
   "devDependencies": {
     "eslint": "^5.7.0",
     "eslint-plugin-react": "^7.7.0",
+    "lighthousebot": "https://github.com/GoogleChromeLabs/lighthousebot",
     "prettier": "^1.12.0",
     "puppeteer": "^1.9.0",
     "semantic-release": "^15.13.3",
@@ -70,7 +71,8 @@
     "develop": "gatsby develop",
     "build": "gatsby build",
     "generatePostPreviewImages": "node./scripts/generatePostPreviewImages.js",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "lh": "lighthousebot"
   },
   "bin": {
     "generatePostPreviewImages": "node./scripts/generatePostPreviewImages.js"
