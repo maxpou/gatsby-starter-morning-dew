@@ -15,6 +15,7 @@ jobs:
         - yarn lint
         - yarn build --prefix-paths
     - stage: performance_budget
+      node_js: lts/*
       if: type = pull_request
       script: 
         - yarn lh -- https://deploy-preview-58--gatsby-starter-morning-dew.netlify.com/
