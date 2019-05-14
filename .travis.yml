@@ -18,7 +18,7 @@ jobs:
       node_js: lts/*
       if: type = pull_request
       script: 
-        - yarn lh -- https://deploy-preview-58--gatsby-starter-morning-dew.netlify.com/
+        - ./scripts/budget.sh
     # Define the release stage that runs semantic-release
     - stage: release
       if: branch = master
