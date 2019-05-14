@@ -17,7 +17,7 @@ jobs:
     - stage: performance_budget
       if: $TRAVIS_PULL_REQUEST != false
       script: 
-        - yarn lh -- https://staging.example.com
+        - yarn lh -- https://deploy-preview-57--gatsby-starter-morning-dew.netlify.com/
     # Define the release stage that runs semantic-release
     - stage: release
       if: branch = master
