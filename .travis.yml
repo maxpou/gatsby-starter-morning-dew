@@ -13,12 +13,7 @@ jobs:
       node_js: lts/*
       script: 
         - yarn lint
-        - yarn build --prefix-paths
-    - stage: performance_budget
-      if: $TRAVIS_PULL_REQUEST != false
-      script: 
-        - yarn lh -- https://deploy-preview-57--gatsby-starter-morning-dew.netlify.com/
-    # Define the release stage that runs semantic-release
+        - yarn build --prefix-paths    # Define the release stage that runs semantic-release
     - stage: release
       if: branch = master
       node_js: lts/*
