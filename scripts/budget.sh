@@ -1,3 +1,2 @@
-echo "$TRAVIS_PULL_REQUEST"
-
-yarn lh -- https://deploy-preview-57--gatsby-starter-morning-dew.netlify.com/how-to-install
+BASE_URL="https://deploy-preview-${TRAVIS_PULL_REQUEST}--gatsby-starter-morning-dew.netlify.com"
+yarn lh -- BASE_URL/how-to-install
