@@ -14,6 +14,11 @@ jobs:
       script: 
         - yarn lint
         - yarn build --prefix-paths
+    - stage: performance_budget
+      node_js: lts/*
+      if: type = pull_request
+      script: 
+        - ./scripts/budget.sh
     # Define the release stage that runs semantic-release
     - stage: release
       if: branch = master
