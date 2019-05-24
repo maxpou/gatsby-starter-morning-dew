@@ -15,7 +15,7 @@ const RelatedPosts = props => {
         const language = post.node.frontmatter.language || 'en'
         return (
           <li key={slug}>
-            <StyledLink to={slug}>
+            <StyledLink to={`/${slug}`}>
               {multilangPosts && <Flag language={language} />}
               {title}
             </StyledLink>

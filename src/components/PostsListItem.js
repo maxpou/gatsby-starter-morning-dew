@@ -60,7 +60,7 @@ const PostsListItem = props => {
     <Post>
       <PostHeader>
         <h2>
-          <PostTitleLink to={slug}>
+          <PostTitleLink to={`/${slug}`}>
             {multilangPosts && <Flag language={language} />}
             {title}
           </PostTitleLink>
@@ -72,7 +72,7 @@ const PostsListItem = props => {
       <footer>
         <TagList tags={tags} icon={true} />
         <PostDate>{date}</PostDate>
-        <ReadPost to={slug}>Read post ›</ReadPost>
+        <ReadPost to={`/${slug}`}>Read post ›</ReadPost>
       </footer>
     </Post>
   )

@@ -31,7 +31,7 @@ class TagList extends React.Component {
         {tags.map((tag, i) => {
           return (
             <Fragment key={`tag-list-${i}`}>
-              <TagListItem to={`tags/${tag}`}>{tag}</TagListItem>
+              <TagListItem to={`/tags/${tag}`}>{tag}</TagListItem>
               {i < tags.length - 1 ? ', ' : ''}
             </Fragment>
           )
