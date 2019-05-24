@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from 'gatsby'
 
-const useSiteImages = (imageName) => {
+const useSiteImages = imageName => {
   const result = useStaticQuery(graphql`
     {
       allFile(filter: { sourceInstanceName: { eq: "images" } }) {
@@ -42,10 +42,10 @@ const useSiteImages = (imageName) => {
   `)
   const items = result.allFile.edges
   const image = items.find(edge => edge.node.relativePath === imageName)
-  if (image === undefined) { 
-    throw `Unable to find image: ${imageName} (in content/images)`;
+  if (image === undefined) {
+    throw `Unable to find image: ${imageName} (in content/images)`
   }
-  console.log(image);
+
   return image.node.childImageSharp
 }
 
