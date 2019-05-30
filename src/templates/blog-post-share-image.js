@@ -1,13 +1,13 @@
 import React from 'react'
 import { graphql, withPrefix } from 'gatsby'
 import styled from 'styled-components'
-import siteConfig from '../../data/siteConfig'
 import { GlobalStyle } from '../components/Commons'
+import useSiteMetadata from '../hooks/use-site-config'
 
 const Preview = styled.div.attrs({
   width: props => props.width || 440,
   height: props => props.height || 220,
-  hero: props => props.hero || withPrefix(siteConfig.siteCover),
+  hero: props => props.hero || withPrefix(props.siteCover),
 })`
   width: ${props => props.width}px;
   height: ${props => props.height}px;
@@ -46,23 +46,22 @@ const ReadTime = styled.h2.attrs({
   }
 `
 
-class BlogPostShareImage extends React.Component {
-  render() {
-    const post = this.props.data.markdownRemark
-    const { width, height, type } = this.props.pageContext
-    const heroImg = post.frontmatter.cover && post.frontmatter.cover.publicURL
-    const minute = post.timeToRead === 1 ? 'min' : 'mins'
+const BlogPostShareImage = props => {
+  const post = props.data.markdownRemark
+  const { width, height, type } = props.pageContext
+  const heroImg = post.frontmatter.cover && post.frontmatter.cover.publicURL
+  const minute = post.timeToRead === 1 ? 'min' : 'mins'
+  const { siteCover } = useSiteMetadata()
 
-    return (
-      <Preview width={width} height={height} hero={heroImg}>
-        <GlobalStyle />
-        <Title type={type}>{post.frontmatter.title}</Title>
-        <ReadTime type={type}>
-          {post.timeToRead} {minute}
-        </ReadTime>
-      </Preview>
-    )
-  }
+  return (
+    <Preview width={width} height={height} hero={heroImg} siteCover={siteCover}>
+      <GlobalStyle />
+      <Title type={type}>{post.frontmatter.title}</Title>
+      <ReadTime type={type}>
+        {post.timeToRead} {minute}
+      </ReadTime>
+    </Preview>
+  )
 }
 
 export default BlogPostShareImage

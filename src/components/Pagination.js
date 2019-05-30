@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import { colors } from '../tokens'
 
 const PaginationWrapper = styled.nav`
   display: flex;
@@ -22,16 +23,16 @@ const PaginationWrapper = styled.nav`
 
 const PageBtn = styled(Link)`
   border-radius: 3px;
-  background-color: rgba(32, 35, 42, 0.85);
-  border: 1px solid rgba(32, 35, 42, 0.85);
-  color: #ffffff;
+  background-color: ${colors.primary};
+  border: 1px solid ${colors.primary};
+  color: ${colors.textLightest};
   padding: 8px 20px;
   min-width: 130px;
 
   &:hover {
-    background-color: #ffffff;
-    color: rgba(32, 35, 42, 0.85);
-    border: 1px solid rgba(32, 35, 42, 0.85);
+    background-color: ${colors.textLightest};
+    color: ${colors.primary};
+    border: 1px solid ${colors.primary};
   }
 
   @media (max-width: 564px) {
@@ -42,10 +43,6 @@ const PageBtn = styled(Link)`
 
 const PreviousBtn = styled(PageBtn)`
   order: 1;
-  /* &:before {
-    content: '‹';
-    margin-right: 0.2rem;
-  } */
   @media (max-width: 564px) {
     order: 2;
   }

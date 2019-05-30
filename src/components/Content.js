@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import ContentHeader from './ContentHeader'
+import { colors } from '../tokens'
 
 const ContentBody = styled.div`
   line-height: 1.6;
@@ -48,13 +49,10 @@ const ContentBody = styled.div`
     border-radius: 5px;
     font-size: 15px;
     line-height: 1.7;
-    background: #2d2d2d;
-    color: #ffffff;
     border-radius: 10px;
     overflow: auto;
     tab-size: 1.5em;
     margin: 1.5em 0em 1.5em 0;
-    /* padding: 1em; */
   }
 
   & .gatsby-highlight > pre {
@@ -64,18 +62,18 @@ const ContentBody = styled.div`
   }
 
   & .gatsby-highlight-code-line {
-    background-color: #022a4b;
+    background-color: ${colors.highlight_code_linebg};
     display: block;
     margin-right: -1em;
     margin-left: -1em;
     padding-right: 1em;
-    padding-left: .75em;
-    border-left: .25em solid #ffa7c4;
+    padding-left: 0.75em;
+    border-left: 0.25em solid ${colors.highlight_code_bg};
   }
 
   & p > code.language-text,
   & li > code.language-text {
-    background: rgba(255, 229, 100, 0.2);
+    background: ${colors.highlight_code_oneline};
     color: #222222cc;
     padding: 0 3px;
     font-size: 0.94em;
@@ -92,7 +90,7 @@ const ContentBody = styled.div`
     & td {
       padding: 0.5em;
       background: #e8e8e8;
-      border-bottom: 2px solid white; 
+      border-bottom: 2px solid ${colors.white};
     }
   }
 `

@@ -1,4 +1,5 @@
-const config = require("./data/siteConfig");
+const path = require('path')
+const config = require('./data/siteConfig')
 
 module.exports = {
   siteMetadata: {
@@ -12,15 +13,28 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/posts`,
+        path: 'content/posts',
         name: 'pages',
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/pages`,
+        path: 'content/pages',
         name: 'pages',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'images',
+        path: 'content/images',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-page-creator`,
+      options: {
+        path: path.join(__dirname, `src`, `pages`),
       },
     },
     {
@@ -49,6 +63,10 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-feed`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -56,10 +74,6 @@ module.exports = {
         trackingId: config.googleAnalyticsId,
       },
     },
-    `gatsby-plugin-feed`,
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -70,7 +84,14 @@ module.exports = {
         theme_color: config.theme_color,
         display: config.display,
         icon: config.icon,
-      }
+      },
+    },
+    // https://www.gatsbyjs.org/docs/themes/converting-a-starter/#transpiling-your-theme-with-webpack
+    {
+      resolve: 'gatsby-plugin-compile-es6-packages',
+      options: {
+        modules: ['gatsby-starter-morning-dew'],
+      },
     },
   ],
 }

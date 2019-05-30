@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import TagList from './TagList'
+import { colors } from '../tokens'
 
 const Header = styled.header`
   margin-bottom: 2rem;
-  color: #787676;
+  color: ${colors.textLight};
 `
 
 class ContentIntro extends React.Component {

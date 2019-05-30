@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { createGlobalStyle } from 'styled-components'
 import { Link } from 'gatsby'
+import { colors } from '../tokens'
 
 export const GlobalStyle = createGlobalStyle`
 * {
@@ -11,8 +12,8 @@ export const GlobalStyle = createGlobalStyle`
 
 body {
   font-family: "Lato", sans-serif;
-  color: #222222cc;
-  background-color: #e8e8e8;
+  color: ${colors.text};
+  background-color: ${colors.background};
 }
 
 img {
@@ -24,7 +25,7 @@ img {
 
 a {
   text-decoration: none;
-  color: rgba(34,34,34,0.8);
+  color: ${colors.primary};
 }
 
 ul,
@@ -34,7 +35,7 @@ ol {
 }
 `
 export const StyledLink = styled(Link)`
-  border-bottom: 1px dotted rgba(162, 162, 162, 0.8);
+  border-bottom: 1px dotted ${colors.primary};
 
   &:hover {
     border-bottom-style: solid;

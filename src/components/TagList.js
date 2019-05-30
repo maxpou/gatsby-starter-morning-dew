@@ -1,19 +1,20 @@
 import React, { Fragment } from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import { colors } from '../tokens'
 
 const ListContainer = styled.div`
   display: inline;
   margin: 0 0.5rem 0 0;
-  color: #787676;
+  color: ${colors.textLight};
 `
 
 const TagListItem = styled(Link)`
   margin-left: 0.3rem;
-  color: #787676;
+  color: ${colors.textLight};
 
   &:hover {
-    border-bottom: 1px dotted #787676;
+    border-bottom: 1px dotted ${colors.textLight};
   }
   &:before {
     content: '#';
@@ -30,7 +31,7 @@ class TagList extends React.Component {
         {tags.map((tag, i) => {
           return (
             <Fragment key={`tag-list-${i}`}>
-              <TagListItem to={`tags/${tag}`}>{tag}</TagListItem>
+              <TagListItem to={`/tags/${tag}`}>{tag}</TagListItem>
               {i < tags.length - 1 ? ', ' : ''}
             </Fragment>
           )

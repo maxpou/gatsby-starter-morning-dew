@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/maxpou/gatsby-starter-morning-dew.svg?branch=master)](https://travis-ci.org/maxpou/gatsby-starter-morning-dew) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![Maintainability](https://api.codeclimate.com/v1/badges/e09f1ac1a5cdb2987a6f/maintainability)](https://codeclimate.com/github/maxpou/gatsby-starter-morning-dew/maintainability) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![Build Status](https://travis-ci.org/maxpou/gatsby-starter-morning-dew.svg?branch=master)](https://travis-ci.org/maxpou/gatsby-starter-morning-dew) [![Netlify Status](https://api.netlify.com/api/v1/badges/d68027bd-19b5-44fd-a2a3-d1f05fc8201e/deploy-status)](https://app.netlify.com/sites/gatsby-starter-morning-dew/deploys) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![Maintainability](https://api.codeclimate.com/v1/badges/e09f1ac1a5cdb2987a6f/maintainability)](https://codeclimate.com/github/maxpou/gatsby-starter-morning-dew/maintainability) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+
 
 
 # gatsby-starter-morning-dew
@@ -12,11 +13,11 @@ Gatsby starter for creating a new blog!
 ## Features
 
 - [:purple_heart: Gatsby v2](https://www.gatsbyjs.org/) / React 16
-- :mag: SEO optimized (robot.txt)
+- :mag: SEO optimized
 - :love_letter: Write posts/pages in Markdown
   - :art: Code syntax highlight
-  - :books: Multilang support (blog post only)
-- :iphone: Responsive design
+  - :books: Multilang support (blog post)
+- :iphone: Mobile Friendly (Responsive design)
 - :sparkles: PWA ready
   - :airplane: Offline support
   - :page_with_curl: Manifest support 
@@ -32,7 +33,7 @@ Gatsby starter for creating a new blog!
 - :construction_worker: Travis CI support
 
 
-![Lighthouse scores (locally :bowtie:)](https://lighthouse.now.sh/?perf=99&pwa=100&a11y=100&bp=93&seo=100)
+![Lighthouse scores (locally :bowtie:)](https://lighthouse.now.sh/?perf=100&pwa=100&a11y=100&bp=100&seo=100)
 
 
 ## Installation
@@ -44,26 +45,26 @@ Gatsby starter for creating a new blog!
   ```sh
   git clone my-site git@github.com:maxpou/gatsby-starter-morning-dew.git
   cd my-site
-  yarn install
+  npm install
   ```
 
 ## Commands
 
 ```sh
 # working locally
-yarn dev
+npm run dev
 
 # generate build
-yarn build
+npm run build
 
 # format code
-yarn format
+npm run format
 
 # lint code
-yarn lint
+npm run lint
 
-# Generate generate post preview images (yarn dev need to run before)
-yarn generatePostPreviewImages
+# Generate generate post preview images (npm run dev need to run before)
+npm run generatePostPreviewImages
 ```
 
 **:warning: Add `--prefix-paths` if you are using path prefix!**
@@ -92,10 +93,10 @@ module.exports = {
   googleAnalyticsId: 'UA-67868977-1',
   background_color: '#ffffff',
   theme_color: '#222222',
-  display: 'minimal-ui',
+  display: 'standalone',
   icon: 'src/assets/gatsby-icon.png',
-  disqusShortname: 'maxpou',
   postsPerPage: 6,
+  disqusShortname: 'maxpou',
   headerLinks: [
     {
       label: '🏡',
@@ -107,7 +108,7 @@ module.exports = {
     },
     {
       label: 'About',
-      url: '/about',
+      url: '/gatsby-starter-morning-dew',
     },
     {
       label: 'Installation',
@@ -120,39 +121,40 @@ module.exports = {
     url: 'https://github.com',
   },
   footerLinks: [
-    [
-      'Explore',
-      {
-        label: 'Blog',
-        url: '/',
-      },
-      {
-        label: 'About',
-        url: '/about',
-      },
-      {
-        label: 'Installation',
-        url: '/how-to-install',
-      },
-    ],
-    [
-      'Follow the author',
-      {
-        label: 'Github',
-        url: 'https://github.com/maxpou/gatsby-starter-morning-dew',
-        iconClassName: 'fa fa-github',
-      },
-      {
-        label: 'Website',
-        url: 'https://www.maxpou.fr',
-        iconClassName: 'fa fa-globe',
-      },
-      {
-        label: 'Twitter',
-        url: 'https://twitter.com/_maxpou',
-        iconClassName: 'fa fa-twitter',
-      },
-    ],
+    {
+      sectionName: 'Explore',
+      links: [
+        {
+          label: 'Blog',
+          url: '/',
+        },
+        {
+          label: 'About',
+          url: '/gatsby-starter-morning-dew',
+        },
+        {
+          label: 'Installation',
+          url: '/how-to-install',
+        },
+      ],
+    },
+    {
+      sectionName: 'Follow the author',
+      links: [
+        {
+          label: 'Github',
+          url: 'https://github.com/maxpou/gatsby-starter-morning-dew',
+        },
+        {
+          label: 'Website',
+          url: 'https://www.maxpou.fr',
+        },
+        {
+          label: 'Twitter',
+          url: 'https://twitter.com/_maxpou',
+        },
+      ],
+    },
   ],
 }
 ```

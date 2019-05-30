@@ -1,7 +1,9 @@
 import React from 'react'
 import { withPrefix } from 'gatsby'
-import siteConfig from '../../data/siteConfig'
 import styled from 'styled-components'
+import useSiteMetadata from '../hooks/use-site-config'
+import useSiteImages from '../hooks/use-site-images'
+import { colors } from '../tokens'
 
 const HeroContainer = styled.div`
   position: relative;
@@ -25,23 +27,22 @@ const HeroTitle = styled.h1`
   font-weight: 700;
   font-size: 3rem;
   margin: 10px 60px;
-  color: #fff;
+  color: ${colors.white};
   text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.6);
 `
 
-class Hero extends React.Component {
-  render() {
-    const heroImg = this.props.heroImg || withPrefix(siteConfig.siteCover)
-    const { title } = this.props
+const Hero = props => {
+  const { siteCover } = useSiteMetadata()
+  const { fluid } = useSiteImages(siteCover)
+  const heroImg = props.heroImg || fluid.src
 
-    return (
-      <HeroContainer style={{ backgroundImage: `url("${heroImg}")` }}>
-        <TitleContainer>
-          <HeroTitle>{title}</HeroTitle>
-        </TitleContainer>
-      </HeroContainer>
-    )
-  }
+  return (
+    <HeroContainer style={{ backgroundImage: `url("${heroImg}")` }}>
+      <TitleContainer>
+        <HeroTitle>{props.title}</HeroTitle>
+      </TitleContainer>
+    </HeroContainer>
+  )
 }
 
 export default Hero
