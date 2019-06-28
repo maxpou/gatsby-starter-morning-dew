@@ -1,10 +1,19 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import styled from 'styled-components'
 import Header from './Header'
 import Footer from './Footer'
-
 import 'prismjs/themes/prism-tomorrow.css'
 import { GlobalStyle } from './Commons'
+import { media } from '../tokens'
+
+const SiteContent = styled.div`
+  margin: 0 0;
+
+  @media ${media.medium} {
+    margin: 60px 0;
+  }
+`
 
 class Template extends React.Component {
   render() {
@@ -20,7 +29,7 @@ class Template extends React.Component {
         </Helmet>
         <GlobalStyle />
         <Header />
-        <div style={{ margin: '60px 0' }}>{children}</div>
+        <SiteContent>{children}</SiteContent>
         <Footer />
       </>
     )

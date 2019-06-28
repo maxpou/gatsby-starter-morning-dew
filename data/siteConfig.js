@@ -23,11 +23,8 @@ module.exports = {
   icon: 'content/images/gatsby-icon.png',
   postsPerPage: 6,
   disqusShortname: 'maxpou',
+  headerLinksIcon: 'baymax.png', // file in content/images
   headerLinks: [
-    {
-      label: '🏡',
-      url: '/',
-    },
     {
       label: 'Blog',
       url: '/',

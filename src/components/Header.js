@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import useSiteMetadata from '../hooks/use-site-config'
-import { colors } from '../tokens'
+import { colors, media } from '../tokens'
+import useSiteImages from '../hooks/use-site-images'
 
 const HeaderWrapper = styled.header`
-  position: fixed;
   top: 0;
   left: 0;
   margin: 0 auto;
@@ -13,6 +13,10 @@ const HeaderWrapper = styled.header`
   width: 100%;
   z-index: 1000;
   background-color: ${colors.primaryAlpha};
+
+  @media ${media.medium} {
+    position: fixed;
+  }
 `
 
 const HeaderNav = styled.nav`
@@ -21,11 +25,18 @@ const HeaderNav = styled.nav`
   height: 60px;
   display: flex;
   flex-direction: row;
-  max-width: 1260px;
+  max-width: 770px;
   z-index: 1000;
-  justify-content: flex-start;
+  justify-content: space-between;
   overflow-x: auto;
   overflow-y: hidden;
+  white-space: nowrap;
+`
+
+const HeaderLinksContainer = styled.div`
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
 `
 
 const HeaderLink = styled(Link)`
@@ -35,24 +46,54 @@ const HeaderLink = styled(Link)`
   color: ${colors.textLightest};
   border: 0;
   margin: 0;
-  margin-right: 0.5rem;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 8px 10px;
+
   min-width: 42px;
   z-index: 10;
+  & + & {
+    margin-left: 0.5rem;
+  }
+`
+
+const HeaderLinkTitle = styled(HeaderLink)`
+  padding-left: 0;
+`
+
+const HeaderLinkTitleContent = styled.span`
+  display: none;
+  @media ${media.medium} {
+    display: block;
+  }
+  padding-left: 0;
+`
+
+const HeaderImage = styled.img`
+  padding: 4px;
+  height: 63px;
 `
 
 const Header = () => {
-  const { headerLinks } = useSiteMetadata()
+  const { headerLinks, siteTitle, headerLinksIcon } = useSiteMetadata()
+  const iconSrc = useSiteImages(headerLinksIcon).fluid.src
 
   return (
     <HeaderWrapper>
       <HeaderNav>
-        {headerLinks.map((headerLink, i) => (
-          <HeaderLink to={headerLink.url} key={`header-link-${i}`}>
-            {headerLink.label}
-          </HeaderLink>
-        ))}
+        <HeaderLinkTitle to={`/`} aria-label={`View home page`}>
+          <HeaderImage src={iconSrc} />
+          <HeaderLinkTitleContent>{siteTitle}</HeaderLinkTitleContent>
+        </HeaderLinkTitle>
+        <HeaderLinksContainer>
+          {headerLinks.map((headerLink, i) => (
+            <HeaderLink
+              to={headerLink.url}
+              key={`header-link-${i}`}
+              aria-label={`View ${headerLink.label} page`}
+            >
+              {headerLink.label}
+            </HeaderLink>
+          ))}
+        </HeaderLinksContainer>
       </HeaderNav>
     </HeaderWrapper>
   )
