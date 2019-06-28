@@ -95,6 +95,7 @@ module.exports = {
     name: 'GitHub',
     url: 'https://github.com',
   },
+  headerLinksIcon: 'baymax.png', // file in content/images
   footerLinks: [
     {
       sectionName: 'Explore',
