@@ -1,7 +1,7 @@
 const { readFile, existsSync } = require('fs')
 const { join, dirname } = require('path')
 const glob = require('glob')
-const yaml = require('yaml').default
+const YAML = require('yaml')
 const puppeteer = require('puppeteer')
 
 const baseUrl = process.argv[2] || 'http://localhost:8000/'
@@ -39,7 +39,7 @@ const parseFile = async file => {
       }
 
       const frontmatter = content.split('---')[1]
-      const data = yaml.parse(frontmatter)
+      const data = YAML.parse(frontmatter)
 
       return resolve({
         ...data,
