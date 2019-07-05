@@ -13,7 +13,6 @@ const HeaderWrapper = styled.header`
   width: 100%;
   z-index: 1000;
   background-color: ${colors.primaryAlpha};
-  font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
   font-weight: 700;
 
   @media ${media.medium} {
