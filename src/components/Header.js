@@ -13,6 +13,8 @@ const HeaderWrapper = styled.header`
   width: 100%;
   z-index: 1000;
   background-color: ${colors.primaryAlpha};
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
+  font-weight: 700;
 
   @media ${media.medium} {
     position: fixed;
@@ -20,6 +22,7 @@ const HeaderWrapper = styled.header`
 `
 
 const HeaderNav = styled.nav`
+  font-weight: 700;
   margin-left: auto;
   margin-right: auto;
   height: 60px;
@@ -51,7 +54,7 @@ const HeaderLink = styled(Link)`
   min-width: 42px;
   z-index: 10;
   & + & {
-    margin-left: 0.5rem;
+    margin-left: 0.7rem;
   }
 `
 
@@ -69,8 +72,10 @@ const HeaderLinkTitleContent = styled.span`
 
 const HeaderImage = styled.img`
   padding: 4px;
-  height: 63px;
+  height: 57px;
 `
+
+// const isActive =
 
 const Header = () => {
   const { headerLinks, siteTitle, headerLinksIcon } = useSiteMetadata()

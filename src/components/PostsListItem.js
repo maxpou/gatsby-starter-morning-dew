@@ -73,7 +73,9 @@ const PostsListItem = props => {
       <footer>
         <TagList tags={tags} icon={true} />
         <PostDate>{date}</PostDate>
-        <ReadPost to={`/${slug}`}>Read post ›</ReadPost>
+        <ReadPost to={`/${slug}`} aria-label={`View ${title} article`}>
+          Read post ›
+        </ReadPost>
       </footer>
     </Post>
   )

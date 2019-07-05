@@ -34,9 +34,9 @@ You can also use `gatsby-starter-morning-dew` as a [Gatsby theme](https://www.ga
   npm install gatsby-starter-morning-dew
   ```
 * In your `gatsby-config.js`, add:
-  ```
+  ```js
   __experimentalThemes: [
-    "gatsby-starter-morning-dew"
+      "gatsby-starter-morning-dew"
   ]
   ```
 
