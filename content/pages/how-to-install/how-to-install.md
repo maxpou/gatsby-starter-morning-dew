@@ -6,7 +6,7 @@ disqus: true
 type: page
 ---
 
-👋 Welcome on **gatsby-starter-morning-dew** starter template!
+👋 Welcome on **gatsby-starter-morning-dew** starter template and theme!
 
 ## Installation
 
@@ -22,8 +22,10 @@ gatsby new gatsby-blog https://github.com/maxpou/gatsby-starter-morning-dew
 ```bash
 git clone my-site git@github.com:maxpou/gatsby-starter-morning-dew.git
 cd my-site
-yarn install
+npm install
 ```
+
+Then run `npm run develop` to try it locally.
 
 ## Installation (theme)
 
