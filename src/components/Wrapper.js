@@ -1,14 +1,15 @@
 import styled from 'styled-components'
+import { colors } from '../tokens'
 
 const Wrapper = styled.main.attrs({
   role: 'main',
 })`
   position: relative;
-  border-radius: 3px;
+  border-radius: 5px;
   width: 80%;
   max-width: 770px;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: ${colors.white};
   margin: 0px auto 30px auto;
   top: 30px;
   padding: 50px;
