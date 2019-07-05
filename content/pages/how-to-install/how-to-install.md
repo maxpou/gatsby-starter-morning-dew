@@ -36,9 +36,9 @@ You can also use `gatsby-starter-morning-dew` as a [Gatsby theme](https://www.ga
   npm install gatsby-starter-morning-dew
   ```
 * In your `gatsby-config.js`, add:
-  ```
+  ```js
   __experimentalThemes: [
-    "gatsby-starter-morning-dew"
+      "gatsby-starter-morning-dew"
   ]
   ```
 
@@ -97,6 +97,7 @@ module.exports = {
     name: 'GitHub',
     url: 'https://github.com',
   },
+  headerLinksIcon: 'baymax.png', // file in content/images
   footerLinks: [
     {
       sectionName: 'Explore',

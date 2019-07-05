@@ -16,6 +16,7 @@ const useSiteMetadata = () => {
           disqusShortname
           disqusSiteUrl
           multilangPosts
+          headerLinksIcon
           headerLinks {
             label
             url

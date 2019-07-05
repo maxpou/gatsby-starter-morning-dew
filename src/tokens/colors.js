@@ -29,6 +29,6 @@ export default {
   highlight_code_marker: '#ffa7c4',
   highlight_code_linebg: '#022a4b',
   // testing
-  // primary: `#03a9f4`,
-  // primaryAlpha: `#03a9f4cc`,
+  // primary: `#6556B3`,
+  // primaryAlpha: `#6556B3cc`,
 }

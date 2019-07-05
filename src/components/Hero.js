@@ -28,7 +28,13 @@ const HeroTitle = styled.h1`
   font-size: 3rem;
   margin: 10px 60px;
   color: ${colors.white};
-  text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.6);
+  text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.85);
+`
+
+const HeroSubTitle = styled.h2`
+  margin: 10px 60px;
+  color: ${colors.white};
+  text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.85);
 `
 
 const Hero = props => {
@@ -40,6 +46,7 @@ const Hero = props => {
     <HeroContainer style={{ backgroundImage: `url("${heroImg}")` }}>
       <TitleContainer>
         <HeroTitle>{props.title}</HeroTitle>
+        {props.subTitle && <HeroSubTitle>{props.subTitle}</HeroSubTitle>}
       </TitleContainer>
     </HeroContainer>
   )
