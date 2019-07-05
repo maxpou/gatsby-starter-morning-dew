@@ -75,8 +75,6 @@ const HeaderImage = styled.img`
   height: 57px;
 `
 
-// const isActive =
-
 const Header = () => {
   const { headerLinks, siteTitle, headerLinksIcon } = useSiteMetadata()
   const iconSrc = useSiteImages(headerLinksIcon).fluid.src
@@ -85,7 +83,7 @@ const Header = () => {
     <HeaderWrapper>
       <HeaderNav>
         <HeaderLinkTitle to={`/`} aria-label={`View home page`}>
-          <HeaderImage src={iconSrc} />
+          <HeaderImage src={iconSrc} alt={siteTitle} />
           <HeaderLinkTitleContent>{siteTitle}</HeaderLinkTitleContent>
         </HeaderLinkTitle>
         <HeaderLinksContainer>
