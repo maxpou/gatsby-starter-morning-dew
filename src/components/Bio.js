@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Text } from './Commons'
 import useSiteMetadata from '../hooks/use-site-config'
 import useSiteImages from '../hooks/use-site-images'
+import { colors } from '../tokens'
 
 const BioWrapper = styled.div`
   & .author-image {
@@ -21,6 +22,7 @@ const BioWrapper = styled.div`
     padding: 6px;
     z-index: 2;
     box-shadow: #ececec 0 0 0 1px;
+    background-color: ${colors.backgroundArticle};
   }
 
   & .author-image .img {

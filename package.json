@@ -13,8 +13,8 @@
     "gatsby": "^2.9.4",
     "gatsby-image": "^2.1.4",
     "gatsby-plugin-compile-es6-packages": "^1.1.0",
-    "gatsby-plugin-feed": "2.2.3",
-    "gatsby-plugin-google-analytics": "2.0.21",
+    "gatsby-plugin-feed": "^2.2.3",
+    "gatsby-plugin-google-analytics": "^2.0.21",
     "gatsby-plugin-manifest": "^2.1.1",
     "gatsby-plugin-offline": "^2.1.3",
     "gatsby-plugin-page-creator": "^2.0.13",
@@ -64,7 +64,7 @@
     "url": "https://github.com/maxpou/gatsby-starter-morning-dew.git"
   },
   "scripts": {
-    "dev": "gatsby develop",
+    "start": "gatsby develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
     "format": "prettier --write 'src/**/*.js' 'data/siteConfig.js' 'gatsby-*.js'",
