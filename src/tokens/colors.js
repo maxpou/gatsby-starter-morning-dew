@@ -22,13 +22,13 @@ export default {
   primary: colors.grey500,
   primaryAlpha: `rgba(32, 35, 42, 0.85)`,
   text: colors.grey500,
-  background: colors.grey100,
+  background: '#f4f8fb',
   heartFooter: 'red',
   highlight_code_oneline: '#fff9d9',
   highlight_code_bg: '#ffa7c4',
   highlight_code_marker: '#ffa7c4',
   highlight_code_linebg: '#022a4b',
   // testing
-  // primary: `#03a9f4`,
-  // primaryAlpha: `#03a9f4cc`,
+  // primary: `#6556B3`,
+  // primaryAlpha: `#6556B3cc`,
 }

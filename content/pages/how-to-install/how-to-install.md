@@ -6,7 +6,7 @@ disqus: true
 type: page
 ---
 
-👋 Welcome on **gatsby-starter-morning-dew** starter template!
+👋 Welcome on **gatsby-starter-morning-dew** starter template and theme!
 
 ## Installation
 
@@ -22,8 +22,10 @@ gatsby new gatsby-blog https://github.com/maxpou/gatsby-starter-morning-dew
 ```bash
 git clone my-site git@github.com:maxpou/gatsby-starter-morning-dew.git
 cd my-site
-yarn install
+npm install
 ```
+
+Then run `npm run develop` to try it locally.
 
 ## Installation (theme)
 
@@ -34,9 +36,9 @@ You can also use `gatsby-starter-morning-dew` as a [Gatsby theme](https://www.ga
   npm install gatsby-starter-morning-dew
   ```
 * In your `gatsby-config.js`, add:
-  ```
+  ```js
   __experimentalThemes: [
-    "gatsby-starter-morning-dew"
+      "gatsby-starter-morning-dew"
   ]
   ```
 
@@ -95,6 +97,7 @@ module.exports = {
     name: 'GitHub',
     url: 'https://github.com',
   },
+  headerLinksIcon: 'baymax.png', // file in content/images
   footerLinks: [
     {
       sectionName: 'Explore',

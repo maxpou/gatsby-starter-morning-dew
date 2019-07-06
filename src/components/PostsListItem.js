@@ -47,6 +47,7 @@ const Excerpt = styled.p`
 `
 
 const PostTitleLink = styled(Link)`
+  color: ${colors.primary};
   &:hover {
     border-bottom: 1px dotted ${colors.primary};
   }
@@ -72,7 +73,9 @@ const PostsListItem = props => {
       <footer>
         <TagList tags={tags} icon={true} />
         <PostDate>{date}</PostDate>
-        <ReadPost to={`/${slug}`}>Read post ›</ReadPost>
+        <ReadPost to={`/${slug}`} aria-label={`View ${title} article`}>
+          Read post ›
+        </ReadPost>
       </footer>
     </Post>
   )

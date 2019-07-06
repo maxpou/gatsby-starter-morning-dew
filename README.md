@@ -120,6 +120,7 @@ module.exports = {
     name: 'GitHub',
     url: 'https://github.com',
   },
+  headerLinksIcon: 'baymax.png', // file in content/images
   footerLinks: [
     {
       sectionName: 'Explore',
@@ -158,3 +159,7 @@ module.exports = {
   ],
 }
 ```
+
+## Deploy
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/maxpou/gatsby-starter-morning-dew)
