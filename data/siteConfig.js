@@ -1,6 +1,6 @@
 module.exports = {
   siteTitle: 'gatsby-starter-morning-dew',
-  siteDescription: "A Gatsby theme/starter to build lightning-fast websites",
+  siteDescription: 'A Gatsby theme/starter to build lightning-fast websites',
   authorName: 'Maxence Poutord',
   twitterUsername: '_maxpou',
   authorAvatar: 'avatar.jpeg', // file in content/images

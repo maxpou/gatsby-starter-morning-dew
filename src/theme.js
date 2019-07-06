@@ -1,6 +1,6 @@
 /*
  * To override any of this theme’s tokens in your site, create a new file in
- * your site at `src/gatsby-theme-starter-morning-dew/theme.js` and export an object from
+ * your site at `src/gatsby-starter-morning-dew/theme.js` and export an object from
  * it. Tokens are nested under the file name.
  *
  * For example, to override the primary color, your `theme.js` would look
@@ -8,7 +8,8 @@
  *
  *    export default {
  *      colors: {
- *        text: 'red'
+ *        primary: `#6556B3`,
+ *        primaryAlpha: `#6556B3cc`,
  *      }
  *    };
  *
