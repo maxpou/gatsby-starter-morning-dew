@@ -2,8 +2,6 @@
 title: "About gatsby-starter-morning-dew"
 slug: gatsby-starter-morning-dew
 cover: ./gatsby-cover.png
-date: 2018-09-30
-language: en
 disqus: true
 type: page
 ---
