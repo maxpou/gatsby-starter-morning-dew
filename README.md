@@ -4,7 +4,8 @@
 
 # gatsby-starter-morning-dew
 
-Gatsby starter for creating a new blog!
+:rocket: A gatsby-starter-morning-dew is a Gatsby starter to build lightning-fast websites!
+:dizzy: You can also use gatsby-starter-morning-dew as a Gatsby Theme
 
 [Demo website.](https://maxpou.github.io/gatsby-starter-morning-dew/)
 
