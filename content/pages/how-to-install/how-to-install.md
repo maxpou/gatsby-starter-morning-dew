@@ -51,10 +51,10 @@ In `data/siteConfig.js`, you will find the following
 ```js
 module.exports = {
   siteTitle: 'gatsby-starter-morning-dew',
-  siteDescription: "👋 Hey I'm a Gatsby starter!",
+  siteDescription: 'A Gatsby theme/starter to build lightning-fast websites',
   authorName: 'Maxence Poutord',
   twitterUsername: '_maxpou',
-  authorAvatar: '/images/avatar.jpeg',
+  authorAvatar: 'avatar.jpeg', // file in content/images
   multilangPosts: true, // enable/disable flags in post lists
   authorDescription: `
   For the last decade, Maxence Poutord has worked with a variety of web technologies. He is currently focused on front-end development.
@@ -66,26 +66,23 @@ module.exports = {
   disqusSiteUrl: 'https://www.maxpou.fr/',
   // Prefixes all links. For cases when deployed to maxpou.fr/gatsby-starter-morning-dew/
   pathPrefix: '/gatsby-starter-morning-dew', // Note: it must *not* have a trailing slash.
-  siteCover: '/images/cover.jpg',
+  siteCover: 'cover-baymax.jpeg', // file in content/images
   googleAnalyticsId: 'UA-67868977-1',
   background_color: '#ffffff',
   theme_color: '#222222',
   display: 'standalone',
-  icon: 'src/assets/gatsby-icon.png',
+  icon: 'content/images/baymax.png',
   postsPerPage: 6,
   disqusShortname: 'maxpou',
+  headerLinksIcon: 'baymax.png', // file in content/images leave empty to disable
   headerLinks: [
-    {
-      label: '🏡',
-      url: '/',
-    },
     {
       label: 'Blog',
       url: '/',
     },
     {
       label: 'About',
-      url: '/gatsby-starter-morning-dew',
+      url: '/about-gatsby-starter-morning-dew',
     },
     {
       label: 'Installation',
@@ -97,7 +94,6 @@ module.exports = {
     name: 'GitHub',
     url: 'https://github.com',
   },
-  headerLinksIcon: 'baymax.png', // file in content/images
   footerLinks: [
     {
       sectionName: 'Explore',
@@ -108,7 +104,7 @@ module.exports = {
         },
         {
           label: 'About',
-          url: '/gatsby-starter-morning-dew',
+          url: '/about-gatsby-starter-morning-dew',
         },
         {
           label: 'Installation',

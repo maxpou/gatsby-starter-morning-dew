@@ -1,7 +1,6 @@
 [![Build Status](https://travis-ci.org/maxpou/gatsby-starter-morning-dew.svg?branch=master)](https://travis-ci.org/maxpou/gatsby-starter-morning-dew) [![Netlify Status](https://api.netlify.com/api/v1/badges/d68027bd-19b5-44fd-a2a3-d1f05fc8201e/deploy-status)](https://app.netlify.com/sites/gatsby-starter-morning-dew/deploys) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![Maintainability](https://api.codeclimate.com/v1/badges/e09f1ac1a5cdb2987a6f/maintainability)](https://codeclimate.com/github/maxpou/gatsby-starter-morning-dew/maintainability) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 
-
 # gatsby-starter-morning-dew
 
 :rocket: A gatsby-starter-morning-dew is a Gatsby starter to build lightning-fast websites!
@@ -9,7 +8,7 @@
 
 [Demo website.](https://maxpou.github.io/gatsby-starter-morning-dew/)
 
-![screenshot](https://i.imgur.com/aRTBbKs.jpg)
+![screenshot](https://i.imgur.com/Tv4SFqT.png)
 
 ## Features
 
@@ -75,10 +74,10 @@ npm run generatePostPreviewImages
 ```js
 module.exports = {
   siteTitle: 'gatsby-starter-morning-dew',
-  siteDescription: "👋 Hey I'm a Gatsby starter!",
+  siteDescription: 'A Gatsby theme/starter to build lightning-fast websites',
   authorName: 'Maxence Poutord',
   twitterUsername: '_maxpou',
-  authorAvatar: '/images/avatar.jpeg',
+  authorAvatar: 'avatar.jpeg', // file in content/images
   multilangPosts: true, // enable/disable flags in post lists
   authorDescription: `
   For the last decade, Maxence Poutord has worked with a variety of web technologies. He is currently focused on front-end development.
@@ -90,26 +89,23 @@ module.exports = {
   disqusSiteUrl: 'https://www.maxpou.fr/',
   // Prefixes all links. For cases when deployed to maxpou.fr/gatsby-starter-morning-dew/
   pathPrefix: '/gatsby-starter-morning-dew', // Note: it must *not* have a trailing slash.
-  siteCover: '/images/cover.jpg',
+  siteCover: 'cover-baymax.jpeg', // file in content/images
   googleAnalyticsId: 'UA-67868977-1',
   background_color: '#ffffff',
   theme_color: '#222222',
   display: 'standalone',
-  icon: 'src/assets/gatsby-icon.png',
+  icon: 'content/images/baymax.png',
   postsPerPage: 6,
   disqusShortname: 'maxpou',
+  headerLinksIcon: 'baymax.png', // file in content/images leave empty to disable
   headerLinks: [
-    {
-      label: '🏡',
-      url: '/',
-    },
     {
       label: 'Blog',
       url: '/',
     },
     {
       label: 'About',
-      url: '/gatsby-starter-morning-dew',
+      url: '/about-gatsby-starter-morning-dew',
     },
     {
       label: 'Installation',
@@ -121,7 +117,6 @@ module.exports = {
     name: 'GitHub',
     url: 'https://github.com',
   },
-  headerLinksIcon: 'baymax.png', // file in content/images
   footerLinks: [
     {
       sectionName: 'Explore',
@@ -132,7 +127,7 @@ module.exports = {
         },
         {
           label: 'About',
-          url: '/gatsby-starter-morning-dew',
+          url: '/about-gatsby-starter-morning-dew',
         },
         {
           label: 'Installation',
