@@ -1,6 +1,6 @@
 ---
 title: "About gatsby-starter-morning-dew"
-slug: gatsby-starter-morning-dew
+slug: about-gatsby-starter-morning-dew
 cover: ./gatsby-cover.png
 disqus: true
 type: page

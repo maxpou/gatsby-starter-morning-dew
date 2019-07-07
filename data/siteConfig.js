@@ -31,7 +31,7 @@ module.exports = {
     },
     {
       label: 'About',
-      url: '/gatsby-starter-morning-dew',
+      url: '/about-gatsby-starter-morning-dew',
     },
     {
       label: 'Installation',
@@ -53,7 +53,7 @@ module.exports = {
         },
         {
           label: 'About',
-          url: '/gatsby-starter-morning-dew',
+          url: '/about-gatsby-starter-morning-dew',
         },
         {
           label: 'Installation',

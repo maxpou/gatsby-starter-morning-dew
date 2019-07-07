@@ -26,11 +26,16 @@ Alis genas rudis felix quas **longum** suorum manu ante prima **usque**. Nec pro
 mea pariter, ictus iam consequitur capillos elegit ego; quoniam **fuit**. Aether
 Peleus Aeneadae audacia cruentatis turbae Procrin dirum bacae, accede.
 
-```php
-    urlLinkedin.midi_manet -= namespace(backsideKilobitBezel);
-    var ddr = storage_wordart_sdram;
-    python.raw_backlink = rfid_load - 4;
-    kibibyte *= cdnThumbnailUri;
+```rust
+fn main() {
+    let strings = vec!["tofu", "93", "18"];
+    let numbers: Vec<_> = strings
+        .into_iter()
+        .map(|s| s.parse::<i32>())
+        .filter_map(Result::ok)
+        .collect();
+    println!("Results: {:?}", numbers);
+}
 ```
 
 ## Fortis dextrae humo limina Tempus singultibus illa
@@ -44,17 +49,23 @@ quam etiamnunc. Puraque [repetitque](http://mihi-aiax.io/suaferunt.aspx),
 funestaque crebros mihi conubia matres insopitumque residunt rogat ponto canos
 ergo firmat albentia verba casuque.
 
-```perl
-    if (lion_vdu + vrml_upnp - redundancyAccessPharming) {
-        driveProcessor = floatingWord(commerceDockRestore(database));
-    } else {
-        partition_source_thunderbolt = -2 + tokenStateArchive /
-                teraflops_gigahertz;
-    }
-    exabytePhpMacintosh -= graphic_cycle(expression, memory(ideFatMatrix,
-            controlInboxMode), 50) + -3;
-    buffer_apple_hdmi += viralSync + internetDigital / tweak_perl_expansion(
-            masterNullFloating + vdu, software_play);
+```jsx
+const Hero = props => {
+  const { siteCover } = useSiteMetadata()
+  const { fluid } = useSiteImages(siteCover)
+  const heroImg = props.heroImg || fluid.src
+
+  return (
+    <HeroContainer style={{ backgroundImage: `url("${heroImg}")` }}>
+      <TitleContainer>
+        <HeroTitle>{props.title}</HeroTitle>
+        {props.subTitle && <HeroSubTitle>{props.subTitle}</HeroSubTitle>}
+      </TitleContainer>
+    </HeroContainer>
+  )
+}
+
+export default Hero
 ```
 
 ## Nati expugnacior nympha milia nascuntur amico
