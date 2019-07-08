@@ -55,7 +55,9 @@
   "keywords": [
     "gatsby",
     "blog",
-    "starter"
+    "starter",
+    "gatsby-theme",
+    "gatsby-plugin"
   ],
   "license": "MIT",
   "main": "n/a",
