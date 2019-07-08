@@ -33,7 +33,7 @@ const NotFoundPage = props => {
     query {
       allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC }
-        filter: { frontmatter: { type: { ne: "page" } } }
+        filter: { fileAbsolutePath: { regex: "/\/content\/posts\/" } }
         limit: 5
       ) {
         edges {

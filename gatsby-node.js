@@ -1,6 +1,6 @@
 const { createFilePath } = require('gatsby-source-filesystem')
 
-exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
   const BlogPostTemplate = require.resolve('./src/templates/blog-post.js')
@@ -21,10 +21,10 @@ exports.createPages = async ({ graphql, actions }) => {
       ) {
         edges {
           node {
+            fileAbsolutePath
             frontmatter {
               title
               slug
-              type
               tags
             }
           }
@@ -32,6 +32,10 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
+
+  if (allMarkdown.errors) {
+    reporter.panic(allMarkdown.errors)
+  }
 
   const postPerPageQuery = await graphql(`
     {
@@ -43,15 +47,10 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  if (allMarkdown.errors) {
-    console.error(allMarkdown.errors)
-    throw Error(allMarkdown.errors)
-  }
-
   const markdownFiles = allMarkdown.data.allMarkdownRemark.edges
 
   const posts = markdownFiles.filter(
-    item => item.node.frontmatter.type !== 'page'
+    item => item.node.fileAbsolutePath.includes('/content/posts/')
   )
 
   // generate paginated post list
@@ -113,7 +112,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // generate pages
   markdownFiles
-    .filter(item => item.node.frontmatter.type === 'page')
+    .filter(item => item.node.fileAbsolutePath.includes('/content/pages/'))
     .forEach(page => {
       createPage({
         path: page.node.frontmatter.slug,
