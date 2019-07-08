@@ -3,7 +3,6 @@ title: How to install
 slug: how-to-install
 cover: ./cover.png
 disqus: true
-type: page
 ---
 
 👋 Welcome on **gatsby-starter-morning-dew** starter template and theme!
