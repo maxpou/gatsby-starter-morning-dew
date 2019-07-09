@@ -7,7 +7,7 @@ disqus: true
 
 👋 Welcome on **gatsby-starter-morning-dew** starter template and theme!
 
-## Installation
+## Installation (starter)
 
 * with Gatsby-cli: 
   
@@ -30,22 +30,44 @@ Then run `npm run develop` to try it locally.
 
 You can also use `gatsby-starter-morning-dew` as a [Gatsby theme](https://www.gatsbyjs.org/blog/2018-11-11-introducing-gatsby-themes/)!
 
-* Add the theme
+1. Add the theme
   ```bash
   npm install gatsby-starter-morning-dew
   ```
-* In your `gatsby-config.js`, add:
+2. In your `gatsby-config.js`, add:
   ```js
-  __experimentalThemes: [
-      "gatsby-starter-morning-dew"
-  ]
+  const config = require('./data/siteConfig')
+  // ...
+  plugins: [
+      {
+        resolve: "gatsby-starter-morning-dew",
+        options: {},
+      },
+      {
+        resolve: `gatsby-plugin-manifest`,
+        options: {
+          name: config.siteTitle,
+          short_name: config.siteTitle,
+          start_url: config.pathPrefix,
+          background_color: config.background_color,
+          theme_color: config.theme_color,
+          display: config.display,
+          icon: 'content/images/company-icon.png', // path to your image
+        },
+      },
+  ],
   ```
+3. Add an image called `baymax.png` in `content/images/baymax.png`.  
+🐞This is due to a bug.  
+😬 Don't worry, this picture will not appear on your website!
 
-For more details, you can see what I did with [my personnal blog](https://github.com/maxpou/maxpou.fr).
+Need more details? Checkout:
+* [maxpou.fr source](https://github.com/maxpou/maxpou.fr): Maxence Poutord's personnal blog;
+* [gatsby-groot source](https://github.com/maxpou/gatsby-groot/): a minimalist blog that use this template!
 
 ## Customisation
 
-In `data/siteConfig.js`, you will find the following
+In `data/siteConfig.js`, you should have the following file structure:
 
 ```js
 module.exports = {
@@ -73,7 +95,7 @@ module.exports = {
   icon: 'content/images/baymax.png',
   postsPerPage: 6,
   disqusShortname: 'maxpou',
-  headerLinksIcon: 'baymax.png', // file in content/images leave empty to disable
+  headerLinksIcon: 'baymax.png', //  (leave empty to disable: '')
   headerLinks: [
     {
       label: 'Blog',
@@ -132,7 +154,21 @@ module.exports = {
 }
 ```
 
-## Markdown headers
+
+## FAQ (Theme): How do I ...
+
+* Change a specific components?  
+👉 See [Component Shadowing (on gatsbyjs.org)](https://www.gatsbyjs.org/blog/2019-04-29-component-shadowing/).
+  
+* Override the [default colors](https://github.com/maxpou/gatsby-starter-morning-dew/blob/master/src/tokens/colors.js)?  
+👉[Check how gatsby-groot extended default colors](https://github.com/maxpou/gatsby-groot/blob/master/src/gatsby-starter-morning-dew/theme.js).
+  
+* More questions? Find a bug?  
+👉Feel free to [open an issue](https://github.com/maxpou/gatsby-starter-morning-dew/issues/new)!  
+👉You can also [ping me on Twitter](https://twitter.com/_maxpou).  
+
+
+## Markdown headers (for posts)
 
 ```yaml
 ---
