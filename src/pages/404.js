@@ -7,7 +7,6 @@ import Wrapper from '../components/Wrapper'
 import SEO from '../components/SEO'
 import RelatedPosts from '../components/RelatedPosts'
 import { Text } from '../components/Commons'
-import { colors } from '../tokens'
 
 const MainTitle = styled.h1`
   line-height: 1.5;

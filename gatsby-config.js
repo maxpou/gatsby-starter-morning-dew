@@ -13,15 +13,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: 'pages',
         path: 'content/posts',
-        name: 'posts',
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: 'content/pages',
         name: 'pages',
+        path: 'content/pages',
       },
     },
     {
@@ -37,6 +37,31 @@ module.exports = {
         path: path.join(__dirname, `src`, `pages`),
       },
     },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        defaultLayouts: {
+          default: require.resolve('./src/templates/page.js'),
+        },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 1380,
+              linkImagesToOriginal: false,
+              withWebp: true,
+            },
+          },
+          { resolve: 'gatsby-remark-prismjs' },
+          { resolve: 'gatsby-remark-responsive-iframe' },
+          { resolve: 'gatsby-remark-copy-linked-files' },
+          { resolve: 'gatsby-remark-smartypants' },
+          { resolve: 'gatsby-remark-autolink-headers' },
+        ],
+      },
+    },
+    // TODO: delete this after mdx
     {
       resolve: `gatsby-transformer-remark`,
       options: {
