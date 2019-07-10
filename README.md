@@ -14,7 +14,7 @@
 
 - [:purple_heart: Gatsby v2](https://www.gatsbyjs.org/) / React 16
 - :mag: SEO optimized
-- :love_letter: Write posts/pages in Markdown
+- :love_letter: Write posts/pages in Markdown or [MDX](https://mdxjs.com/)
   - :art: Code syntax highlight
   - :books: Multilang support (blog post)
 - :iphone: Mobile Friendly (Responsive design)

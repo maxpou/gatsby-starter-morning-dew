@@ -1,79 +1,80 @@
 {
   "name": "gatsby-starter-morning-dew",
-  "description": "Starter Morning Dew Blog",
   "version": "0.0.0-development",
-  "author": "Maxence Poutord <maxence.poutord@gmail.com>",
+  "description": "Starter Morning Dew Blog",
+  "keywords": [
+    "blog",
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-theme",
+    "starter"
+  ],
+  "homepage": "https://github.com/maxpou/gatsby-starter-morning-dew#readme",
   "bugs": {
     "url": "https://github.com/maxpou/gatsby-starter-morning-dew/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxpou/gatsby-starter-morning-dew.git"
+  },
+  "license": "MIT",
+  "author": "Maxence Poutord <maxence.poutord@gmail.com>",
+  "main": "n/a",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write 'src/**/*.js' 'data/siteConfig.js' 'gatsby-*.js'",
+    "generatePostPreviewImages": "node ./scripts/generatePostPreviewImages.js",
+    "lh": "lighthousebot",
+    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "semantic-release": "semantic-release",
+    "start": "gatsby develop",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+  },
   "dependencies": {
-    "babel-plugin-styled-components": "^1.8.0",
-    "core-js": "^3.1.3",
-    "disqus-react": "^1.0.5",
-    "gatsby": "^2.9.4",
-    "gatsby-image": "^2.1.4",
+    "@mdx-js/mdx": "^1.0.23",
+    "@mdx-js/react": "^1.0.23",
+    "babel-plugin-styled-components": "^1.10.6",
+    "disqus-react": "^1.0.6",
+    "gatsby": "^2.13.7",
+    "gatsby-image": "^2.2.4",
     "gatsby-plugin-compile-es6-packages": "^1.1.0",
-    "gatsby-plugin-feed": "^2.2.3",
-    "gatsby-plugin-google-analytics": "^2.0.21",
+    "gatsby-plugin-google-analytics": "^2.1.1",
     "gatsby-plugin-manifest": "^2.2.1",
-    "gatsby-plugin-offline": "^2.1.3",
-    "gatsby-plugin-page-creator": "^2.0.13",
-    "gatsby-plugin-react-helmet": "^3.0.12",
-    "gatsby-plugin-sharp": "^2.1.5",
-    "gatsby-plugin-styled-components": "^3.0.4",
-    "gatsby-remark-autolink-headers": "^2.0.18",
-    "gatsby-remark-copy-linked-files": "^2.0.13",
-    "gatsby-remark-images": "^3.0.16",
-    "gatsby-remark-prismjs": "^3.2.11",
+    "gatsby-plugin-mdx": "^1.0.8",
+    "gatsby-plugin-offline": "^2.2.1",
+    "gatsby-plugin-page-creator": "^2.1.2",
+    "gatsby-plugin-react-helmet": "^3.1.0",
+    "gatsby-plugin-sharp": "^2.2.3",
+    "gatsby-plugin-styled-components": "^3.1.0",
+    "gatsby-remark-autolink-headers": "^2.1.0",
+    "gatsby-remark-copy-linked-files": "^2.1.0",
+    "gatsby-remark-images": "^3.1.3",
+    "gatsby-remark-prismjs": "^3.3.1",
     "gatsby-remark-responsive-iframe": "^2.1.1",
-    "gatsby-remark-smartypants": "^2.0.8",
-    "gatsby-source-filesystem": "^2.0.39",
-    "gatsby-transformer-remark": "^2.3.12",
-    "gatsby-transformer-sharp": "^2.1.21",
+    "gatsby-remark-smartypants": "^2.1.0",
+    "gatsby-source-filesystem": "^2.1.2",
+    "gatsby-transformer-remark": "^2.6.1",
+    "gatsby-transformer-sharp": "^2.2.1",
     "lodash": "^4.17.5",
     "prismjs": "^1.16.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "styled-components": "^4.3.1"
-  },
-  "peerDependencies": {
-    "gatsby": "^2.9.4",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
-    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-react": "^7.14.2",
     "lighthousebot": "https://github.com/GoogleChromeLabs/lighthousebot",
     "prettier": "^1.18.2",
     "puppeteer": "^1.17.0",
-    "semantic-release": "^15.13.16",
+    "semantic-release": "^15.13.18",
     "yaml": "^1.6.0"
   },
-  "homepage": "https://github.com/maxpou/gatsby-starter-morning-dew#readme",
-  "keywords": [
-    "gatsby",
-    "blog",
-    "starter",
-    "gatsby-theme",
-    "gatsby-plugin"
-  ],
-  "license": "MIT",
-  "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/maxpou/gatsby-starter-morning-dew.git"
-  },
-  "scripts": {
-    "start": "gatsby develop",
-    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-    "format": "prettier --write 'src/**/*.js' 'data/siteConfig.js' 'gatsby-*.js'",
-    "develop": "gatsby develop",
-    "build": "gatsby build",
-    "generatePostPreviewImages": "node ./scripts/generatePostPreviewImages.js",
-    "semantic-release": "semantic-release",
-    "lh": "lighthousebot"
+  "peerDependencies": {
+    "gatsby": "^2.13.7",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }

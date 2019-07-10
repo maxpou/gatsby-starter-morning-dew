@@ -47,7 +47,7 @@ const ReadTime = styled.h2.attrs({
 `
 
 const BlogPostShareImage = props => {
-  const post = props.data.markdownRemark
+  const post = props.data.post
   const { width, height, type } = props.pageContext
   const heroImg = post.frontmatter.cover && post.frontmatter.cover.publicURL
   const minute = post.timeToRead === 1 ? 'min' : 'mins'
@@ -68,7 +68,7 @@ export default BlogPostShareImage
 
 export const pageQuery = graphql`
   query BlogPostShareImage($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+    post: mdx(frontmatter: { slug: { eq: $slug } }) {
       timeToRead
       frontmatter {
         title

@@ -11,7 +11,7 @@ import Hero from '../components/Hero'
 class Tags extends React.Component {
   render() {
     const pageTitle = `#${this.props.pageContext.tag}`
-    const posts = get(this, 'props.data.allMarkdownRemark.edges')
+    const posts = get(this, 'props.data.posts.edges')
 
     return (
       <Layout location={this.props.location} title={pageTitle}>
@@ -31,7 +31,7 @@ export default Tags
 
 export const pageQuery = graphql`
   query PostsByTag($tag: String!) {
-    allMarkdownRemark(
+    posts: allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { eq: $tag } } }
     ) {

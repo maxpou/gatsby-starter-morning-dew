@@ -7,7 +7,6 @@ import Wrapper from '../components/Wrapper'
 import SEO from '../components/SEO'
 import RelatedPosts from '../components/RelatedPosts'
 import { Text } from '../components/Commons'
-import { colors } from '../tokens'
 
 const MainTitle = styled.h1`
   line-height: 1.5;
@@ -31,7 +30,7 @@ const SubTitle = styled.h2`
 const NotFoundPage = props => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(
+      posts: allMdx(
         sort: { fields: [frontmatter___date], order: DESC }
         filter: { fileAbsolutePath: { regex: "//content/posts//" } }
         limit: 5
@@ -52,7 +51,7 @@ const NotFoundPage = props => {
     }
   `)
 
-  const posts = data.allMarkdownRemark.edges
+  const posts = data.posts.edges
 
   return (
     <Layout location={props.location} noCover={true}>

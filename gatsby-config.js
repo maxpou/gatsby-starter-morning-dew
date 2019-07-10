@@ -13,15 +13,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: 'content/posts',
         name: 'posts',
+        path: 'content/posts',
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: 'content/pages',
         name: 'pages',
+        path: 'content/pages',
       },
     },
     {
@@ -38,32 +38,37 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        extensions: [`.mdx`, `.md`],
+        defaultLayouts: {
+          default: require.resolve('./src/templates/page.js'),
+        },
+        gatsbyRemarkPlugins: [
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 590,
               linkImagesToOriginal: false,
               withWebp: true,
             },
           },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
-          },
-          'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants',
-          'gatsby-remark-autolink-headers',
+          { resolve: 'gatsby-remark-prismjs' },
+          { resolve: 'gatsby-remark-responsive-iframe' },
+          { resolve: 'gatsby-remark-copy-linked-files' },
+          { resolve: 'gatsby-remark-smartypants' },
+          { resolve: 'gatsby-remark-autolink-headers' },
         ],
       },
     },
+    // Reminder (https://github.com/gatsbyjs/gatsby/issues/15486#issuecomment-509405867)
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-images`],
+      },
+    },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
