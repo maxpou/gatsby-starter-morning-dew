@@ -61,32 +61,6 @@ module.exports = {
         ],
       },
     },
-    // TODO: delete this after mdx
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 590,
-              linkImagesToOriginal: false,
-              withWebp: true,
-            },
-          },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
-          },
-          'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants',
-          'gatsby-remark-autolink-headers',
-        ],
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,

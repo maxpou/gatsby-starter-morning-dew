@@ -15,7 +15,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const allMarkdown = await graphql(`
     {
-      allMarkdownRemark(
+      allMdx(
         sort: { fields: [frontmatter___date], order: DESC }
         limit: 1000
       ) {
@@ -47,7 +47,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
   `)
 
-  const markdownFiles = allMarkdown.data.allMarkdownRemark.edges
+  const markdownFiles = allMarkdown.data.allMdx.edges
 
   const posts = markdownFiles.filter(item =>
     item.node.fileAbsolutePath.includes('/content/posts/')

@@ -46,3 +46,23 @@ export const Text = styled.p`
   line-height: 1.6;
   margin: 1em 0 0 0;
 `
+
+export const Button = styled(Link)`
+  border-radius: 3px;
+  background-color: ${colors.primary};
+  border: 1px solid ${colors.primary};
+  color: ${colors.textLightest};
+  padding: 8px 20px;
+  min-width: 130px;
+
+  &:hover {
+    background-color: ${colors.textLightest};
+    color: ${colors.primary};
+    border: 1px solid ${colors.primary};
+  }
+
+  @media (max-width: 564px) {
+    margin-top: 10px;
+    width: 100%;
+  }
+`

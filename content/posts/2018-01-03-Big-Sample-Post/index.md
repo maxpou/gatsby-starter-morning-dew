@@ -22,17 +22,19 @@ You can play around with Markdown on our [live demo page](http://www.markdown-he
 (If you're not a Markdown Here user, check out the [Markdown Cheatsheet](./Markdown-Cheatsheet) that is not specific to MDH. But, really, you should also use Markdown Here, because it's awesome. http://markdown-here.com)
 
 ##### Table of Contents
-- [H1](#h1)
-  - [H2](#h2)
-    - [H3](#h3)
-      - [H4](#h4)
-        - [H5](#h5)
-          - [H6](#h6)
-  - [Emphasis](#emphasis)
-  - [Lists](#lists)
-  - [Links](#links)
-  - [Images](#images)
-  - [Code and Syntax Highlighting](#code-and-syntax-highlighting)
+- [H1](#H1)
+  - [H2](#H2)
+    - [H3](#H3)
+      - [H4](#H4)
+        - [H5](#H5)
+          - [H6](#H6)
+- [Alt-H1](#Alt-H1)
+  - [Alt-H2](#Alt-H2)
+  - [Emphasis](#Emphasis)
+  - [Lists](#Lists)
+  - [Links](#Links)
+  - [Images](#Images)
+  - [Code and Syntax Highlighting](#Code-and-Syntax-Highlighting)
 
 
 ## Headers
