@@ -68,7 +68,7 @@ export default BlogPostShareImage
 
 export const pageQuery = graphql`
   query BlogPostShareImage($slug: String!) {
-    post:mdx(frontmatter: { slug: { eq: $slug } }) {
+    post: mdx(frontmatter: { slug: { eq: $slug } }) {
       timeToRead
       frontmatter {
         title
