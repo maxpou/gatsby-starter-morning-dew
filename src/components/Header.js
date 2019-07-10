@@ -75,15 +75,22 @@ const HeaderImage = styled.img`
 `
 
 const Header = () => {
-  const { headerLinks, siteTitle, headerLinksIcon } = useSiteMetadata()
-  const iconSrc = headerLinksIcon ? useSiteImages(headerLinksIcon).fluid.src : null;
+  const {
+    headerLinks,
+    siteTitle,
+    headerTitle,
+    headerLinksIcon,
+  } = useSiteMetadata()
+  const iconSrc = headerLinksIcon
+    ? useSiteImages(headerLinksIcon).fluid.src
+    : null
 
   return (
     <HeaderWrapper>
       <HeaderNav>
         <HeaderLinkTitle to={`/`} aria-label={`View home page`}>
           {iconSrc && <HeaderImage src={iconSrc} alt={siteTitle} />}
-          <HeaderLinkTitleContent>{siteTitle}</HeaderLinkTitleContent>
+          <HeaderLinkTitleContent>{headerTitle}</HeaderLinkTitleContent>
         </HeaderLinkTitle>
         <HeaderLinksContainer>
           {headerLinks.map((headerLink, i) => (

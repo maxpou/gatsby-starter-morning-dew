@@ -1,6 +1,6 @@
 ---
 title: "Social media card generator"
-slug: gatsby-starter-morning-dew-v1-1
+slug: social-media-card-generator
 date: 2018-11-13
 language: en
 cover: ./cover-balloons.jpg

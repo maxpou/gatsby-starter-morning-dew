@@ -49,8 +49,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const markdownFiles = allMarkdown.data.allMarkdownRemark.edges
 
-  const posts = markdownFiles.filter(
-    item => item.node.fileAbsolutePath.includes('/content/posts/')
+  const posts = markdownFiles.filter(item =>
+    item.node.fileAbsolutePath.includes('/content/posts/')
   )
 
   // generate paginated post list

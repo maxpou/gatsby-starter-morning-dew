@@ -46,7 +46,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fileAbsolutePath: { regex: "/\/content\/posts\/" } }
+      filter: { fileAbsolutePath: { regex: "//content/posts//" } }
       limit: $limit
       skip: $skip
     ) {
