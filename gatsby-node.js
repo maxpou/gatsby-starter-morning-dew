@@ -13,9 +13,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     './src/templates/blog-list-template.js'
   )
 
-  const allMarkdown = await graphql(`
+  const allMarkdownQuery = await graphql(`
     {
-      allMdx(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
+      allMarkdown: allMdx(
+        sort: { fields: [frontmatter___date], order: DESC }
+        limit: 1000
+      ) {
         edges {
           node {
             fileAbsolutePath
@@ -30,8 +33,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
   `)
 
-  if (allMarkdown.errors) {
-    reporter.panic(allMarkdown.errors)
+  if (allMarkdownQuery.errors) {
+    reporter.panic(allMarkdownQuery.errors)
   }
 
   const postPerPageQuery = await graphql(`
@@ -44,7 +47,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
   `)
 
-  const markdownFiles = allMarkdown.data.allMdx.edges
+  const markdownFiles = allMarkdownQuery.data.allMarkdown.edges
 
   const posts = markdownFiles.filter(item =>
     item.node.fileAbsolutePath.includes('/content/posts/')
