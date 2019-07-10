@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
-import ContentMdx from '../components/ContentMdx'
+import Content from '../components/Content'
 import Wrapper from '../components/Wrapper'
 import Hero from '../components/Hero'
 import SEO from '../components/SEO'
@@ -27,7 +27,7 @@ export default props => {
 
       <Wrapper>
         <article>
-          <ContentMdx content={page.body} date={page.frontmatter.date} />
+          <Content content={page.body} date={page.frontmatter.date} />
         </article>
       </Wrapper>
 

@@ -30,7 +30,7 @@ const SubTitle = styled.h2`
 const NotFoundPage = props => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(
+      posts: allMdx(
         sort: { fields: [frontmatter___date], order: DESC }
         filter: { fileAbsolutePath: { regex: "//content/posts//" } }
         limit: 5
@@ -51,7 +51,7 @@ const NotFoundPage = props => {
     }
   `)
 
-  const posts = data.allMarkdownRemark.edges
+  const posts = data.posts.edges
 
   return (
     <Layout location={props.location} noCover={true}>

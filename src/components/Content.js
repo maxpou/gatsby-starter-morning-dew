@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import ContentHeader from './ContentHeader'
 import { colors } from '../tokens'
+import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
 
 const ContentBody = styled.div`
   line-height: 1.6;
@@ -102,7 +103,9 @@ class Content extends React.Component {
     return (
       <section>
         {(tags || date) && <ContentHeader date={date} tags={tags} />}
-        <ContentBody dangerouslySetInnerHTML={{ __html: content }} />
+        <ContentBody>
+          <MDXRenderer>{content}</MDXRenderer>
+        </ContentBody>
       </section>
     )
   }

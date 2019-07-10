@@ -11,7 +11,7 @@ import Disqus from '../components/Disqus'
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
+    const post = this.props.data.post
     const { previous, next } = this.props.pageContext
 
     return (
@@ -53,10 +53,9 @@ export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-      id
+    post: mdx(frontmatter: { slug: { eq: $slug } }) {
       excerpt
-      html
+      body
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")

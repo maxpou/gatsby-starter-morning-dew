@@ -25,7 +25,7 @@ class Article extends React.Component {
     return (
       <ArticleWrapper>
         <Content
-          content={post.html}
+          content={post.body}
           date={post.frontmatter.date}
           tags={post.frontmatter.tags}
         />
