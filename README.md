@@ -144,6 +144,7 @@ module.exports = {
   icon: 'content/images/baymax.png',
   postsPerPage: 6,
   disqusShortname: 'maxpou',
+  headerTitle: 'gatsby-starter-morning-dew',
   headerLinksIcon: 'baymax.png', // file in content/images (leave empty to disable: '')
   headerLinks: [
     {
