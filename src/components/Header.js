@@ -127,6 +127,7 @@ const BurgerButton = styled.button`
   cursor: pointer;
   padding: 8px 25px;
   outline: none;
+  -webkit-tap-highlight-color: transparent;
   @media ${media.medium} {
     display: none;
   }
