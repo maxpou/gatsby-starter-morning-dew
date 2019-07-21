@@ -33,6 +33,7 @@ const HeaderNav = styled.nav`
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
+  padding: 0px 20px;
 `
 
 const HeaderLinksContainer = styled.div`
@@ -125,9 +126,10 @@ const BurgerButton = styled.button`
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 8px 25px;
+  padding: 8px 12px;
   outline: none;
   -webkit-tap-highlight-color: transparent;
+
   @media ${media.medium} {
     display: none;
   }
