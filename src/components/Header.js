@@ -119,10 +119,14 @@ const HeaderLinks = ({ headerLinks }) => {
 const BurgerButton = styled.button`
   z-index: 30;
   top: 0px;
-  left: -40px;
   position: relative;
   color: ${colors.textLightest};
   display: flex;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px 25px;
+  outline: none;
   @media ${media.medium} {
     display: none;
   }
