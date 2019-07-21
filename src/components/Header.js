@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import useSiteMetadata from '../hooks/use-site-config'
@@ -36,9 +36,12 @@ const HeaderNav = styled.nav`
 `
 
 const HeaderLinksContainer = styled.div`
-  display: flex;
+  display: none;
   -webkit-box-align: center;
   align-items: center;
+  @media ${media.medium} {
+    display: flex;
+  }
 `
 
 const HeaderLink = styled(Link)`
@@ -62,10 +65,7 @@ const HeaderLinkTitle = styled(HeaderLink)`
 `
 
 const HeaderLinkTitleContent = styled.span`
-  display: none;
-  @media ${media.medium} {
-    display: block;
-  }
+  display: block;
   padding-left: 0;
 `
 
@@ -73,6 +73,129 @@ const HeaderImage = styled.img`
   padding: 4px;
   height: 57px;
 `
+
+const MobilePanel = styled.div`
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: ${colors.primary};
+  @media ${media.medium} {
+    display: none;
+  }
+`
+
+const MobileNav = styled.nav`
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0px auto;
+
+  & a {
+    display: flex;
+    margin: 10px 0 !important;
+  }
+`
+
+const HeaderLinks = ({ headerLinks }) => {
+  return headerLinks.map((headerLink, i) => (
+    <HeaderLink
+      to={headerLink.url}
+      key={`header-link-${i}`}
+      aria-label={`View ${headerLink.label} page`}
+    >
+      {headerLink.label}
+    </HeaderLink>
+  ))
+}
+
+const BurgerButton = styled.button`
+  z-index: 30;
+  top: 0px;
+  position: relative;
+  color: ${colors.textLightest};
+  display: flex;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px 25px;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  @media ${media.medium} {
+    display: none;
+  }
+`
+
+const BurgerContent = styled.div`
+  width: 24px;
+  height: 2px;
+  background: ${colors.textLightest};
+  position: absolute;
+  left: 0;
+  ${props =>
+    props.isToggledOn
+      ? 'background: transparent'
+      : `background: ${colors.textLightest}`};
+  transition: all 250ms cubic-bezier(0.86, 0, 0.07, 1);
+  ::before {
+    content: '';
+    top: -8px;
+    width: 24px;
+    height: 2px;
+    background: ${colors.textLightest};
+    position: absolute;
+    left: 0;
+    ${props =>
+      props.isToggledOn
+        ? 'transform: rotate(45deg); top: 0;'
+        : 'transform: rotate(0)'};
+    transition: all 250ms cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  ::after {
+    top: 8px;
+    content: '';
+    width: 24px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: 0;
+    ${props =>
+      props.isToggledOn
+        ? 'transform: rotate(-45deg); top: 0;'
+        : 'transform: rotate(0)'};
+    transition: all 250ms cubic-bezier(0.86, 0, 0.07, 1);
+  }
+`
+
+const MobileHeader = ({ headerLinks }) => {
+  const [isToggledOn, setToggle] = useState(false)
+  const toggle = () => setToggle(!isToggledOn)
+
+  return (
+    <>
+      <BurgerButton
+        onClick={toggle}
+        aria-label={`${isToggledOn ? 'close menu' : 'open menu'}`}
+      >
+        <BurgerContent isToggledOn={isToggledOn} />
+      </BurgerButton>
+      {isToggledOn && (
+        <MobilePanel>
+          <MobileNav>
+            <HeaderLinks headerLinks={headerLinks} />
+          </MobileNav>
+        </MobilePanel>
+      )}
+    </>
+  )
+}
 
 const Header = () => {
   const {
@@ -93,16 +216,9 @@ const Header = () => {
           <HeaderLinkTitleContent>{headerTitle}</HeaderLinkTitleContent>
         </HeaderLinkTitle>
         <HeaderLinksContainer>
-          {headerLinks.map((headerLink, i) => (
-            <HeaderLink
-              to={headerLink.url}
-              key={`header-link-${i}`}
-              aria-label={`View ${headerLink.label} page`}
-            >
-              {headerLink.label}
-            </HeaderLink>
-          ))}
+          <HeaderLinks headerLinks={headerLinks} />
         </HeaderLinksContainer>
+        <MobileHeader headerLinks={headerLinks} />
       </HeaderNav>
     </HeaderWrapper>
   )
