@@ -73,7 +73,9 @@ const ContentBody = styled.div`
   }
 
   & p > code.language-text,
-  & li > code.language-text {
+  & li > code.language-text,
+  & em > code.language-text,
+  & strong > code.language-text {
     background: ${colors.highlight_code_oneline};
     color: #222222cc;
     padding: 0 3px;
