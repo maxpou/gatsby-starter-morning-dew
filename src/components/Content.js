@@ -35,10 +35,12 @@ const ContentBody = styled.div`
   }
 
   & > blockquote {
-    box-sizing: border-box;
-    margin: 1.75em 0 1.75em -2.2em;
-    padding: 0 0 0 1.75em;
-    border-left: 0.4em solid rgba(32, 35, 42, 0.85);
+    box-sizing: border-box;    
+    background-color: #f7f7f7;
+    border-left: 5px solid rgb(244, 213, 36);
+    margin: 30px 0px;
+    padding: 5px 20px;
+    border-radius: 0 8px 8px 0;
   }
 
   & > blockquote p {
@@ -81,6 +83,12 @@ const ContentBody = styled.div`
     padding: 0 3px;
     font-size: 0.94em;
     border-radius: 0.3rem;
+    word-wrap: break-word;
+  }
+
+  & code {
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
 
   & table {
@@ -92,7 +100,7 @@ const ContentBody = styled.div`
     & th,
     & td {
       padding: 0.5em;
-      background: #e8e8e8;
+      background: #f7f7f7;
       border-bottom: 2px solid ${colors.white};
     }
   }
