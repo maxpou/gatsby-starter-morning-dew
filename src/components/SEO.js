@@ -14,7 +14,7 @@ const SEO = props => {
   } = useSiteMetadata()
 
   const title = props.title ? `${props.title} | ${siteTitle}` : siteTitle
-  const formatedSiteUrl = siteUrl.substring(0, siteUrl.length - 1)
+  const formatedSiteUrl = siteUrl.endsWith('/') ? siteUrl.substring(0, siteUrl.length - 1) : siteUrl
   const imagePath = props.imageFb || props.cover || withPrefix(siteCover)
   const imagePathTwitter = props.imageTw || props.cover || withPrefix(siteCover)
   const image = `${formatedSiteUrl}${imagePath}`
