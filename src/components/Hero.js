@@ -1,5 +1,4 @@
 import React from 'react'
-import { withPrefix } from 'gatsby'
 import styled from 'styled-components'
 import useSiteMetadata from '../hooks/use-site-config'
 import useSiteImages from '../hooks/use-site-images'
