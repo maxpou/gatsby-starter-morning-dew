@@ -43,7 +43,7 @@ const useSiteImages = imageName => {
   const items = result.allFile.edges
   const image = items.find(edge => edge.node.relativePath === imageName)
   if (image === undefined) {
-    throw `Unable to find image: ${imageName} (in content/images)`
+    throw new Error(`Unable to find image: ${imageName} (in content/images)`)
   }
 
   return image.node.childImageSharp
