@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-const { readFile, existsSync } = require('fs')
+const { readFile } = require('fs')
 const { join, dirname } = require('path')
 const glob = require('glob')
 const YAML = require('yaml')
