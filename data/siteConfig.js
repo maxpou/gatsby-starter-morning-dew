@@ -66,7 +66,7 @@ module.exports = {
       sectionName: 'Follow the author',
       links: [
         {
-          label: 'Github',
+          label: 'GitHub',
           url: 'https://github.com/maxpou/gatsby-starter-morning-dew',
         },
         {
