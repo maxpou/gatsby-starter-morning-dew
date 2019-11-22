@@ -74,6 +74,13 @@ const ContentBody = styled.div`
     border-left: 0.25em solid ${colors.highlight_code_bg};
   }
 
+  & h1 > code.language-text,
+  & h2 > code.language-text,
+  & h3 > code.language-text,
+  & h4 > code.language-text,
+  & h5 > code.language-text,
+  & h6 > code.language-text,
+  & a > code.language-text,
   & p > code.language-text,
   & li > code.language-text,
   & em > code.language-text,
