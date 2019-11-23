@@ -63,7 +63,7 @@ const Bio = () => {
   return (
     <BioWrapper>
       <figure className="author-image">
-        <a
+        <div
           alt={authorName}
           style={{ backgroundImage: `url("${fixed.src}")` }}
           className="img"

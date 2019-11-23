@@ -135,7 +135,11 @@ const Footer = () => {
             .
           </p>
           <p className="footer-item-text">
-            Hosted with <span className="footer-heart" role="img" aria-label="Love">❤</span> by{' '}
+            Hosted with{' '}
+            <span className="footer-heart" role="img" aria-label="Love">
+              ❤
+            </span>{' '}
+            by{' '}
             <a className="footer-link" href={websiteHost.url}>
               {websiteHost.name}
             </a>

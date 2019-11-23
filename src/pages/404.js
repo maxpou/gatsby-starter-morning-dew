@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
@@ -59,7 +60,9 @@ const NotFoundPage = props => {
       <SEO title="Page Not Found" />
       <Wrapper>
         <MainTitle>404 Page Not Found</MainTitle>
-        <Ghost role="img" aria-label="Ghost">👻</Ghost>
+        <Ghost role="img" aria-label="Ghost">
+          👻
+        </Ghost>
         <Text>
           Looks like you've followed a broken link or entered a URL that doesn't
           exist on this site.

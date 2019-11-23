@@ -22,20 +22,21 @@ const ContentBody = styled.div`
   }
 
   & a {
-    border-bottom: 1px dotted rgba(162, 162, 162, 0.8);
-
+    box-shadow: 0 2px 0 0 ${colors.links};
+    /* box-shadow: ${colors.links} 0px -2px 0px inset; */
+    
     &:hover {
-      border-bottom-style: solid;
+      color: ${colors.links};;
     }
 
     &.anchor,
     &.gatsby-resp-image-link {
-      border: none;
+      box-shadow: none;
     }
   }
 
   & > blockquote {
-    box-sizing: border-box;    
+    box-sizing: border-box;
     background-color: #f7f7f7;
     border-left: 5px solid rgb(244, 213, 36);
     margin: 30px 0px;
