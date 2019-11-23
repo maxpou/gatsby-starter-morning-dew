@@ -25,6 +25,7 @@ export default {
   background: '#f4f8fb',
   backgroundArticle: colors.white,
   heartFooter: 'red',
+  links: '#008fda',
   highlight_code_oneline: '#fff9d9',
   highlight_code_bg: '#ffa7c4',
   highlight_code_marker: '#ffa7c4',
