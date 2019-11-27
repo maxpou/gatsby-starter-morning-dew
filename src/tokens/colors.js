@@ -12,6 +12,7 @@ const colors = {
   grey900: '#131315',
 
   white: '#ffffff',
+  yellow: '#ffdc4e',
 }
 
 export default {
@@ -25,10 +26,11 @@ export default {
   background: '#f4f8fb',
   backgroundArticle: colors.white,
   heartFooter: 'red',
-  links: '#008fda',
+  links: colors.yellow,
+  backgroundSelection: colors.yellow,
   highlight_code_oneline: '#fff9d9',
-  highlight_code_bg: '#ffa7c4',
-  highlight_code_marker: '#ffa7c4',
+  highlight_code_bg: colors.yellow,
+  highlight_code_marker: colors.yellow,
   highlight_code_linebg: '#022a4b',
   // testing
   // primary: `#6556B3`,

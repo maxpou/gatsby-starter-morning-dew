@@ -49,10 +49,11 @@ const BioWrapper = styled.div`
 
 const BioText = styled(Text)`
   & a {
-    border-bottom: 1px dotted #ececec;
+    box-shadow: 0 2px 0 0 ${colors.links};
   }
   & a:hover {
-    border-bottom-style: solid;
+    filter: brightness(150%);
+    box-shadow: none;
   }
 `
 

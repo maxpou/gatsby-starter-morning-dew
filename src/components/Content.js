@@ -23,10 +23,10 @@ const ContentBody = styled.div`
 
   & a {
     box-shadow: 0 2px 0 0 ${colors.links};
-    /* box-shadow: ${colors.links} 0px -2px 0px inset; */
-    
+
     &:hover {
-      color: ${colors.links};;
+      filter: brightness(150%);
+      box-shadow: none;
     }
 
     &.anchor,

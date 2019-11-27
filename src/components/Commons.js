@@ -33,12 +33,17 @@ ol {
   padding-left: 2em;
   margin: 1em 0 0 0;
 }
+
+*::selection {
+  background-color: ${colors.backgroundSelection};
+}
 `
 export const StyledLink = styled(Link)`
-  border-bottom: 1px dotted ${colors.primary};
+  box-shadow: 0 2px 0 0 ${colors.links};
 
   &:hover {
-    border-bottom-style: solid;
+    filter: brightness(150%);
+    box-shadow: none;
   }
 `
 
