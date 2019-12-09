@@ -1,11 +1,11 @@
 ---
-title: "Social media card generator"
+title: "How to generate social share images"
 slug: social-media-card-generator
 date: 2018-11-13
 language: en
 cover: ./cover-balloons.jpg
-imageTw: ./gatsby-starter-morning-dew-v1-1-tw.png
-imageFb: ./gatsby-starter-morning-dew-v1-1-fb.png
+imageTw: ./social-media-card-generator-tw.png
+imageFb: ./social-media-card-generator-fb.png
 tags:
   - gatsby
 ---
@@ -20,19 +20,27 @@ This great idea come from a [conversation](https://twitter.com/_maxpou/status/10
 
 **How to do it?**
 
-1. In a terminal, run `npm run dev`.
-2. In a second terminal, run: `npm run generatePostPreviewImages`
-3. In the post's header, add the generated images:
+1. Open 2 terminals:
+  ```bash
+  # Terminal 1
+  npm run dev
+
+  # Terminal 2
+  npm run generatePostPreviewImages
+  # ..you can also specify the url (if different from http://localhost:8000/)
+  npm run generatePostPreviewImages http://localhost:1234/
+  ```
+2. In the post's header, add the generated images:
   ```yaml
   title: My blog post
   # ...
-  imageTw: ./gatsby-starter-morning-dew-v1-1-tw.png
-  imageFb: ./gatsby-starter-morning-dew-v1-1-fb.png
+  imageTw: ./social-media-card-generator-tw.png
+  imageFb: ./social-media-card-generator-fb.png
   ```
 
 Gatsby will first create extra url suffixed by `/image_tw` and `/image_fb` (i.e. *http://localhost:8000/gatsby-starter-morning-dew-v1-1/image_tw*). Then, Pupetter will take a snapshot and add it to your post folder.
 
-**Quick tip:** If you want to recreate this pictures
+**💡Quick tip:** If you want to recreate this pictures
 
 ```bash
 # delete Facebook images
@@ -41,7 +49,7 @@ find ./content -name "*-fb.png" -type f -delete
 find ./content -name "*-tw.png" -type f -delete
 ```
 
-If you don't to skip the file generation for some posts, add `generate-card: false` to the post's header.
+If you want to skip the file generation for some posts, add `generate-card: false` to the post's header.
 
 ```yaml
 ---

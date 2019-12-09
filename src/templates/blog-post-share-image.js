@@ -1,8 +1,48 @@
 import React from 'react'
 import { graphql, withPrefix } from 'gatsby'
 import styled from 'styled-components'
-import { GlobalStyle } from '../components/Commons'
+import { createGlobalStyle } from 'styled-components'
 import useSiteMetadata from '../hooks/use-site-config'
+import useSiteImages from '../hooks/use-site-images'
+import colors from '../tokens/colors'
+
+const GlobalPageStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Rubik', sans-serif;
+  }
+`
+
+const Wrapper = styled.div.attrs({
+  width: props => props.width || 440,
+  height: props => props.height || 220,
+})`
+  width: ${props => props.width}px;
+  height: ${props => props.height}px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  vertical-align: middle;
+  text-align: center;
+  background-color: ${colors.socialMediaCardFilter};
+  position: relative;
+`
+
+const Square = styled.div.attrs({
+  width: props => props.width || 440,
+  height: props => props.height || 220,
+})`
+  width: ${props => props.width}px;
+  height: ${props => props.height}px;
+  position: absolute;
+  outline: 3px solid #fff !important;
+  outline-offset: -25px;
+`
 
 const Preview = styled.div.attrs({
   width: props => props.width || 440,
@@ -14,12 +54,8 @@ const Preview = styled.div.attrs({
   background-image: url("${props => props.hero}");
   background-position: center;
   background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  vertical-align: middle;
-  text-align: center;
+  position: absolute;
+  opacity: 0.5;
 `
 
 const Title = styled.h1.attrs({
@@ -31,36 +67,79 @@ const Title = styled.h1.attrs({
   color: #fff;
   text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.6);
   text-align: center;
+  z-index: 1;
 `
 
-const ReadTime = styled.h2.attrs({
-  fontSize: props => (props.type === 'twitter' ? '1.5rem' : '2rem'),
+const SiteTitle = styled.p.attrs({
+  fontSize: props => (props.type === 'twitter' ? '1rem' : '2.6rem'),
 })`
-  vertical-align: middle;
   font-size: ${props => props.fontSize};
+  left: 50%;
+  font-weight: 700;
   text-align: center;
+  z-index: 1;
+  position: absolute;
+  top: 22px;
+  background-color: #fff;
+  padding: 1px 5px 1px 5px;
+  transform: translate(-50%);
+`
+
+const AuthorImg = styled.img.attrs({
+  size: props => (props.type === 'twitter' ? '40px' : '52px'),
+})`
+  height: ${props => props.size};
+  width: ${props => props.size};
+  border-radius: ${props => props.size};
+  display: inline-block;
+  vertical-align: middle;
+`
+
+const SubTitle = styled.div`
+  vertical-align: middle;
+  text-align: center;
+  font-weight: 700;
+  z-index: 1;
+`
+
+const ReadTime = styled.span.attrs({
+  fontSize: props => (props.type === 'twitter' ? '1rem' : '2rem'),
+})`
+  font-size: ${props => props.fontSize};
+  text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.6);
   color: #fff;
-  ::before {
-    padding: 0.4em;
-    content: '👁';
-  }
+  padding-left: 8px;
 `
 
 const BlogPostShareImage = props => {
   const post = props.data.post
   const { width, height, type } = props.pageContext
   const heroImg = post.frontmatter.cover && post.frontmatter.cover.publicURL
-  const minute = post.timeToRead === 1 ? 'min' : 'mins'
-  const { siteCover } = useSiteMetadata()
+  const { siteCover, authorAvatar } = useSiteMetadata()
+  const { fixed } = useSiteImages(authorAvatar)
 
   return (
-    <Preview width={width} height={height} hero={heroImg} siteCover={siteCover}>
-      <GlobalStyle />
+    <Wrapper width={width} height={height}>
+      <link
+        href="https://fonts.googleapis.com/css?family=Rubik&display=swap"
+        rel="stylesheet"
+      />
+      <GlobalPageStyle />
+
+      <SiteTitle type={type}>maxpou.fr</SiteTitle>
       <Title type={type}>{post.frontmatter.title}</Title>
-      <ReadTime type={type}>
-        {post.timeToRead} {minute}
-      </ReadTime>
-    </Preview>
+      <SubTitle>
+        <AuthorImg type={type} src={fixed.src} />
+        <ReadTime type={type}>{post.timeToRead} min read</ReadTime>
+      </SubTitle>
+      <Preview
+        width={width}
+        height={height}
+        hero={heroImg}
+        siteCover={siteCover}
+      />
+      <Square width={width} height={height} />
+    </Wrapper>
   )
 }
 
