@@ -32,6 +32,7 @@ export default {
   highlight_code_bg: colors.yellow,
   highlight_code_marker: colors.yellow,
   highlight_code_linebg: '#022a4b',
+  socialMediaCardFilter: '#437abf', // #8f43bf
   // testing
   // primary: `#6556B3`,
   // primaryAlpha: `#6556B3cc`,

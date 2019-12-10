@@ -23,13 +23,16 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write 'src/**/*.js' 'data/siteConfig.js' 'gatsby-*.js'",
-    "generatePostPreviewImages": "node ./scripts/generatePostPreviewImages.js",
+    "format": "prettier --write 'src/**/*.js' 'data/siteConfig.js' 'gatsby-*.js' 'scripts/*.js'",
+    "generatePostPreviewImages": "./scripts/generatePostPreviewImages.js",
     "lh": "lighthousebot",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "semantic-release": "semantic-release",
     "start": "gatsby develop",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+  },
+  "bin": {
+    "generatePostPreviewImages": "./scripts/generatePostPreviewImages.js"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.5.1",
