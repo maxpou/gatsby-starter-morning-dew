@@ -5,15 +5,15 @@ date: 2018-11-13
 language: en
 cover: ./cover-balloons.jpg
 imageTw: ./social-media-card-generator-tw.png
-imageFb: ./social-media-card-generator-fb.png
+imageFb: ./social-media-card-generator-tw.png
 tags:
   - gatsby
 ---
 
 
-It's now posible to generate preview images for social networks ([Twitter](https://cards-dev.twitter.com/validator) and Facebook).
+It's now posible to generate preview images for social networks ([Twitter](https://cards-dev.twitter.com/validator), Slack, LinkedIn...).
 
-![twitter cards](./twitter-cards.png)
+![twitter card](./twitter-card.png)
 
 This great idea come from a [conversation](https://twitter.com/_maxpou/status/1054106299213012992) I had with Luciano Mammino (aka [@Loige](https://twitter.com/loige)). I basically took 85% of his code. Thanks Luciano 😊
 
