@@ -31,7 +31,7 @@ const takeScreenshot = async (url, width, height, destination) => {
 }
 
 const getArticleFiles = () => {
-  return glob.sync(join(__dirname, '..', 'content', 'posts', '**', '*.md'))
+  return glob.sync(join(process.cwd(), 'content', 'posts', '**', '*.md'))
 }
 
 const parseFile = async file => {

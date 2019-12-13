@@ -83,6 +83,7 @@ const SiteTitle = styled.p.attrs({
   background-color: #fff;
   padding: 1px 5px 1px 5px;
   transform: translate(-50%);
+  width: max-content;
 `
 
 const AuthorImg = styled.img.attrs({
@@ -115,7 +116,7 @@ const BlogPostShareImage = props => {
   const post = props.data.post
   const { width, height, type } = props.pageContext
   const heroImg = post.frontmatter.cover && post.frontmatter.cover.publicURL
-  const { siteCover, authorAvatar } = useSiteMetadata()
+  const { siteCover, authorAvatar, headerTitle } = useSiteMetadata()
   const { fixed } = useSiteImages(authorAvatar)
 
   return (
@@ -126,7 +127,7 @@ const BlogPostShareImage = props => {
       />
       <GlobalPageStyle />
 
-      <SiteTitle type={type}>maxpou.fr</SiteTitle>
+      <SiteTitle type={type}>{headerTitle}</SiteTitle>
       <Title type={type}>{post.frontmatter.title}</Title>
       <SubTitle>
         <AuthorImg type={type} src={fixed.src} />
