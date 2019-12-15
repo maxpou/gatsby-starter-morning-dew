@@ -28,6 +28,12 @@ a {
   color: ${colors.primary};
 }
 
+hr {
+  border: 0;
+  border-top: 1px solid ${colors.grey100};
+  margin: 50px 0 5px 0;
+}
+
 ul,
 ol {
   padding-left: 2em;
