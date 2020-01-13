@@ -17,10 +17,8 @@ const SEO = props => {
   const formatedSiteUrl = siteUrl.endsWith('/')
     ? siteUrl.substring(0, siteUrl.length - 1)
     : siteUrl
-  const imagePath = props.imageFb || props.cover || withPrefix(siteCover)
-  const imagePathTwitter = props.imageTw || props.cover || withPrefix(siteCover)
+  const imagePath = props.imageShare || props.cover || withPrefix(siteCover)
   const image = `${formatedSiteUrl}${imagePath}`
-  const imageTwitter = `${formatedSiteUrl}${imagePathTwitter}`
   const description = props.description || siteDescription
 
   return (
@@ -42,7 +40,7 @@ const SEO = props => {
       <meta name="twitter:creator" content={twitterUsername} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={imageTwitter} />
+      <meta name="twitter:image" content={image} />
     </Helmet>
   )
 }

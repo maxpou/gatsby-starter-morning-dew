@@ -13,18 +13,14 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.post
     const { previous, next } = this.props.pageContext
-
     return (
       <Layout location={this.props.location}>
         <SEO
           title={post.frontmatter.title}
           description={post.excerpt}
           cover={post.frontmatter.cover && post.frontmatter.cover.publicURL}
-          imageFb={
-            post.frontmatter.imageFb && post.frontmatter.imageFb.publicURL
-          }
-          imageTw={
-            post.frontmatter.imageTw && post.frontmatter.imageTw.publicURL
+          imageShare={
+            post.frontmatter.imageShare && post.frontmatter.imageShare.publicURL
           }
           lang={post.frontmatter.language}
           path={post.frontmatter.slug}
@@ -65,10 +61,7 @@ export const pageQuery = graphql`
         cover {
           publicURL
         }
-        imageTw {
-          publicURL
-        }
-        imageFb {
+        imageShare {
           publicURL
         }
       }

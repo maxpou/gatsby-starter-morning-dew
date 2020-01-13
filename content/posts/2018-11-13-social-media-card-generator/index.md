@@ -4,8 +4,7 @@ slug: social-media-card-generator
 date: 2018-11-13
 language: en
 cover: ./cover-balloons.jpg
-imageTw: ./social-media-card-generator-tw.png
-imageFb: ./social-media-card-generator-tw.png
+imageShare: ./social-media-card-generator-share.png
 tags:
   - gatsby
 ---
@@ -34,19 +33,16 @@ This great idea come from a [conversation](https://twitter.com/_maxpou/status/10
   ```yaml
   title: My blog post
   # ...
-  imageTw: ./social-media-card-generator-tw.png
-  imageFb: ./social-media-card-generator-fb.png
+  imageShare: ./social-media-card-generator-share.png
   ```
 
-Gatsby will first create extra url suffixed by `/image_tw` and `/image_fb` (i.e. *http://localhost:8000/gatsby-starter-morning-dew-v1-1/image_tw*). Then, Pupetter will take a snapshot and add it to your post folder.
+Gatsby will first create extra url suffixed by `/image_share` (i.e. *http://localhost:8000/gatsby-starter-morning-dew-v1-1/image_share*). Then, Pupetter will take a snapshot and add it to your `post` folder.
 
 **💡Quick tip:** If you want to recreate this pictures
 
 ```bash
-# delete Facebook images
-find ./content -name "*-fb.png" -type f -delete
-# delete Twitter images
-find ./content -name "*-tw.png" -type f -delete
+# delete all share images
+find ./content -name "*-share.png" -type f -delete
 ```
 
 If you want to skip the file generation for some posts, add `generate-card: false` to the post's header.

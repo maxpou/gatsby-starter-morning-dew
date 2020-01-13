@@ -58,11 +58,9 @@ const Preview = styled.div.attrs({
   opacity: 0.5;
 `
 
-const Title = styled.h1.attrs({
-  fontSize: props => (props.type === 'twitter' ? '1.8rem' : '4.8rem'),
-})`
+const Title = styled.h1`
   font-weight: 700;
-  font-size: ${props => props.fontSize};
+  font-size: '1.8rem';
   margin: 10px 60px;
   color: #fff;
   text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.6);
@@ -70,10 +68,8 @@ const Title = styled.h1.attrs({
   z-index: 1;
 `
 
-const SiteTitle = styled.p.attrs({
-  fontSize: props => (props.type === 'twitter' ? '1rem' : '2.6rem'),
-})`
-  font-size: ${props => props.fontSize};
+const SiteTitle = styled.p`
+  font-size: '1rem';
   left: 50%;
   font-weight: 700;
   text-align: center;
@@ -86,12 +82,10 @@ const SiteTitle = styled.p.attrs({
   width: max-content;
 `
 
-const AuthorImg = styled.img.attrs({
-  size: props => (props.type === 'twitter' ? '40px' : '52px'),
-})`
-  height: ${props => props.size};
-  width: ${props => props.size};
-  border-radius: ${props => props.size};
+const AuthorImg = styled.img`
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
   display: inline-block;
   vertical-align: middle;
 `
@@ -103,10 +97,8 @@ const SubTitle = styled.div`
   z-index: 1;
 `
 
-const ReadTime = styled.span.attrs({
-  fontSize: props => (props.type === 'twitter' ? '1rem' : '2rem'),
-})`
-  font-size: ${props => props.fontSize};
+const ReadTime = styled.span`
+  font-size: '1rem';
   text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.6);
   color: #fff;
   padding-left: 8px;
@@ -114,7 +106,7 @@ const ReadTime = styled.span.attrs({
 
 const BlogPostShareImage = props => {
   const post = props.data.post
-  const { width, height, type } = props.pageContext
+  const { width, height } = props.pageContext
   const heroImg = post.frontmatter.cover && post.frontmatter.cover.publicURL
   const { siteCover, authorAvatar, headerTitle } = useSiteMetadata()
   const { fixed } = useSiteImages(authorAvatar)
@@ -127,11 +119,11 @@ const BlogPostShareImage = props => {
       />
       <GlobalPageStyle />
 
-      <SiteTitle type={type}>{headerTitle}</SiteTitle>
-      <Title type={type}>{post.frontmatter.title}</Title>
+      <SiteTitle>{headerTitle}</SiteTitle>
+      <Title>{post.frontmatter.title}</Title>
       <SubTitle>
-        <AuthorImg type={type} src={fixed.src} />
-        <ReadTime type={type}>{post.timeToRead} min read</ReadTime>
+        <AuthorImg src={fixed.src} />
+        <ReadTime>{post.timeToRead} min read</ReadTime>
       </SubTitle>
       <Preview
         width={width}
