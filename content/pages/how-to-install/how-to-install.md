@@ -187,13 +187,13 @@ language: en
 cover: ./cover-balloons.jpg
 
 # use generated Twitter/etc. cards
-imageTw: ./gatsby-starter-morning-dew-v1-1-tw.png
-imageFb: ./gatsby-starter-morning-dew-v1-1-fb.png
+imageShare: ./gatsby-starter-morning-dew-v1-1-share.png
 # ... or if you want to skip the generation
 generate-card: false
 
 # Tags
 tags:
-  - gatsby
+  - Gatsby
+  - JavaScript
 ---
 ```

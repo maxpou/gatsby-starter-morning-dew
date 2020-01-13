@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /* eslint-disable no-console */
-const { readFile } = require('fs')
+const { readFile, existsSync } = require('fs')
 const { join, dirname } = require('path')
 const glob = require('glob')
 const YAML = require('yaml')
@@ -58,18 +58,16 @@ const main = async () => {
 
   for (let i = 0; i < files.length; i++) {
     const file = files[i]
-    const destPrefix = join(file.directory, `${file.slug}-`)
-    const fbFile = `${destPrefix}fb.png`
-    const twFile = `${destPrefix}tw.png`
+    const destinationFile = join(file.directory, `${file.slug}-share.png`)
 
-    if (file['generate-card'] !== false) {
-      await takeScreenshot(`${baseUrl}${file.slug}/image_fb`, 1200, 630, fbFile)
-      console.log(`Created ${fbFile}`)
-    }
-
-    if (file['generate-card'] !== false) {
-      await takeScreenshot(`${baseUrl}${file.slug}/image_tw`, 440, 220, twFile)
-      console.log(`Created ${twFile}`)
+    if (file['generate-card'] !== false && !existsSync(destinationFile)) {
+      await takeScreenshot(
+        `${baseUrl}${file.slug}/image_share`,
+        440,
+        220,
+        destinationFile
+      )
+      console.log(`Created ${destinationFile}`)
     }
   }
 }
