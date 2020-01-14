@@ -5,6 +5,7 @@ import TagList from './TagList'
 import useSiteMetadata from '../hooks/use-site-config'
 import styled from 'styled-components'
 import { colors } from '../tokens'
+import { Bull, ReadingTime } from './Commons'
 
 const Post = styled.article`
   border-bottom: 1px solid rgba(214, 209, 230, 0.5);
@@ -29,14 +30,6 @@ const ReadPost = styled(Link)`
   }
 `
 
-const PostDate = styled.time`
-  color: ${colors.textLight};
-  &:before {
-    content: '🗓';
-    margin-right: 0.2rem;
-  }
-`
-
 const PostHeader = styled.header`
   padding: 1em 0;
 `
@@ -53,8 +46,13 @@ const PostTitleLink = styled(Link)`
   }
 `
 
+const FooterLine = styled.div`
+  color: ${colors.textLight};
+  font-size: 0.8em;
+`
+
 const PostsListItem = props => {
-  const { title, excerpt, slug, date, language, tags } = props
+  const { title, excerpt, slug, language, tags, timeToRead } = props
   const { multilangPosts } = useSiteMetadata()
 
   return (
@@ -71,8 +69,11 @@ const PostsListItem = props => {
         <Excerpt dangerouslySetInnerHTML={{ __html: excerpt }} />
       </section>
       <footer>
-        <TagList tags={tags} icon={true} />
-        <PostDate>{date}</PostDate>
+        <FooterLine>
+          <ReadingTime min={timeToRead} />
+          <Bull />
+          <TagList tags={tags} />
+        </FooterLine>
         <ReadPost to={`/${slug}`} aria-label={`View ${title} article`}>
           Read post ›
         </ReadPost>

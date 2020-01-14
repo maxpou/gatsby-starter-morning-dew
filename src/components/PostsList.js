@@ -13,7 +13,7 @@ class PostsList extends React.Component {
             title: post.node.frontmatter.title,
             excerpt: post.node.excerpt,
             slug: post.node.frontmatter.slug,
-            date: post.node.frontmatter.date,
+            timeToRead: post.node.timeToRead,
             language: post.node.frontmatter.language || 'fr',
             tags: post.node.frontmatter.tags || [],
           }
