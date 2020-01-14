@@ -13,6 +13,7 @@ const colors = {
 
   white: '#ffffff',
   yellow: '#ffdc4e',
+  lightBlue: '#697980',
 }
 
 export default {
@@ -33,6 +34,7 @@ export default {
   highlight_code_marker: colors.yellow,
   highlight_code_linebg: '#022a4b',
   socialMediaCardFilter: '#437abf', // #8f43bf
+  postMetadata: colors.lightBlue,
   // testing
   // primary: `#6556B3`,
   // primaryAlpha: `#6556B3cc`,

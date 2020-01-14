@@ -5,13 +5,16 @@ import { colors } from '../tokens'
 
 const ListContainer = styled.div`
   display: inline;
-  margin: 0 0.5rem 0 0;
-  color: ${colors.textLight};
+  color: ${colors.postMetadata};
 `
 
 const TagListItem = styled(Link)`
-  margin-left: 0.3rem;
-  color: ${colors.textLight};
+  text-transform: uppercase;
+  color: ${colors.postMetadata};
+
+  &:not(:first-child) {
+    margin-left: 0.3rem;
+  }
 
   &:hover {
     border-bottom: 1px dotted ${colors.textLight};
@@ -23,11 +26,10 @@ const TagListItem = styled(Link)`
 
 class TagList extends React.Component {
   render() {
-    const { tags, icon } = this.props
+    const { tags } = this.props
 
     return (
       <ListContainer>
-        {icon === true && <Fragment>🏷 </Fragment>}
         {tags.map((tag, i) => {
           return (
             <Fragment key={`tag-list-${i}`}>

@@ -51,8 +51,8 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
+          timeToRead
           frontmatter {
-            date(formatString: "DD MMMM, YYYY")
             title
             tags
             language
