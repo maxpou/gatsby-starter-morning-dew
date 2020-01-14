@@ -60,7 +60,7 @@ const Preview = styled.div.attrs({
 
 const Title = styled.h1`
   font-weight: 700;
-  font-size: '1.8rem';
+  font-size: 1.8rem;
   margin: 10px 60px;
   color: #fff;
   text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.6);
@@ -69,7 +69,7 @@ const Title = styled.h1`
 `
 
 const SiteTitle = styled.p`
-  font-size: '1rem';
+  font-size: 1rem;
   left: 50%;
   font-weight: 700;
   text-align: center;
@@ -98,7 +98,7 @@ const SubTitle = styled.div`
 `
 
 const ReadTime = styled.span`
-  font-size: '1rem';
+  font-size: 1rem;
   text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.6);
   color: #fff;
   padding-left: 8px;
