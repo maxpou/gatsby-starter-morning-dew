@@ -131,7 +131,6 @@ const ContentBody = styled.div`
   }
 
   & code {
-    white-space: pre-wrap;
     word-wrap: break-word;
   }
 
