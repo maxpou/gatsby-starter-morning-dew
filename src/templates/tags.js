@@ -38,7 +38,13 @@ export const pageQuery = graphql`
   query PostsByTag($tag: String!) {
     posts: allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { eq: $tag } } }
+      filter: {
+        frontmatter: {
+          tags: { eq: $tag }
+          published: { ne: false }
+          unlisted: { ne: true }
+        }
+      }
     ) {
       edges {
         node {
