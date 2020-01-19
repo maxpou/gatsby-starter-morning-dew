@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import TagList from './TagList'
+import Translations from './Translations'
 import Time from './Time'
 import { colors } from '../tokens'
 import { Bull } from './Commons'
@@ -13,7 +14,7 @@ const Header = styled.header`
 
 class ContentIntro extends React.Component {
   render() {
-    const { date, tags } = this.props
+    const { date, tags, translations } = this.props
 
     return (
       <Header>
@@ -24,6 +25,8 @@ class ContentIntro extends React.Component {
             <TagList tags={tags} />
           </Fragment>
         )}
+
+        {translations && <Translations translations={translations} />}
       </Header>
     )
   }

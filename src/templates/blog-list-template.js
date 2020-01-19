@@ -44,7 +44,10 @@ export const pageQuery = graphql`
     }
     posts: allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fileAbsolutePath: { regex: "//content/posts//" } }
+      filter: {
+        fileAbsolutePath: { regex: "//content/posts//" }
+        frontmatter: { published: { ne: false }, unlisted: { ne: true } }
+      }
       limit: $limit
       skip: $skip
     ) {

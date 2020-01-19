@@ -13,6 +13,7 @@ const colors = {
 
   white: '#ffffff',
   yellow: '#ffdc4e',
+  lightYellow: '#f9e892',
   lightBlue: '#697980',
 }
 

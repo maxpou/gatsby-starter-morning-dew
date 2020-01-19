@@ -1,0 +1,52 @@
+---
+title: Utiliser MDX
+slug: using-mdx-fr
+date: 2019-07-10
+language: fr
+unlisted: true
+generate-card: false
+tags: ['gatsby', 'translation']
+translations:
+  - link: '/using-mdx'
+    language: 'English'
+---
+
+## Salut les gens!
+
+Grace a à MDX, il est maintenant possible d'ajouter du JSX dans du Markdown! Juste en dessous, un example de JSX intégré dans du Markdown <br />
+
+> MDX est un format autorisable qui vous permet d'écrire en toute transparence JSX dans vos documents Markdown. Vous pouvez importer des composants, tels que des graphiques interactifs ou des alertes, et les intégrer dans votre contenu. Cela rend l'écriture de contenu longue forme avec des composants un souffle 🚀.
+
+
+**Example:**
+
+<div style={{ padding: '20px', backgroundColor: 'tomato' }}>
+  <h3>Voila du JSX dans du Markdown</h3>
+  {console.log('Salut MDX')}
+</div>
+
+Code:
+
+```jsx
+<div style={{ padding: '20px', backgroundColor: 'tomato' }}>
+  <h3>Voila du JSX dans du Markdown</h3>
+  {console.log('Salut MDX')}
+</div>
+```
+
+
+## How-to?
+
+```jsx{5}
+import MySuperComponent from '../path/to/MySuperComponent'
+
+# Du text en Markdown
+
+<MySuperComponent />
+
+Un autre texte en markdown
+```
+
+## Read more
+
+👉 https://mdxjs.com

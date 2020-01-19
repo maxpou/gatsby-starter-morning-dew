@@ -15,7 +15,7 @@ const useSiteMetadata = () => {
           twitterUsername
           disqusShortname
           disqusSiteUrl
-          multilangPosts
+          defaultLang
           headerTitle
           headerLinksIcon
           headerLinks {

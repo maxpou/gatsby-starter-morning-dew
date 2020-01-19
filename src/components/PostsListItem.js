@@ -53,14 +53,14 @@ const FooterLine = styled.div`
 
 const PostsListItem = props => {
   const { title, excerpt, slug, language, tags, timeToRead } = props
-  const { multilangPosts } = useSiteMetadata()
+  const { defaultLang } = useSiteMetadata()
 
   return (
     <Post>
       <PostHeader>
         <h2>
           <PostTitleLink to={`/${slug}`}>
-            {multilangPosts && <Flag language={language} />}
+            {defaultLang !== language && <Flag language={language} />}
             {title}
           </PostTitleLink>
         </h2>

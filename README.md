@@ -16,17 +16,17 @@
 - :mag: SEO optimized
 - :love_letter: Write posts/pages in Markdown or [MDX](https://mdxjs.com/)
   - :art: Code syntax highlight
-  - :books: Multilang support (blog post)
+  - :books: Multilang support/i18n (blog post)
 - :iphone: Mobile Friendly (Responsive design)
 - :sparkles: PWA ready
   - :airplane: Offline support
   - :page_with_curl: Manifest support 
 - [:wrench: Fully configurable (see data/siteConfig.js)](./data/siteConfig.js)
 - :speech_balloon: Disqus support
-- :nail_care: css-in-js (with [styled-components v4](https://www.styled-components.com))
+- :nail_care: css-in-js (with [styled-components v5](https://www.styled-components.com))
 - :bookmark: Groups post with tags
 - :bar_chart: Google Analytics support
-- :bird: post preview image generation (Twitter, Facebook)
+- :bird: post preview image generation (Twitter, Facebook...)
 - :gem: Developer tools:
   - eslint
   - prettier
@@ -87,7 +87,7 @@ You can also use `gatsby-starter-morning-dew` as a [Gatsby theme](https://www.ga
   ],
   ```
 3. Add an image called `baymax.png` in `content/images/baymax.png`.  
-🐞This is due to a bug.  
+🐞This is due to a theme limitations.  
 😬 Don't worry, this picture will not appear on your website!
 
 Need more details? Checkout:
@@ -125,7 +125,7 @@ module.exports = {
   authorName: 'Maxence Poutord',
   twitterUsername: '_maxpou',
   authorAvatar: 'avatar.jpeg', // file in content/images
-  multilangPosts: true, // enable/disable flags in post lists
+  defaultLang: 'en', // show flag if lang is not default. Leave empty to enable flags in post lists
   authorDescription: `
   For the last decade, Maxence Poutord has worked with a variety of web technologies. He is currently focused on front-end development.
   On his day to day job, he is working as a senior front-end engineer at VSware. He is also a frequent tech speaker and a mentor.

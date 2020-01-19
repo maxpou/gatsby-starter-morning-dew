@@ -17,6 +17,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     {
       allMarkdown: allMdx(
         sort: { fields: [frontmatter___date], order: DESC }
+        filter: { frontmatter: { published: { ne: false } } }
         limit: 1000
       ) {
         edges {
@@ -26,6 +27,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               title
               slug
               tags
+              language
             }
           }
         }
