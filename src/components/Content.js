@@ -35,6 +35,31 @@ const ContentBody = styled.div`
     }
   }
 
+  h1 .anchor svg,
+  h2 .anchor svg,
+  h3 .anchor svg,
+  h4 .anchor svg,
+  h5 .anchor svg,
+  h6 .anchor svg {
+    visibility: hidden;
+    margin-left: -16px;
+  }
+
+  h1:hover .anchor svg,
+  h2:hover .anchor svg,
+  h3:hover .anchor svg,
+  h4:hover .anchor svg,
+  h5:hover .anchor svg,
+  h6:hover .anchor svg,
+  h1 .anchor:focus svg,
+  h2 .anchor:focus svg,
+  h3 .anchor:focus svg,
+  h4 .anchor:focus svg,
+  h5 .anchor:focus svg,
+  h6 .anchor:focus svg {
+    visibility: visible;
+  }
+
   & > blockquote {
     box-sizing: border-box;
     background-color: #f7f7f7;
@@ -56,13 +81,24 @@ const ContentBody = styled.div`
     border-radius: 10px;
     overflow: auto;
     tab-size: 1.5em;
-    margin: 1.5em 0em 1.5em 0;
+    margin: 1.5em -1.5em;
+
+    @media (max-width: 500px) {
+      border-radius: 0;
+      margin-left: -25px;
+      margin-right: -25px;
+    }
   }
 
   & .gatsby-highlight > pre {
     border: 0;
     margin: 0;
     padding: 1;
+  }
+
+  & .gatsby-highlight pre[class*=language-] {
+    float: left;
+    min-width: 100%;
   }
 
   & .gatsby-highlight-code-line {
