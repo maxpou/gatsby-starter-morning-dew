@@ -8,7 +8,7 @@ const ListContainer = styled.div`
   color: ${colors.postMetadata};
 `
 
-const TagListItem = styled(Link)`
+const TagListItemLink = styled(Link)`
   text-transform: uppercase;
   color: ${colors.postMetadata};
 
@@ -24,16 +24,30 @@ const TagListItem = styled(Link)`
   }
 `
 
+const TagListItem = styled.span`
+  text-transform: uppercase;
+  color: ${colors.postMetadata};
+  &:not(:first-child) {
+    margin-left: 0.3rem;
+  }
+  &:before {
+    content: '#';
+  }
+`
+
 class TagList extends React.Component {
   render() {
-    const { tags } = this.props
+    const { tags, noLink } = this.props
 
     return (
       <ListContainer>
         {tags.map((tag, i) => {
           return (
             <Fragment key={`tag-list-${i}`}>
-              <TagListItem to={`/tags/${tag}`}>{tag}</TagListItem>
+              {!noLink && (
+                <TagListItemLink to={`/tags/${tag}`}>{tag}</TagListItemLink>
+              )}
+              {noLink && <TagListItem to={`/tags/${tag}`}>{tag}</TagListItem>}
               {i < tags.length - 1 ? ', ' : ''}
             </Fragment>
           )
