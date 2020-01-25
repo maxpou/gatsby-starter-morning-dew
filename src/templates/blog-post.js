@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-
 import Layout from '../components/layout'
 import Wrapper from '../components/Wrapper'
 import Hero from '../components/Hero'
@@ -38,8 +37,11 @@ class BlogPostTemplate extends React.Component {
 
         <Wrapper>
           <Disqus slug={post.frontmatter.slug} title={post.frontmatter.title} />
-          <PrevNextPost previous={previous} next={next} />
         </Wrapper>
+
+        {/* <Wrapper> */}
+        <PrevNextPost previous={previous} next={next} />
+        {/* </Wrapper> */}
       </Layout>
     )
   }

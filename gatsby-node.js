@@ -28,7 +28,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               slug
               tags
               language
+              cover {
+                publicURL
+              }
             }
+            timeToRead
+            excerpt
           }
         }
       }
