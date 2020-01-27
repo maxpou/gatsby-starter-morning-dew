@@ -8,7 +8,7 @@
 
 [Demo website.](https://maxpou.github.io/gatsby-starter-morning-dew/)
 
-![screenshot](https://i.imgur.com/Tv4SFqT.png)
+![screenshot](https://i.imgur.com/nPthSQy.png)
 
 ## Features
 
