@@ -80,9 +80,15 @@ const PrevNextPost = props => {
       <PreviewContainer>
         {articles.map((article, i) => {
           const { excerpt, timeToRead } = article.node
-          const { tags, cover, title, slug, language } = article.node.frontmatter
+          const {
+            tags,
+            cover,
+            title,
+            slug,
+            language,
+          } = article.node.frontmatter
           const heroImg = (cover && cover.publicURL) || fluid.src
-          console.log(article.node);
+
           return (
             <Preview key={`prev-next-${i}`}>
               <Link to={`/${slug}`} aria-label={`View ${title} article`}>
