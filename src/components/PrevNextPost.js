@@ -107,8 +107,12 @@ const PrevNextPost = props => {
                   </section>
                   <footer>
                     <ReadingTime min={timeToRead} />
-                    <Bull />
-                    <TagList tags={tags} noLink={true} />
+                    {Array.isArray(tags) && (
+                      <>
+                        <Bull />
+                        <TagList tags={tags} noLink={true} />
+                      </>
+                    )}
                   </footer>
                 </PreviewContent>
               </Link>
