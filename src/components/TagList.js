@@ -56,4 +56,5 @@ class TagList extends React.Component {
     )
   }
 }
+
 export default TagList
