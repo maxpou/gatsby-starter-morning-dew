@@ -18,12 +18,14 @@ const GlobalPageStyle = createGlobalStyle`
   }
 `
 
-const Wrapper = styled.div.attrs({
-  width: props => props.width || 440,
-  height: props => props.height || 220,
-})`
-  width: ${props => props.width}px;
-  height: ${props => props.height}px;
+// styled.div.attrs({ color: p => p.color });
+styled.div.attrs(p => ({
+  color: p.color,
+}))
+
+const Wrapper = styled.div`
+  width: ${props => props.width || 440}px;
+  height: ${props => props.height || 220}px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,25 +35,19 @@ const Wrapper = styled.div.attrs({
   position: relative;
 `
 
-const Square = styled.div.attrs({
-  width: props => props.width || 440,
-  height: props => props.height || 220,
-})`
-  width: ${props => props.width}px;
-  height: ${props => props.height}px;
+const Square = styled.div`
+  width: ${props => props.width || 440}px;
+  height: ${props => props.height || 220}px;
   position: absolute;
   outline: 3px solid #fff !important;
   outline-offset: -25px;
 `
 
-const Preview = styled.div.attrs({
-  width: props => props.width || 440,
-  height: props => props.height || 220,
-  hero: props => props.hero || withPrefix(props.siteCover),
-})`
-  width: ${props => props.width}px;
-  height: ${props => props.height}px;
-  background-image: url("${props => props.hero}");
+const Preview = styled.div`
+  width: ${props => props.width || 440}px;
+  height: ${props => props.height || 220}px;
+  background-image: url("${props =>
+    props.hero || withPrefix(props.siteCover)}");
   background-position: center;
   background-size: cover;
   position: absolute;
@@ -110,6 +106,7 @@ const BlogPostShareImage = props => {
   const heroImg = post.frontmatter.cover && post.frontmatter.cover.publicURL
   const { siteCover, authorAvatar, headerTitle } = useSiteMetadata()
   const { fixed } = useSiteImages(authorAvatar)
+  const siteCoverPath = useSiteImages(siteCover).fluid.src
 
   return (
     <Wrapper width={width} height={height}>
@@ -129,7 +126,7 @@ const BlogPostShareImage = props => {
         width={width}
         height={height}
         hero={heroImg}
-        siteCover={siteCover}
+        siteCover={siteCoverPath}
       />
       <Square width={width} height={height} />
     </Wrapper>
