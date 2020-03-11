@@ -11,8 +11,8 @@ jobs:
   include:
     - stage: test
       node_js: lts/*
-      script: 
-        - yarn lint
+      script:
+        - yarn format
         - yarn build --prefix-paths
     - stage: performance_budget
       node_js: lts/*
