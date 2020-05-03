@@ -63,7 +63,6 @@ module.exports = {
             }
           },
           {
-            // gatsby-remark-embed-video still does not work if gatsby-remark-images is removed here.
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 590,
@@ -72,7 +71,6 @@ module.exports = {
             },
           },
           { resolve: 'gatsby-remark-prismjs' },
-          // gatsby-remark-embed-video still does not work if gatsby-remark-responsive-iframe is removed here.
           { resolve: 'gatsby-remark-responsive-iframe' },
           { resolve: 'gatsby-remark-copy-linked-files' },
           { resolve: 'gatsby-remark-smartypants' },
@@ -83,7 +81,7 @@ module.exports = {
     // Reminder (https://github.com/gatsbyjs/gatsby/issues/15486#issuecomment-509405867)
     // If you configure both gatsby-plugin-mdx and gatsby-transformer-remark to use gatsby-remark-images as a plugin, then everything works as expected.
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           {
