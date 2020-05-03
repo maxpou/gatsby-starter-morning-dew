@@ -16,7 +16,7 @@ const PageTitle = styled.h1`
 class Tags extends React.Component {
   render() {
     const pageTitle = `#${this.props.pageContext.tag}`
-    const posts = get(this, 'props.data.posts.edges')
+    const posts = this.props.data.posts.edges
 
     return (
       <Layout location={this.props.location}>
