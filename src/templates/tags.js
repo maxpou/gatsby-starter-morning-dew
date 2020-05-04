@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import get from 'lodash/get'
 
 import Layout from '../components/layout'
 import PostsList from '../components/PostsList'

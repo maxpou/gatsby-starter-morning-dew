@@ -72,7 +72,7 @@
     "yaml": "^1.6.0"
   },
   "peerDependencies": {
-    "gatsby": "^2.20.00",
+    "gatsby": "^2.20.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0"
   }
