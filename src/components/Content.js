@@ -74,6 +74,10 @@ const ContentBody = styled.div`
     font-style: italic;
   }
 
+  & .gatsby-resp-image-figcaption {
+    text-align: center;
+  }
+
   & .gatsby-highlight {
     border-radius: 5px;
     font-size: 15px;

@@ -16,3 +16,5 @@ tags:
 
 ![a funny gif](./git-push-force.gif)
 
+![a funny gif](./cover.jpg "gatsby-config.js is set to only display a caption if a title is explicitly provided, rather than default to the alt-text. But if a title is provided, it will be centered under the image.")
+
