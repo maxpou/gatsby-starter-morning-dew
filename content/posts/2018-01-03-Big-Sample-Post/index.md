@@ -316,6 +316,16 @@ Quote break.
 
 Adding multiple > will create nested blockquotes:
 
+```no-highlight
+> blockquote
+>
+> > nested blockquote
+>
+> > **I'm bold!**
+>
+> more quotes
+```
+
 > blockquote
 >
 > > nested blockquote
