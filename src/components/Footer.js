@@ -25,7 +25,6 @@ const FooterWrapper = styled.footer`
       flex: 1 auto;
       display: inline-flex;
       flex-direction: column;
-      margin-bottom: 1em;
       padding-right: 1em;
     }
   }
@@ -36,20 +35,25 @@ const FooterWrapper = styled.footer`
 
     &:hover {
       color: ${colors.textLightestHover};
-      /* border-bottom: 1px dotted ${colors.textLightestHover}; */
     }
   }
 
   .footer-col > p {
     margin: 0;
   }
+
   .footer-title {
+    font-size: 0.83em;
     margin: 0 0 1rem;
   }
 
   .footer-item {
-    padding: 0.25rem 0;
     color: ${colors.textLightest};
+
+    & a {
+      padding: 0.25rem 0;
+      display: block;
+    }
   }
 
   .footer-heart {
@@ -66,6 +70,11 @@ const FooterWrapper = styled.footer`
     margin: 0 0.25rem;
     margin-right: 0.25rem;
     padding: 0.25rem;
+  }
+
+  .footer-column-items {
+    grid-template-columns: 1fr;
+    display: grid;
   }
 
   @media (max-width: 564px) {
@@ -100,12 +109,14 @@ const Footer = () => {
   const FooterColumn = ({ column }) => {
     return (
       <div className="footer-col">
-        <h5 className="footer-title" key={column.sectionName}>
+        <h3 className="footer-title" key={column.sectionName}>
           {column.sectionName}
-        </h5>
-        {column.links.map((item, i) => {
-          return <FooterItem item={item} key={`footer-column-item-${i}`} />
-        })}
+        </h3>
+        <div className="footer-column-items">
+          {column.links.map((item, i) => {
+            return <FooterItem item={item} key={`footer-column-item-${i}`} />
+          })}
+        </div>
       </div>
     )
   }
@@ -114,9 +125,9 @@ const Footer = () => {
     <FooterWrapper>
       <nav>
         <div className="footer-col">
-          <h5 className="footer-title">
+          <h3 className="footer-title">
             {authorName} © {new Date().getFullYear()}
-          </h5>
+          </h3>
           <p className="footer-item-text">
             Built with{' '}
             <a className="footer-link" href="https://www.gatsbyjs.org">
