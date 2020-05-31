@@ -31,6 +31,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               cover {
                 publicURL
               }
+              unlisted
             }
             timeToRead
             excerpt
@@ -60,9 +61,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     item.node.fileAbsolutePath.includes('/content/posts/')
   )
 
+  const listedPosts = posts.filter(item =>
+    item.node.frontmatter.unlisted !== true
+  )
+
   // generate paginated post list
   const postsPerPage = postPerPageQuery.data.site.siteMetadata.postsPerPage
-  const nbPages = Math.ceil(posts.length / postsPerPage)
+  const nbPages = Math.ceil(listedPosts.length / postsPerPage)
 
   Array.from({ length: nbPages }).forEach((_, i) => {
     createPage({
@@ -119,7 +124,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
 
-  // generate tags
+  // generate tag page
   markdownFiles
     .filter(item => item.node.frontmatter.tags !== null)
     .reduce(
