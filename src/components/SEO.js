@@ -22,6 +22,9 @@ const SEO = props => {
   const imagePath = props.imageShare || props.cover || withPrefix(siteCover)
   const image = `${formatedSiteUrl}${imagePath}`
   const description = props.description || siteDescription
+  const internalTranslations = (props.translations || []).filter(
+    t => !t.link.startsWith('http')
+  )
 
   return (
     <Helmet title={title}>
@@ -29,6 +32,14 @@ const SEO = props => {
       <html lang={lang} />
       <meta name="description" content={description} />
       <link rel="canonical" href={formatedSiteUrl + withPrefix(path)} />
+
+      {internalTranslations.map(translation => (
+        <link
+          rel="alternate"
+          hreflang={translation.hreflang}
+          href={formatedSiteUrl + translation.link}
+        />
+      ))}
 
       {/* OpenGraph tags */}
       <meta property="og:url" content={formatedSiteUrl + withPrefix(path)} />

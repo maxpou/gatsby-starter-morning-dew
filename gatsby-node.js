@@ -61,8 +61,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     item.node.fileAbsolutePath.includes('/content/posts/')
   )
 
-  const listedPosts = posts.filter(item =>
-    item.node.frontmatter.unlisted !== true
+  const listedPosts = posts.filter(
+    item => item.node.frontmatter.unlisted !== true
   )
 
   // generate paginated post list
