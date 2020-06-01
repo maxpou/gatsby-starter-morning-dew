@@ -37,7 +37,7 @@ const SEO = props => {
         <link
           rel="alternate"
           hreflang={translation.hreflang}
-          href={formatedSiteUrl + translation.link}
+          href={formatedSiteUrl + withPrefix(translation.link)}
         />
       ))}
 
