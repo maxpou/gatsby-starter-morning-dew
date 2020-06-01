@@ -14,6 +14,7 @@ tags: ['fake']
 translations:
   - link: 'https://www.maxpou.fr/about'
     language: 'french'
+    hreflang: fr
 ---
 
 This exists to populate GraphQL fields and avoid null errors. It should contain

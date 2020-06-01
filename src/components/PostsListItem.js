@@ -65,9 +65,11 @@ const PostsListItem = props => {
           </PostTitleLink>
         </h2>
       </PostHeader>
+
       <section>
         <Excerpt dangerouslySetInnerHTML={{ __html: excerpt }} />
       </section>
+
       <footer>
         <FooterLine>
           <ReadingTime min={timeToRead} />

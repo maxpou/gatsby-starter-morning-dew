@@ -12,6 +12,7 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.post
     const { previous, next } = this.props.pageContext
+
     return (
       <Layout location={this.props.location}>
         <SEO
@@ -22,6 +23,7 @@ class BlogPostTemplate extends React.Component {
             post.frontmatter.imageShare && post.frontmatter.imageShare.publicURL
           }
           lang={post.frontmatter.language}
+          translations={post.frontmatter.translations}
           path={post.frontmatter.slug}
           isBlogPost
         />
@@ -39,9 +41,7 @@ class BlogPostTemplate extends React.Component {
           <Disqus slug={post.frontmatter.slug} title={post.frontmatter.title} />
         </Wrapper>
 
-        {/* <Wrapper> */}
         <PrevNextPost previous={previous} next={next} />
-        {/* </Wrapper> */}
       </Layout>
     )
   }
@@ -69,6 +69,7 @@ export const pageQuery = graphql`
         translations {
           language
           link
+          hreflang
         }
       }
     }
