@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import { withPrefix } from 'gatsby'
 import styled from 'styled-components'
 import { colors } from '../tokens'
 
@@ -29,7 +30,7 @@ class Translations extends React.Component {
         {translations.map((translation, i) => {
           return (
             <Fragment key={`translation-${i}`}>
-              <TranslationLink href={translation.link}>
+              <TranslationLink href={withPrefix(translation.link)}>
                 {translation.language}
               </TranslationLink>
               {i < translations.length - 1 ? ', ' : ''}
