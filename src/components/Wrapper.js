@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.main.attrs(props => ({
-  role: !props.as && 'main',
-  id: !props.as && 'main-content',
+  role: !props.as ? 'main' : undefined,
+  id: !props.as ? 'main-content' : undefined,
 }))`
   position: relative;
   border-radius: 5px;

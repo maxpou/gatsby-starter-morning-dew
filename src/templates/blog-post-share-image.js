@@ -40,8 +40,8 @@ const Square = styled.div`
 const Preview = styled.div`
   width: ${props => props.width || 440}px;
   height: ${props => props.height || 220}px;
-  background-image: url("${props =>
-    props.hero || withPrefix(props.siteCover)}");
+  background-image: url('${props =>
+    props.hero || withPrefix(props.siteCover)}');
   background-position: center;
   background-size: cover;
   position: absolute;
