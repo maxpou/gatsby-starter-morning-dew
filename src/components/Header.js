@@ -139,6 +139,7 @@ const BurgerButton = styled.button`
 
 const BurgerContent = styled.div`
   width: 24px;
+  top: 30px;
   height: 2px;
   background: ${colors.textLightest};
   position: absolute;
