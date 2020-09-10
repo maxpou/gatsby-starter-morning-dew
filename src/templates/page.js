@@ -32,7 +32,7 @@ export default props => {
       </Wrapper>
 
       {page.frontmatter.disqus && (
-        <Wrapper>
+        <Wrapper as="aside">
           <Disqus slug={page.frontmatter.slug} title={page.frontmatter.title} />
         </Wrapper>
       )}
