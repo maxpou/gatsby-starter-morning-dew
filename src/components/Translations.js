@@ -1,22 +1,21 @@
 import React, { Fragment } from 'react'
 import { withPrefix } from 'gatsby'
 import styled from 'styled-components'
-import { colors } from '../tokens'
 
 const TranslationContainer = styled.div`
   border-radius: 5px;
   padding: 10px;
   margin-top: 10px;
-  background-color: ${colors.lightYellow};
-  border: 1px solid ${colors.grey700};
+  background-color: var(--color-lightYellow);
+  border: 1px solid var(--color-grey700);
 `
 
 const InfoText = styled.span`
-  color: ${colors.grey900};
+  color: var(--color-grey900);
 `
 
 const TranslationLink = styled.a`
-  color: ${colors.grey900};
+  color: var(--color-grey900);
   text-decoration: underline;
 `
 

@@ -1,23 +1,22 @@
 import React, { Fragment } from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { colors } from '../tokens'
 
 const ListContainer = styled.div`
   display: inline;
-  color: ${colors.postMetadata};
+  color: var(--color-textSecondary);
 `
 
 const TagListItemLink = styled(Link)`
   text-transform: uppercase;
-  color: ${colors.postMetadata};
+  color: var(--color-textSecondary);
 
   &:not(:first-child) {
     margin-left: 0.3rem;
   }
 
   &:hover {
-    border-bottom: 1px dotted ${colors.textLight};
+    border-bottom: 1px dotted var(--color-textSecondary);
   }
   &:before {
     content: '#';
@@ -26,7 +25,7 @@ const TagListItemLink = styled(Link)`
 
 const TagListItem = styled.span`
   text-transform: uppercase;
-  color: ${colors.postMetadata};
+  color: var(--color-textSecondary);
   &:not(:first-child) {
     margin-left: 0.3rem;
   }

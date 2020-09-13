@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { createGlobalStyle } from 'styled-components'
 import { Link } from 'gatsby'
-import { colors } from '../tokens'
 
 export const GlobalStyle = createGlobalStyle`
 * {
@@ -13,8 +12,8 @@ export const GlobalStyle = createGlobalStyle`
 
 body {
   font-family: "Lato", sans-serif;
-  color: ${colors.text};
-  background-color: ${colors.background};
+  color: var(--color-text);
+  background-color: var(--color-siteBackground);
 }
 
 img {
@@ -26,12 +25,12 @@ img {
 
 a {
   text-decoration: none;
-  color: ${colors.primary};
+  color: var(--color-text);
 }
 
 hr {
   border: 0;
-  border-top: 1px solid ${colors.grey100};
+  border-top: 1px solid var(--color-grey100);
   margin: 50px 0 5px 0;
 }
 
@@ -42,11 +41,11 @@ ol {
 }
 
 *::selection {
-  background-color: ${colors.backgroundSelection};
+  background-color: var(--color-secondary);
 }
 `
 export const StyledLink = styled(Link)`
-  box-shadow: 0 2px 0 0 ${colors.links};
+  box-shadow: 0 2px 0 0 var(--color-secondary);
 
   &:hover {
     filter: brightness(150%);
@@ -61,7 +60,7 @@ export const Text = styled.p`
 
 export const Bull = styled.span`
   display: inline-block;
-  color: ${colors.postMetadata};
+  color: var(--color-textSecondary);
   margin: 0 4px;
   &::before {
     content: '•';
@@ -71,7 +70,7 @@ export const Bull = styled.span`
 export const ReadingTime = props => {
   const ReadingTimeContainer = styled.span`
     text-transform: uppercase;
-    color: ${colors.postMetadata};
+    color: var(--color-textSecondary);
   `
   return <ReadingTimeContainer>{props.min} min read</ReadingTimeContainer>
 }

@@ -1,10 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { colors } from '../tokens'
 
 const Time = props => {
   const TimeContainer = styled.time`
-    color: ${colors.postMetadata};
+    color: var(--color-textSecondary);
   `
   const { date } = props
 

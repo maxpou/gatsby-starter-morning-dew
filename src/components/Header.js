@@ -4,8 +4,9 @@ import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import useSiteMetadata from '../hooks/use-site-config'
-import { colors, media } from '../tokens'
+import { media } from '../tokens'
 import useSiteImages from '../hooks/use-site-images'
+import DarkToggle from './DarkToggle'
 
 const HeaderWrapper = styled.header`
   top: 0;
@@ -14,7 +15,7 @@ const HeaderWrapper = styled.header`
   display: block;
   width: 100%;
   z-index: 1000;
-  background-color: ${colors.primaryAlpha};
+  background-color: var(--color-primaryAlpha);
   font-weight: 700;
 
   @media ${media.medium} {
@@ -35,7 +36,7 @@ const HeaderNav = styled.nav`
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
-  padding: 0px 20px;
+  padding: 0px 10px;
 `
 
 const HeaderLinksContainer = styled.div`
@@ -51,7 +52,7 @@ const HeaderLink = styled(Link)`
   position: relative;
   display: flex;
   align-items: center;
-  color: ${colors.textLightest};
+  color: var(--color-white);
   border: 0;
   margin: 0;
   padding: 8px 10px;
@@ -86,9 +87,27 @@ const MobilePanel = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
-  background-color: ${colors.primary};
+  background-color: var(--color-primary);
   @media ${media.medium} {
     display: none;
+  }
+`
+
+const SkipMainContent = styled.a`
+  position: absolute;
+  left: -999px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+  color: var(--color-white);
+  background-color: var(--color-grey700);
+
+  &:focus {
+    display: inline-block;
+    height: auto;
+    width: auto;
+    position: static;
+    padding: 20px 10px;
   }
 `
 
@@ -123,7 +142,7 @@ const BurgerButton = styled.button`
   z-index: 30;
   top: 0px;
   position: relative;
-  color: ${colors.textLightest};
+  color: var(--color-white);
   display: flex;
   background: transparent;
   border: none;
@@ -141,20 +160,20 @@ const BurgerContent = styled.div`
   width: 24px;
   top: 30px;
   height: 2px;
-  background: ${colors.textLightest};
+  background: var(--color-white);
   position: absolute;
   left: 0;
   ${props =>
     props.isToggledOn
       ? 'background: transparent'
-      : `background: ${colors.textLightest}`};
+      : `background: var(--color-white)`};
   transition: all 250ms cubic-bezier(0.86, 0, 0.07, 1);
   ::before {
     content: '';
     top: -8px;
     width: 24px;
     height: 2px;
-    background: ${colors.textLightest};
+    background: var(--color-white);
     position: absolute;
     left: 0;
     ${props =>
@@ -195,6 +214,7 @@ const MobileHeader = ({ headerLinks }) => {
         <MobilePanel>
           <MobileNav>
             <HeaderLinks headerLinks={headerLinks} />
+            <DarkToggle isExpanded={true} />
           </MobileNav>
         </MobilePanel>
       )}
@@ -216,12 +236,16 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <HeaderNav>
+        <SkipMainContent href="#main-content">
+          Skip to main content
+        </SkipMainContent>
         <HeaderLinkTitle to={`/`} aria-label={`View home page`}>
           {iconSrc && <HeaderImage src={iconSrc} alt={siteTitle} />}
           <HeaderLinkTitleContent>{headerTitle}</HeaderLinkTitleContent>
         </HeaderLinkTitle>
         <HeaderLinksContainer>
           <HeaderLinks headerLinks={headerLinks} />
+          <DarkToggle />
         </HeaderLinksContainer>
         <MobileHeader headerLinks={headerLinks} />
       </HeaderNav>

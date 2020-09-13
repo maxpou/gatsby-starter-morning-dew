@@ -31,7 +31,7 @@ const Wrapper = styled.div`
   justify-content: center;
   vertical-align: middle;
   text-align: center;
-  background-color: ${colors.socialMediaCardFilter};
+  background-color: #437abf;
   position: relative;
 `
 

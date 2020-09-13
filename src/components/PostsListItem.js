@@ -1,10 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Flag from './Flag/Flag'
+import Flag from './Flag'
 import TagList from './TagList'
 import useSiteMetadata from '../hooks/use-site-config'
 import styled from 'styled-components'
-import { colors } from '../tokens'
 import { Bull, ReadingTime } from './Commons'
 
 const Post = styled.article`
@@ -21,12 +20,12 @@ const ReadPost = styled(Link)`
   text-transform: uppercase;
   letter-spacing: 0.05em;
   line-height: 2;
-  color: ${colors.primary};
+  color: var(--color-text);
 
   &:hover {
-    background-color: ${colors.primaryAlpha};
+    background-color: var(--color-grey600);
     border-radius: 0.25rem;
-    color: ${colors.textLightest};
+    color: var(--color-white);
   }
 `
 
@@ -40,14 +39,13 @@ const Excerpt = styled.p`
 `
 
 const PostTitleLink = styled(Link)`
-  color: ${colors.primary};
+  color: var(--color-text);
   &:hover {
-    border-bottom: 1px dotted ${colors.primary};
+    border-bottom: 1px dotted var(--color-text);
   }
 `
 
 const FooterLine = styled.div`
-  color: ${colors.textLight};
   font-size: 0.8em;
 `
 
