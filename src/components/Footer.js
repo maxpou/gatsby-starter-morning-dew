@@ -2,14 +2,13 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import useSiteMetadata from '../hooks/use-site-config'
-import { colors } from '../tokens'
 
 const FooterWrapper = styled.footer`
   text-align: left;
   padding-top: 30px;
   padding-bottom: 50px;
-  background-color: ${colors.primary};
-  color: ${colors.textLightest};
+  background-color: var(--color-primary);
+  color: var(--color-white);
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
@@ -30,11 +29,11 @@ const FooterWrapper = styled.footer`
   }
 
   & a {
-    color: ${colors.textLightest};
+    color: var(--color-white);
     font-weight: bold;
 
     &:hover {
-      color: ${colors.textLightestHover};
+      color: var(--color-grey200);
     }
   }
 
@@ -48,7 +47,7 @@ const FooterWrapper = styled.footer`
   }
 
   .footer-item {
-    color: ${colors.textLightest};
+    color: var(--color-white);
 
     & a {
       padding: 0.25rem 0;
@@ -57,12 +56,12 @@ const FooterWrapper = styled.footer`
   }
 
   .footer-heart {
-    color: ${colors.heartFooter};
+    color: var(--color-red);
   }
 
   .footer-item-text {
     padding: 0.1rem 0;
-    color: ${colors.textLightest};
+    color: var(--color-white);
   }
 
   .footer-header {

@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import ContentHeader from './ContentHeader'
-import { colors } from '../tokens'
 import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
 
 const ContentBody = styled.div`
@@ -22,7 +21,8 @@ const ContentBody = styled.div`
   }
 
   & a {
-    box-shadow: 0 2px 0 0 ${colors.links};
+    fill: var(--color-text);
+    box-shadow: 0 2px 0 0 var(--color-secondary);
 
     &:hover {
       filter: brightness(150%);
@@ -62,8 +62,8 @@ const ContentBody = styled.div`
 
   & > blockquote {
     box-sizing: border-box;
-    background-color: #f7f7f7;
-    border-left: 5px solid rgb(244, 213, 36);
+    background-color: var(--color-secondaryContentBackground);
+    border-left: 5px solid var(--color-secondary);
     margin: 30px 0px;
     padding: 5px 20px;
     border-radius: 0 8px 8px 0;
@@ -102,13 +102,13 @@ const ContentBody = styled.div`
   }
 
   & .gatsby-highlight-code-line {
-    background-color: ${colors.highlight_code_linebg};
+    background-color: var(--color-darkBlue);
     display: block;
     margin-right: -1em;
     margin-left: -1em;
     padding-right: 1em;
     padding-left: 0.75em;
-    border-left: 0.25em solid ${colors.highlight_code_bg};
+    border-left: 0.25em solid var(--color-yellow);
   }
 
   & h1 > code.language-text,
@@ -122,7 +122,7 @@ const ContentBody = styled.div`
   & li > code.language-text,
   & em > code.language-text,
   & strong > code.language-text {
-    background: ${colors.highlight_code_oneline};
+    background: var(--color-beige);
     color: #222222cc;
     padding: 0 3px;
     font-size: 0.94em;
@@ -143,8 +143,13 @@ const ContentBody = styled.div`
     & th,
     & td {
       padding: 0.5em;
-      background: #f7f7f7;
-      border-bottom: 2px solid ${colors.white};
+      background-color: var(--color-secondaryContentBackground);
+    }
+    & tr {
+      border-bottom: 2px solid var(--color-white);
+    }
+    & tbody tr:last-child {
+      border-bottom: none;
     }
   }
 `

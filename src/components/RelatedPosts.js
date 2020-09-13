@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyledLink } from './Commons'
-import Flag from './Flag/Flag'
+import Flag from './Flag'
 import useSiteMetadata from '../hooks/use-site-config'
 
 const RelatedPosts = props => {

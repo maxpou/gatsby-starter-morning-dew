@@ -3,12 +3,11 @@ import styled from 'styled-components'
 import TagList from './TagList'
 import Translations from './Translations'
 import Time from './Time'
-import { colors } from '../tokens'
 import { Bull } from './Commons'
 
 const Header = styled.header`
   margin-bottom: 2rem;
-  color: ${colors.textLight};
+  color: var(--color-textSecondary);
   font-size: 0.9em;
 `
 

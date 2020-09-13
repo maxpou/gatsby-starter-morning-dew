@@ -1,4 +1,4 @@
-import colorDefaults from './colors'
+import { COLORS as colorDefaults } from './colors'
 import mediaDefaults from './media'
 import theme from '../theme'
 

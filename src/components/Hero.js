@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import useSiteMetadata from '../hooks/use-site-config'
 import useSiteImages from '../hooks/use-site-images'
-import { colors } from '../tokens'
 
 const HeroContainer = styled.div`
   position: relative;
@@ -26,13 +25,13 @@ const HeroTitle = styled.h1`
   font-weight: 700;
   font-size: 3rem;
   margin: 10px 50px;
-  color: ${colors.white};
+  color: var(--color-white);
   text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.85);
 `
 
 const HeroSubTitle = styled.h2`
   margin: 10px 50px;
-  color: ${colors.white};
+  color: var(--color-white);
   text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.85);
 `
 

@@ -1,19 +1,19 @@
 import styled from 'styled-components'
-import { colors } from '../tokens'
 
 const Wrapper = styled.main.attrs(props => ({
   role: !props.as && 'main',
+  id: !props.as && 'main-content',
 }))`
   position: relative;
   border-radius: 5px;
   width: 80%;
   max-width: 770px;
   word-wrap: break-word;
-  background-color: ${colors.backgroundArticle};
+  background-color: var(--color-wrapperBackground);
   margin: 0px auto 30px auto;
   top: 30px;
   padding: 50px;
-  box-shadow: 0 0 0 0, 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 0, 0 6px 12px var(--color-wrapperShadow);
 
   @media (max-width: 780px) {
     width: 100%;

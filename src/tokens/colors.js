@@ -14,29 +14,55 @@ const colors = {
   white: '#ffffff',
   yellow: '#ffdc4e',
   lightYellow: '#f9e892',
-  lightBlue: '#697980',
+  blueGreyed: '#546c77',
+  darkBlue: '#022a4b',
+  beige: '#fff9d9',
+  red: '#ff0000',
 }
 
-export default {
+export const COLORS = {
   ...colors,
-  textLightest: colors.white,
-  textLightestHover: colors.grey200,
-  textLight: '#57595d',
-  primary: colors.grey500,
-  primaryAlpha: `rgba(32, 35, 42, 0.85)`,
-  text: colors.grey500,
-  background: '#f4f8fb',
-  backgroundArticle: colors.white,
-  heartFooter: 'red',
-  links: colors.yellow,
-  backgroundSelection: colors.yellow,
-  highlight_code_oneline: '#fff9d9',
-  highlight_code_bg: colors.yellow,
-  highlight_code_marker: colors.yellow,
-  highlight_code_linebg: '#022a4b',
-  socialMediaCardFilter: '#437abf', // #8f43bf
-  postMetadata: colors.lightBlue,
-  // testing
-  // primary: `#6556B3`,
-  // primaryAlpha: `#6556B3cc`,
+  text: {
+    light: colors.grey500,
+    dark: colors.white,
+  },
+  textSecondary: {
+    light: colors.blueGreyed,
+    dark: '#c6d8e0',
+  },
+  siteBackground: {
+    light: '#f4f8fb',
+    dark: colors.grey500,
+  },
+  wrapperBackground: {
+    light: colors.white,
+    dark: colors.grey500,
+  },
+  secondaryContentBackground: {
+    light: '#f7f7f7',
+    dark: '#3a3a3a',
+  },
+  wrapperShadow: {
+    light: '#0000001a',
+    dark: '#00000000',
+  },
+  primary: {
+    light: colors.grey500,
+    dark: colors.grey500,
+  },
+  primaryAlpha: {
+    light: 'rgba(32, 35, 42, 0.85)',
+    dark: 'rgba(32, 35, 42, 0.85)',
+  },
+  secondary: {
+    light: colors.yellow,
+    dark: colors.yellow,
+  },
+  h2: {
+    light: colors.grey500,
+    dark: colors.yellow,
+  },
 }
+
+export const COLOR_MODE_KEY = 'color-mode'
+export const INITIAL_COLOR_MODE_CSS_PROP = '--initial-color-mode'

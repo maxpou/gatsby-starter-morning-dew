@@ -1,11 +1,10 @@
 import React, { Fragment } from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { colors } from '../tokens'
 import useSiteMetadata from '../hooks/use-site-config'
 import useSiteImages from '../hooks/use-site-images'
 import TagList from './TagList'
-import Flag from './Flag/Flag'
+import Flag from './Flag'
 import { ReadingTime, Bull } from './Commons'
 
 const PreviewContainer = styled.aside`
@@ -26,13 +25,13 @@ const PreviewContainer = styled.aside`
 const Preview = styled.article`
   cursor: pointer;
   flex: 1 1 300px;
-  background-color: ${colors.backgroundArticle};
+  background-color: var(--color-secondaryContentBackground);
   box-shadow: 0 0 0 0, 0 6px 12px rgba(0, 0, 0, 0.1);
   margin: 20px 20px;
   border-radius: 5px;
 
   &:hover {
-    box-shadow: 0 0 0 0, 0 6px 12px ${colors.grey300};
+    box-shadow: 0 0 0 0, 0 6px 12px var(--color-grey300);
     transition: all 0.3s ease;
     transform: translate3D(0, -1px, 0);
   }
