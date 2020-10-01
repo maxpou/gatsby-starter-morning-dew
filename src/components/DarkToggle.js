@@ -33,7 +33,7 @@ const DarkToggle = ({ isExpanded = false }) => {
       aria-label={`Activate ${oppositeColor} mode`}
     >
       {colorMode === 'dark' ? (
-        <img src={SunIcon} alt={'sun logo'} />
+        <img src={SunIcon} alt="sun logo" />
       ) : (
         <img src={MoonIcon} alt="moon Logo" />
       )}
