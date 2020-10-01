@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import { createGlobalStyle } from 'styled-components'
 import useSiteMetadata from '../hooks/use-site-config'
 import useSiteImages from '../hooks/use-site-images'
-import colors from '../tokens/colors'
 
 const GlobalPageStyle = createGlobalStyle`
   * {
@@ -17,11 +16,6 @@ const GlobalPageStyle = createGlobalStyle`
     font-family: 'Rubik', sans-serif;
   }
 `
-
-// styled.div.attrs({ color: p => p.color });
-styled.div.attrs(p => ({
-  color: p.color,
-}))
 
 const Wrapper = styled.div`
   width: ${props => props.width || 440}px;
