@@ -51,6 +51,7 @@
     "gatsby-plugin-styled-components": "^3.2.4",
     "gatsby-remark-autolink-headers": "^2.2.4",
     "gatsby-remark-copy-linked-files": "^2.2.4",
+    "gatsby-remark-embed-video": "^2.0.1",
     "gatsby-remark-images": "^3.2.6",
     "gatsby-remark-prismjs": "^3.4.5",
     "gatsby-remark-responsive-iframe": "^2.3.4",
