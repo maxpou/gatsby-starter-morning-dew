@@ -51,14 +51,17 @@ module.exports = {
         {
           label: 'Blog',
           url: '/',
+          rel: null,
         },
         {
           label: 'About',
           url: '/about-gatsby-starter-morning-dew',
+          rel: null,
         },
         {
           label: 'Installation',
           url: '/how-to-install',
+          rel: null,
         },
       ],
     },
@@ -68,14 +71,17 @@ module.exports = {
         {
           label: 'GitHub',
           url: 'https://github.com/maxpou/gatsby-starter-morning-dew',
+          rel: null,
         },
         {
           label: 'Website',
           url: 'https://www.maxpou.fr',
+          rel: null,
         },
         {
           label: 'Twitter',
           url: 'https://twitter.com/_maxpou',
+          rel: 'me',
         },
       ],
     },
