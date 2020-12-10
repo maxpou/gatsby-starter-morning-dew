@@ -18,6 +18,7 @@
   - :art: Code syntax highlight
   - :books: Multilang support/i18n (blog post)
 - :iphone: Mobile Friendly (Responsive design)
+- :last_quarter_moon_with_face: Dark mode
 - :sparkles: PWA ready
   - :airplane: Offline support
   - :page_with_curl: Manifest support 

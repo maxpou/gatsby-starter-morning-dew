@@ -25,6 +25,7 @@ A gatsby-starter-morning-dew is a Gatsby theme/starter to build lightning-fast w
   - 🎨 Code syntax highlight
   - 📚 Multilang support (blog post)
 - 📱 Mobile Friendly (Responsive design)
+- 🌜 Dark mode
 - ✨ PWA ready
   - ✈️ Offline support
   - 📃 Manifest support 
