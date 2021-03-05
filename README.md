@@ -26,7 +26,6 @@
 - :speech_balloon: Disqus support
 - :nail_care: css-in-js (with [styled-components v5](https://www.styled-components.com))
 - :bookmark: Groups post with tags
-- :bar_chart: Google Analytics support
 - :bird: post preview image generation (Twitter, Facebook...)
 - :gem: Developer tools:
   - eslint
@@ -138,7 +137,6 @@ module.exports = {
   // Prefixes all links. For cases when deployed to maxpou.fr/gatsby-starter-morning-dew/
   pathPrefix: '/gatsby-starter-morning-dew', // Note: it must *not* have a trailing slash.
   siteCover: 'cover-baymax.jpeg', // file in content/images
-  googleAnalyticsId: 'UA-67868977-1',
   background_color: '#ffffff',
   theme_color: '#222222',
   display: 'standalone',
