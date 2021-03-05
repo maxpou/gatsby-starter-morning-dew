@@ -12,7 +12,7 @@
 
 ## Features
 
-- [:purple_heart: Gatsby v2](https://www.gatsbyjs.org/) / React 16
+- [:purple_heart: Gatsby v3](https://www.gatsbyjs.org/) / React 16
 - :mag: SEO optimized
 - :love_letter: Write posts/pages in Markdown or [MDX](https://mdxjs.com/)
   - :art: Code syntax highlight

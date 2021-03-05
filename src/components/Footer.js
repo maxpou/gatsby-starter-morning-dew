@@ -98,7 +98,7 @@ const Footer = () => {
     }
     return (
       <span className="footer-item">
-        <a className="footer-link" href={item.url}>
+        <a className="footer-link" href={item.url} rel={item.rel}>
           {item.label}
         </a>
       </span>
