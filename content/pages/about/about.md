@@ -34,7 +34,6 @@ A gatsby-starter-morning-dew is a Gatsby theme/starter to build lightning-fast w
 - 💅 css-in-js (with [styled-components](https://www.styled-components.com))
 - 🧙‍♀️ Use it as a starter or [as a theme](https://www.gatsbyjs.org/blog/2018-11-11-introducing-gatsby-themes/)
 - 🔖 Groups post with tags
-- 📊 Google Analytics support
 - 🐦 post preview image generation (Twitter, Facebook)
 - 💎 Developer tools (eslint, prettier)
 - 👷 Travis CI support
