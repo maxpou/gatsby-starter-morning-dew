@@ -51,6 +51,7 @@ module.exports = {
               maxWidth: 590,
               linkImagesToOriginal: false,
               withWebp: true,
+              showCaptions: ['title'],
             },
           },
           { resolve: 'gatsby-remark-prismjs' },
