@@ -41,10 +41,6 @@
 <p align="center">
   <img src="https://i.imgur.com/FXkc88D.png" alt="screenshot">
 </p>
-<p align="center">
-  <img src="https://i.imgur.com/FXkc88D.png" alt="screenshot">
-</p>
-
 
 ## Features
 
