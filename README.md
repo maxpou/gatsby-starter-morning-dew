@@ -1,18 +1,54 @@
-[![Build Status](https://travis-ci.com/maxpou/gatsby-starter-morning-dew.svg?branch=master)](https://travis-ci.com/maxpou/gatsby-starter-morning-dew) [![Netlify Status](https://api.netlify.com/api/v1/badges/d68027bd-19b5-44fd-a2a3-d1f05fc8201e/deploy-status)](https://app.netlify.com/sites/gatsby-starter-morning-dew/deploys) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![Maintainability](https://api.codeclimate.com/v1/badges/e09f1ac1a5cdb2987a6f/maintainability)](https://codeclimate.com/github/maxpou/gatsby-starter-morning-dew/maintainability) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+<h1 align="center">gatsby-starter-morning-dew</h1>
 
+<p align="center">
+  🚀 A gatsby-starter-morning-dew is a Gatsby starter to build lightning-fast websites!
+</p>
 
-# gatsby-starter-morning-dew
+<p align="center">
+  <strong>
+    <a href="https://maxpou.github.io/gatsby-starter-morning-dew/">Demo</a>
+  </strong>
+</p>
 
-:rocket: A gatsby-starter-morning-dew is a Gatsby starter to build lightning-fast websites!  
-:dizzy: You can also use gatsby-starter-morning-dew as a Gatsby Theme
+<p align="center">
+  <a href="https://travis-ci.com/maxpou/gatsby-starter-morning-dew">
+    <img
+      alt="Build Status"
+      src="https://travis-ci.com/maxpou/gatsby-starter-morning-dew.svg?branch=master">
+  </a>
+	<a href="https://app.netlify.com/sites/gatsby-starter-morning-dew/deploys">
+    <img
+      alt="Netlify Status"
+      src="https://api.netlify.com/api/v1/badges/d68027bd-19b5-44fd-a2a3-d1f05fc8201e/deploy-status">
+  </a>
+	<a href="https://codeclimate.com/github/maxpou/gatsby-starter-morning-dew/maintainability">
+    <img
+      alt="Maintainability"
+      src="https://api.codeclimate.com/v1/badges/e09f1ac1a5cdb2987a6f/maintainability">
+  </a>
+	<a href="https://github.com/semantic-release/semantic-release">
+    <img
+      alt="semantic-release"
+      src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg">
+  </a>
+  <a href="https://npm-stat.com/charts.html?package=gatsby-starter-morning-dew&from=2018-02-12">
+    <img
+      alt="Total downloads on npm"
+      src="https://img.shields.io/npm/dy/gatsby-starter-morning-dew.svg?colorA=333a41&colorB=007dc7&maxAge=3600&label=Downloads">
+  <a>
+</p>
 
-[Demo website.](https://maxpou.github.io/gatsby-starter-morning-dew/)
+<p align="center">
+  <img src="https://i.imgur.com/FXkc88D.png" alt="screenshot">
+</p>
+<p align="center">
+  <img src="https://i.imgur.com/FXkc88D.png" alt="screenshot">
+</p>
 
-![screenshot](https://i.imgur.com/nPthSQy.png)
 
 ## Features
 
-- [:purple_heart: Gatsby v3](https://www.gatsbyjs.org/) / React 16
+- [:purple_heart: Gatsby 3](https://www.gatsbyjs.org/) / React 16
 - :mag: SEO optimized
 - :love_letter: Write posts/pages in Markdown or [MDX](https://mdxjs.com/)
   - :art: Code syntax highlight
@@ -33,7 +69,7 @@
 - :construction_worker: Travis CI support
 
 
-![Lighthouse scores (locally :bowtie:)](https://lighthouse.now.sh/?perf=100&pwa=100&a11y=100&bp=100&seo=100)
+![Lighthouse scores](https://i.imgur.com/Y6bFKFj.png)
 
 ## Installation (starter)
 
