@@ -36,7 +36,7 @@ export default Tags
 export const pageQuery = graphql`
   query PostsByTag($tag: String!) {
     posts: allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter : { date : DESC }}
       filter: {
         frontmatter: {
           tags: { eq: $tag }
@@ -48,7 +48,11 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
-          timeToRead
+          fields {
+            timeToRead {
+              text
+            }
+          }
           frontmatter {
             title
             tags

@@ -34,7 +34,7 @@ class BlogPostTemplate extends React.Component {
         />
 
         <Wrapper>
-          <Article post={post} />
+          <Article post={post} body={this.props.children}> </Article>
         </Wrapper>
 
         <Wrapper as="aside">
@@ -60,9 +60,7 @@ export const pageQuery = graphql`
         slug
         language
         tags
-        cover {
-          publicURL
-        }
+        cover 
         imageShare {
           publicURL
         }

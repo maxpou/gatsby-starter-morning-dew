@@ -14,6 +14,7 @@ class BlogList extends React.Component {
     const posts = this.props.data.posts.edges
     const { pageContext } = this.props
 
+    console.log(pageContext);
     return (
       <Layout location={this.props.location}>
         <SEO />
@@ -43,9 +44,9 @@ export const pageQuery = graphql`
       }
     }
     posts: allMdx(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter : {date : DESC }}
       filter: {
-        fileAbsolutePath: { regex: "//content/posts//" }
+        internal : { contentFilePath: { regex: "//content/posts//" } }
         frontmatter: { published: { ne: false }, unlisted: { ne: true } }
       }
       limit: $limit
@@ -54,7 +55,11 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
-          timeToRead
+          fields {
+            timeToRead {
+              text
+            }
+          }
           frontmatter {
             title
             tags

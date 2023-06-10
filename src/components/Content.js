@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import ContentHeader from './ContentHeader'
-import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
+//import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
 
 const ContentBody = styled.div`
   line-height: 1.6;
@@ -159,6 +159,7 @@ class Content extends React.Component {
   render() {
     const { content, date, tags, translations } = this.props
 
+    console.log(content);
     return (
       <section>
         {(tags || date || translations) && (
@@ -166,7 +167,8 @@ class Content extends React.Component {
         )}
 
         <ContentBody>
-          <MDXRenderer>{content}</MDXRenderer>
+          {/* <MDXRenderer>{content}</MDXRenderer> */}
+          {content}
         </ContentBody>
       </section>
     )

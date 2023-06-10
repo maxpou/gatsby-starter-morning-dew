@@ -73,5 +73,5 @@ const ReadingTimeContainer = styled.span`
 `
 
 export const ReadingTime = props => {
-  return <ReadingTimeContainer>{props.min} min read</ReadingTimeContainer>
+  return <ReadingTimeContainer>{props.min} </ReadingTimeContainer>
 }

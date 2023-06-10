@@ -78,7 +78,8 @@ const PrevNextPost = props => {
     <Fragment>
       <PreviewContainer>
         {articles.map((article, i) => {
-          const { excerpt, timeToRead } = article.node
+          const { excerpt, fields } = article.node
+          const timeToRead = fields.timeToRead.text;
           const {
             tags,
             cover,

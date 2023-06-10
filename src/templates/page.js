@@ -27,7 +27,7 @@ const Page = props => {
 
       <Wrapper>
         <article>
-          <Content content={page.body} date={page.frontmatter.date} />
+          <Content content={props.children} date={page.frontmatter.date} />
         </article>
       </Wrapper>
 
@@ -52,9 +52,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         disqus
-        cover {
-          publicURL
-        }
+        cover 
       }
     }
   }

@@ -19,7 +19,7 @@ This cheatsheet is specifically *Markdown Here's* version of Github-flavored Mar
 
 You can play around with Markdown on our [live demo page](http://www.markdown-here.com/livedemo.html).
 
-(If you're not a Markdown Here user, check out the [Markdown Cheatsheet](./Markdown-Cheatsheet) that is not specific to MDH. But, really, you should also use Markdown Here, because it's awesome. http://markdown-here.com)
+(If you're not a Markdown Here user, check out the [Markdown Cheatsheet](./Markdown-Cheatsheet) that is not specific to MDH. But, really, you should also use Markdown Here, because it's awesome. `http://markdown-here.com)`
 
 ##### Table of Contents
 - [H1](#H1)
@@ -171,7 +171,7 @@ Some text to show that the reference links can follow later.
 Or leave it empty and use the [link text itself]
 
 URLs and URLs in angle brackets will automatically get turned into links.
-http://www.example.com or <http://www.example.com> and sometimes
+`http://www.example.com` or `<http://www.example.com>` and sometimes
 example.com (but not on Github, for example).
 
 Some text to show that the reference links can follow later.
@@ -220,7 +220,8 @@ Inline `code` has `back-ticks around` it.
 
 Blocks of code are either fenced by lines with three back-ticks <code>```</code>, or are indented with four spaces. I recommend only using the fenced code blocks -- they're easier and only they support syntax highlighting.
 
-<pre lang="no-highlight"><code>
+{/* <pre lang="no-highlight"> <code> */}
+```` no-highlight
 ```javascript
 var s = "JavaScript syntax highlighting";
 alert(s);
@@ -235,7 +236,8 @@ print s
 No language indicated, so no syntax highlighting.
 But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
 ```
-</code></pre>
+````
+ {/*</code>  </pre>*/}
 
 
 
