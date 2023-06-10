@@ -1,5 +1,7 @@
 const path = require('path')
 const config = require('./data/siteConfig')
+const remarkGfm = require('remark-gfm')
+//import remarkGfm from 'remark-gfm';
 
 module.exports = {
   siteMetadata: {
@@ -9,6 +11,10 @@ module.exports = {
     ...config,
   },
   pathPrefix: config.pathPrefix,
+  /*flags: {
+    DEV_SSR: true,
+  },*/
+
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -40,9 +46,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        extensions: [`.mdx`, `.md`],
-        defaultLayouts: {
-          default: require.resolve('./src/templates/page.js'),
+        extensions: [ `.md`, `.mdx`],
+        //defaultLayouts: {
+        //  default: require.resolve('./src/templates/page.js'),
+        //},
+        mdxOptions: {
+          remarkPlugins: [remarkGfm]
         },
         gatsbyRemarkPlugins: [
           {
@@ -68,11 +77,12 @@ module.exports = {
         plugins: [`gatsby-remark-images`],
       },
     },
+    `gatsby-plugin-sitemap`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-offline`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
+//    `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -85,6 +95,7 @@ module.exports = {
         icon: config.icon,
       },
     },
+    `gatsby-plugin-offline`,
     // https://www.gatsbyjs.org/docs/themes/converting-a-starter/#transpiling-your-theme-with-webpack
     {
       resolve: 'gatsby-plugin-compile-es6-packages',

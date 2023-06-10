@@ -1,4 +1,5 @@
 const { createFilePath } = require('gatsby-source-filesystem')
+const readingTime = require('reading-time')
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
@@ -16,30 +17,43 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const allMarkdownQuery = await graphql(`
     {
       allMarkdown: allMdx(
-        sort: { fields: [frontmatter___date], order: DESC }
+        sort: { frontmatter : {date : DESC }}
         filter: { frontmatter: { published: { ne: false } } }
         limit: 1000
       ) {
         edges {
           node {
-            fileAbsolutePath
+            id
+            fields {
+              timeToRead {
+                text
+              }
+            }
             frontmatter {
               title
               slug
               tags
-              language
-              cover {
-                publicURL
-              }
               unlisted
             }
-            timeToRead
+            internal {
+              contentFilePath
+            }
             excerpt
           }
         }
       }
     }
   `)
+
+  const tagsGroupQuery = await graphql(`
+  {
+    tagsGroup: allMdx (limit: 2000) {
+      group(field: { frontmatter: { tags: SELECT }}) {
+        fieldValue
+      }
+    }
+  }
+`)
 
   if (allMarkdownQuery.errors) {
     reporter.panic(allMarkdownQuery.errors)
@@ -58,13 +72,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const markdownFiles = allMarkdownQuery.data.allMarkdown.edges
 
   const posts = markdownFiles.filter(item =>
-    item.node.fileAbsolutePath.includes('/content/posts/')
+    item.node.internal.contentFilePath.includes('/content/posts/')
   )
 
   const listedPosts = posts.filter(
     item => item.node.frontmatter.unlisted !== true
   )
-
+  console.log("Posts start")
+  posts.forEach((p) => {
+    console.log(p.node?.frontmatter);
+    // console.log(p.node?.frontmatter?.excerpt)
+  })
+  console.log("Posts end")
   // generate paginated post list
   const postsPerPage = postPerPageQuery.data.site.siteMetadata.postsPerPage
   const nbPages = Math.ceil(listedPosts.length / postsPerPage)
@@ -89,8 +108,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     createPage({
       path: post.node.frontmatter.slug,
-      component: BlogPostTemplate,
+      component: `${BlogPostTemplate}?__contentFilePath=${post.node.internal.contentFilePath}`,
       context: {
+        id : post.node.id,
         slug: post.node.frontmatter.slug,
         previous,
         next,
@@ -101,7 +121,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     if (process.env.gatsby_executing_command.includes('develop')) {
       createPage({
         path: `${post.node.frontmatter.slug}/image_share`,
-        component: BlogPostShareImage,
+        component: `${BlogPostShareImage}?__contentFilePath=${post.node.internal.contentFilePath}`,
         context: {
           slug: post.node.frontmatter.slug,
           width: 440,
@@ -113,11 +133,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // generate pages
   markdownFiles
-    .filter(item => item.node.fileAbsolutePath.includes('/content/pages/'))
+    .filter(item => item.node.internal.contentFilePath.includes('/content/pages/'))
     .forEach(page => {
       createPage({
         path: page.node.frontmatter.slug,
-        component: PageTemplate,
+        component: `${PageTemplate}?__contentFilePath=${page.node.internal.contentFilePath}`,
         context: {
           slug: page.node.frontmatter.slug,
         },
@@ -125,20 +145,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
 
   // generate tag page
-  markdownFiles
-    .filter(item => item.node.frontmatter.tags !== null)
-    .reduce(
-      (acc, cur) => [...new Set([...acc, ...cur.node.frontmatter.tags])],
-      []
-    )
-    .forEach(uniqTag => {
+  const tags = tagsGroupQuery.data.tagsGroup.group
+
+  tags.forEach(uniqTag => {
       createPage({
-        path: `tags/${uniqTag}`,
+        path: `tags/${uniqTag.fieldValue}`,
         component: PostsBytagTemplate,
         context: {
-          tag: uniqTag,
+          tag: uniqTag.fieldValue,
         },
       })
+      console.log(uniqTag);
     })
 }
 
@@ -151,6 +168,13 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: `slug`,
       node,
       value,
+    })
+  }
+  if (node.internal.type === `Mdx`) {
+    createNodeField({
+      node,
+      name: `timeToRead`,
+      value: readingTime(node.body)
     })
   }
 }

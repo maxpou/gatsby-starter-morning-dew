@@ -33,9 +33,9 @@ const NotFoundPage = props => {
   const data = useStaticQuery(graphql`
     query {
       posts: allMdx(
-        sort: { fields: [frontmatter___date], order: DESC }
+        sort: { frontmatter : {date : DESC }}
         filter: {
-          fileAbsolutePath: { regex: "//content/posts//" }
+          internal : { contentFilePath: { regex: "//content/posts//" } }
           frontmatter: { published: { ne: false }, unlisted: { ne: true } }
         }
         limit: 5
